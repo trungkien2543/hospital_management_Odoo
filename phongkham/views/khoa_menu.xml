@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="khoa_menu" name="Quản lý Khoa bệnh viện" action="action_khoa">
+
+            <menuitem id="phongkham_menu" name="Phòng khám" action="action_phongkham_information"/>
+            <menuitem id="sudungphongkham" action="action_sudungphongkham"/>
+
+            <menuitem id="phongbenh_menu" name="Phòng bệnh" action="action_phongbenh_information"/>
+            <menuitem id="giuongbenh_menu" name="Giường bệnh" action="action_giuongbenh_information"/>
+            <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information"/>
+
+        </menuitem>
+
+    </data>
+</odoo>

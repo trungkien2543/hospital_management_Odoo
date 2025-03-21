@@ -9,9 +9,13 @@
         This module helps in managing hospital records, including patients, doctors, and appointments.
     """,
     'data': [
-        'views/phongkham_menu.xml',
-        'views/phongkham_information.xml',
+        'views/khoa_action.xml',
+        'views/khoa_menu.xml',
+        'views/phongkham.xml',
         'views/sudungphongkham.xml',
+        'views/phongbenh_information.xml',
+        'views/giuongbenh_information.xml',
+        'views/sudunggiuongbenh_information.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [
