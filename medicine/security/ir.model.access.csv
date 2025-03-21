@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hospital_medicine,access_hospital_medicine,model_hospital_medicine,base.group_user,1,1,1,1
+access_hospital_don_vi_tinh,access_hospital_don_vi_tinh,model_hospital_don_vi_tinh,base.group_user,1,1,1,1
+access_hospital_tuong_tac_thuoc,access_hospital_tuong_tac_thuoc,model_hospital_tuong_tac_thuoc,base.group_user,1,1,1,1
+access_hospital_lo_hang,access_hospital_lo_hang,model_hospital_lo_hang,base.group_user,1,1,1,1

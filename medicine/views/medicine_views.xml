@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="medicine_search_view" model="ir.ui.view">
+        <field name="name">medicine.search.view</field>
+        <field name="model">hospital.medicine</field>
+            <field name="arch" type="xml">
+                <search string="Tìm kiếm thuốc">
+                    <field name="ma_thuoc"/>
+                        <field name="ten_thuoc"/>
+                        <field name="nhom_thuoc"/>
+                        <field name="dang_bao_che"/>
+                        <field name="quy_tac_dong_goi"/>
+                        <field name="lieu_dung"/>
+                        <field name="chong_chi_dinh"/>
+                        <field name="tac_dung_phu"/>
+                        <field name="don_vi_tinh"/>
+                        <field name="so_luong_ton_kho"/>
+                        <field name="state" widget="pill"/>
+                        <field name="active"/>
+                        <field name="ghi_chu"/>
+    <!--                    <field name="state" select="multi"/>  &lt;!&ndash; Tìm kiếm nâng cao &ndash;&gt;-->
+                </search>
+            </field>
+    </record>
+
+     <record id="medicine_list_view_tree" model="ir.ui.view">
+        <field name="name">medicine.stock.list</field>
+        <field name="model">hospital.medicine</field>
+        <field name="arch" type="xml">
+            <list string="Thuốc">
+                    <field name="ma_thuoc"/>
+                    <field name="ten_thuoc"/>
+                    <field name="nhom_thuoc"/>
+                    <field name="dang_bao_che"/>
+                    <field name="quy_tac_dong_goi"/>
+                    <field name="lieu_dung"/>
+                    <field name="chong_chi_dinh"/>
+                    <field name="tac_dung_phu"/>
+                    <field name="don_vi_tinh"/>
+                    <field name="so_luong_ton_kho"/>
+                    <field name="state" widget="pill"/>
+                    <field name="active"/>
+                    <field name="ghi_chu"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="medicine_form_view" model="ir.ui.view">
+        <field name="name">medicine.form.view</field>
+        <field name="model">hospital.medicine</field>
+        <field name="arch" type="xml">
+            <form string="Thuốc">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_thuoc"/>
+                            <field name="ten_thuoc"/>
+                        </group>
+                        <group>
+                            <field name="nhom_thuoc"/>
+                            <field name="so_luong_ton_kho"/>
+                            <field name="state" widget="pill"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Mô tả">
+                            <group>
+                                <group>
+                                <field name="dang_bao_che"/>
+                                <field name="quy_tac_dong_goi"/>
+                                <field name="lieu_dung"/>
+                                <field name="chong_chi_dinh"/>
+                                </group>
+                                <group>
+                                    <field name="tac_dung_phu"/>
+                                    <field name="don_vi_tinh"/>
+                                    <field name="active"/>
+                                    <field name="ghi_chu"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Tương tác thuốc">
+                            <field name="tuongtacthuoc_ids">
+                                <list editable="bottom">
+                                    <field name="ma_thuoc_2"/>
+                                    <field name="mo_ta"/>
+                                    <field name="muc_do_nguy_hiem"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
