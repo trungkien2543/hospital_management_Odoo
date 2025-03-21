@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-        <!-- Menu chính -->
-        <menuitem id="phongbenh_menu" name="Phòng bệnh" action="action_phongbenh_information">
-            <menuitem id="giuongbenh_menu" name="Giường bệnh" action="action_giuongbenh_information"/>
-            <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information"/>
-        </menuitem>
+
 
 
         <record id="action_phongbenh_information" model="ir.actions.act_window">            <!--action phong benh -->
@@ -35,6 +31,15 @@
             <field name="res_model">benhvien.sudunggiuongbenh</field>
             <field name="view_mode">list,form</field>
         </record>
+
+        <!-- Menu chính -->
+        <menuitem id="phongbenh_menu" name="Phòng bệnh" action="action_phongbenh_information">
+            <menuitem id="giuongbenh_menu" name="Giường bệnh" action="action_giuongbenh_information"/>
+            <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information"/>
+        </menuitem>
+
+
+
 
     </data>
 </odoo>

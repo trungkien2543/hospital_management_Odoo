@@ -2,9 +2,6 @@
 <odoo>
     <data>
 
-        <menuitem id="phongkham_menu" name="Phòng khám" action="action_phongkham_information">
-            <menuitem id="sudungphongkham" name="Sử dụng Phòng khám" action="action_sudungphongkham"/>
-        </menuitem>
 
         <record id="action_phongkham_information" model="ir.actions.act_window">
             <field name="name">Phong kham Information Action</field>
@@ -27,6 +24,12 @@
                 </p>
             </field>
         </record>
+
+        <menuitem id="phongkham_menu" name="Phòng khám" action="action_phongkham_information">
+            <menuitem id="sudungphongkham" name="Sử dụng Phòng khám" action="action_sudungphongkham"/>
+        </menuitem>
+
+
 
     </data>
 </odoo>
