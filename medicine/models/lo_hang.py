@@ -17,8 +17,11 @@ class LoHang(models.Model):
         ('khong_su_dung', 'Không Sử Dụng')
     ], string="Trạng Thái", default="con_hang", required=True)
     tinh_trang_chat_luong = fields.Text(string="Tình Trạng Chất Lượng")
-    thuoc = fields.Many2one("hospital.medicine", string="Thuốc", required=True)
-    # phieu_nhap = fields.Many2one("hospital.phieu_nhap", string="Phiếu Nhập", required=True)
+
+    thuoc = fields.Many2one("hospital.thuoc", string="Thuốc", required=True)
+
+    phieu_nhap = fields.Many2one("hospital.phieu_nhap", string="Phiếu Nhập", required=True)
+
 
     _sql_constraints = [
         ('unique_ma_lo_hang', 'unique(ma_lo_hang)', 'Mã lô hàng phải là duy nhất!')

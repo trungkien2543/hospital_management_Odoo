@@ -1,7 +1,7 @@
 from odoo import fields, models, api
 
-class Medicine(models.Model):
-    _name = "hospital.medicine"
+class Thuoc(models.Model):
+    _name = "hospital.thuoc"
     _description = "Medicine Manage"
     _rec_name = "ten_thuoc"
 
@@ -25,6 +25,8 @@ class Medicine(models.Model):
 
     tuongtacthuoc_ids = fields.One2many("hospital.tuong_tac_thuoc","ma_thuoc_1",string="Tương tác thuốc")
 
+    lohang_ids = fields.One2many("hospital.lo_hang","thuoc",string="Thông tin lô hàng")
+
     _sql_constraints = [
         ('unique_ma_thuoc', 'unique(ma_thuoc)', 'Mã thuốc phải là duy nhất!'),
         ('unique_ten_thuoc', 'unique(ten_thuoc)', 'Tên thuốc không được trùng nhau!'),
@@ -40,7 +42,7 @@ class Medicine(models.Model):
         # Kiểm tra nếu 'ma_thuoc' không có trong 'vals' hoặc giá trị là 'New'
         if vals.get('ma_thuoc', 'MED0001') == 'MED0001':
             # Lấy số tiếp theo từ sequence 'hospital.medicine' để tạo mã thuốc
-            vals['ma_thuoc'] = self.env['ir.sequence'].next_by_code('hospital.medicine') or 'MED0001'
+            vals['ma_thuoc'] = self.env['ir.sequence'].next_by_code('hospital.thuoc') or 'MED0001'
 
         # Gọi phương thức create gốc để tạo bản ghi trong database
-        return super(Medicine, self).create(vals)
+        return super(Thuoc, self).create(vals)

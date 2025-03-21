@@ -4,7 +4,7 @@
     <!-- Định nghĩa action để hiển thị danh sách thuốc -->
     <record id="action_medicine_list" model="ir.actions.act_window">
         <field name="name">Danh sách thuốc</field>
-        <field name="res_model">hospital.medicine</field>
+        <field name="res_model">hospital.thuoc</field>
         <field name="view_mode">list,form</field>
     </record>
 
@@ -15,17 +15,5 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <!-- Định nghĩa action để hiển thị danh sách tương tác thuốc   -->
-    <record id="action_tuong_tac_thuoc_list" model="ir.actions.act_window">
-        <field name="name">Tương tác thuốc</field>
-        <field name="res_model">hospital.tuong_tac_thuoc</field>
-        <field name="view_mode">list,form</field>
-    </record>
-
-    <record id="action_lo_hang" model="ir.actions.act_window">
-        <field name="name">Lô Hàng</field>
-        <field name="res_model">hospital.lo_hang</field>
-        <field name="view_mode">list,form</field>
-    </record>
 
 </odoo>

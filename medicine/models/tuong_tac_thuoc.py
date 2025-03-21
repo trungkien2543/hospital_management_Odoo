@@ -6,8 +6,8 @@ class TuongTacThuoc(models.Model):
     _name = "hospital.tuong_tac_thuoc"
     _description = "Tương tác giữa các thuốc"
 
-    ma_thuoc_1 = fields.Many2one("hospital.medicine",string="Thuốc 1", required=True, copy = False)
-    ma_thuoc_2 = fields.Many2one("hospital.medicine",string="Thuốc 2", required=True, copy = False)
+    ma_thuoc_1 = fields.Many2one("hospital.thuoc",string="Thuốc 1", required=True, copy = False)
+    ma_thuoc_2 = fields.Many2one("hospital.thuoc",string="Thuốc 2", required=True, copy = False)
     mo_ta = fields.Text(string="Mô tả", required=True)  # TEXT NOT NULL
     muc_do_nguy_hiem = fields.Selection([
         ('Thấp', 'Thấp'),

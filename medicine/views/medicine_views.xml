@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
-    <record id="medicine_search_view" model="ir.ui.view">
+    <record id="thuoc_search_view" model="ir.ui.view">
         <field name="name">medicine.search.view</field>
-        <field name="model">hospital.medicine</field>
+        <field name="model">hospital.thuoc</field>
             <field name="arch" type="xml">
                 <search string="Tìm kiếm thuốc">
                     <field name="ma_thuoc"/>
@@ -24,9 +24,9 @@
             </field>
     </record>
 
-     <record id="medicine_list_view_tree" model="ir.ui.view">
-        <field name="name">medicine.stock.list</field>
-        <field name="model">hospital.medicine</field>
+     <record id="thuoc_list_view_tree" model="ir.ui.view">
+        <field name="name">thuoc.stock.list</field>
+        <field name="model">hospital.thuoc</field>
         <field name="arch" type="xml">
             <list string="Thuốc">
                     <field name="ma_thuoc"/>
@@ -46,9 +46,9 @@
         </field>
     </record>
 
-    <record id="medicine_form_view" model="ir.ui.view">
+    <record id="thuoc_form_view" model="ir.ui.view">
         <field name="name">medicine.form.view</field>
-        <field name="model">hospital.medicine</field>
+        <field name="model">hospital.thuoc</field>
         <field name="arch" type="xml">
             <form string="Thuốc">
                 <sheet>
@@ -86,6 +86,21 @@
                                     <field name="ma_thuoc_2"/>
                                     <field name="mo_ta"/>
                                     <field name="muc_do_nguy_hiem"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Thông tin lô hàng">
+                            <field name="lohang_ids" readonly="1">
+                                <list>
+                                    <field name="ma_lo_hang"/>
+                                    <field name="han_su_dung"/>
+                                    <field name="ngay_nhap"/>
+                                    <field name="gia_nhap"/>
+                                    <field name="gia_ban"/>
+                                    <field name="so_luong_ton_kho"/>
+                                    <field name="trang_thai"/>
+                                    <field name="tinh_trang_chat_luong"/>
+                                    <field name="phieu_nhap"/>
                                 </list>
                             </field>
                         </page>
