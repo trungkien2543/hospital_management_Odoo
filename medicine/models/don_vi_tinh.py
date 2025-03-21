@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class DonViTinh(models.Model):
-    _name = "benhvien.don_vi_tinh"
+    _name = "hospital.don_vi_tinh"
     _description = "Đơn vị tính"
     _rec_name = "ten_don_vi"  # Định nghĩa tên hiển thị thay vì ID
 

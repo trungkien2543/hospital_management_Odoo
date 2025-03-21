@@ -3,7 +3,7 @@
 
     <record id="thuoc_search_view" model="ir.ui.view">
         <field name="name">medicine.search.view</field>
-        <field name="model">benhvien.thuoc</field>
+        <field name="model">hospital.thuoc</field>
             <field name="arch" type="xml">
                 <search string="Tìm kiếm thuốc">
                     <field name="ma_thuoc"/>
@@ -26,7 +26,7 @@
 
      <record id="thuoc_list_view_tree" model="ir.ui.view">
         <field name="name">thuoc.stock.list</field>
-        <field name="model">benhvien.thuoc</field>
+        <field name="model">hospital.thuoc</field>
         <field name="arch" type="xml">
             <list string="Thuốc">
                     <field name="ma_thuoc"/>
@@ -48,7 +48,7 @@
 
     <record id="thuoc_form_view" model="ir.ui.view">
         <field name="name">medicine.form.view</field>
-        <field name="model">benhvien.thuoc</field>
+        <field name="model">hospital.thuoc</field>
         <field name="arch" type="xml">
             <form string="Thuốc">
                 <sheet>
@@ -100,7 +100,7 @@
                                     <field name="so_luong_ton_kho"/>
                                     <field name="trang_thai"/>
                                     <field name="tinh_trang_chat_luong"/>
-<!--                                    <field name="phieu_nhap"/>-->
+                                    <field name="phieu_nhap"/>
                                 </list>
                             </field>
                         </page>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_lo_hang_form" model="ir.ui.view">
-        <field name="name">benhvien.lo_hang.form</field>
-        <field name="model">benhvien.lo_hang</field>
+        <field name="name">hospital.lo_hang.form</field>
+        <field name="model">hospital.lo_hang</field>
         <field name="arch" type="xml">
             <form string="Lô Hàng">
                 <sheet>
@@ -27,8 +27,8 @@
     </record>
 
     <record id="view_lo_hang_list" model="ir.ui.view">
-        <field name="name">benhvien.lo_hang.list</field>
-        <field name="model">benhvien.lo_hang</field>
+        <field name="name">hospital.lo_hang.list</field>
+        <field name="model">hospital.lo_hang</field>
         <field name="arch" type="xml">
             <list string="Lô Hàng">
                 <field name="ma_lo_hang"/>

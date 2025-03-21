@@ -6,7 +6,7 @@
     'version': '1.0.0',
     'summary': 'Manage your stock and logistics activities',
     'website': '',
-    'depends': ['stock'],
+    'depends': [],
     'category': 'Hopital',
     'sequence': 25,
     'demo': [

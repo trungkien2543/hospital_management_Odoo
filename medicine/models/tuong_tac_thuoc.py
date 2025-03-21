@@ -3,11 +3,11 @@ from odoo.exceptions import ValidationError
 
 
 class TuongTacThuoc(models.Model):
-    _name = "benhvien.tuong_tac_thuoc"
+    _name = "hospital.tuong_tac_thuoc"
     _description = "Tương tác giữa các thuốc"
 
-    ma_thuoc_1 = fields.Many2one("benhvien.thuoc",string="Thuốc 1", required=True, copy = False)
-    ma_thuoc_2 = fields.Many2one("benhvien.thuoc",string="Thuốc 2", required=True, copy = False)
+    ma_thuoc_1 = fields.Many2one("hospital.thuoc",string="Thuốc 1", required=True, copy = False)
+    ma_thuoc_2 = fields.Many2one("hospital.thuoc",string="Thuốc 2", required=True, copy = False)
     mo_ta = fields.Text(string="Mô tả", required=True)  # TEXT NOT NULL
     muc_do_nguy_hiem = fields.Selection([
         ('Thấp', 'Thấp'),
@@ -26,7 +26,7 @@ class TuongTacThuoc(models.Model):
             if record.ma_thuoc_1 == record.ma_thuoc_2:
                 raise ValidationError("Một thuốc không thể tương tác với chính nó!")
 
-            existing_pair = self.env['benhvien.tuong_tac_thuoc'].search([
+            existing_pair = self.env['hospital.tuong_tac_thuoc'].search([
                 '|',
                 ('ma_thuoc_1', '=', record.ma_thuoc_1.id), ('ma_thuoc_2', '=', record.ma_thuoc_2.id),
                 ('ma_thuoc_1', '=', record.ma_thuoc_2.id), ('ma_thuoc_2', '=', record.ma_thuoc_1.id)

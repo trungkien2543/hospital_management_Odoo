@@ -1,7 +1,7 @@
 from odoo import fields, models, api
 
 class Thuoc(models.Model):
-    _name = "benhvien.thuoc"
+    _name = "hospital.thuoc"
     _description = "Medicine Manage"
     _rec_name = "ten_thuoc"
 
@@ -13,7 +13,7 @@ class Thuoc(models.Model):
     lieu_dung = fields.Text(string="Liều dùng", required=True)  # TEXT NOT NULL
     chong_chi_dinh = fields.Text(string="Chống chỉ định", required=True)  # TEXT NOT NULL
     tac_dung_phu = fields.Text(string="Tác dụng phụ", required=True)  # TEXT NOT NULL
-    don_vi_tinh = fields.Many2one("benhvien.don_vi_tinh",string="Đơn vị tính", required=True)  # INTEGER NOT NULL
+    don_vi_tinh = fields.Many2one("hospital.don_vi_tinh",string="Đơn vị tính", required=True)  # INTEGER NOT NULL
     ghi_chu = fields.Text(string="Ghi chú", required=True)  # TEXT NOT NULL
     so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True, default=0)  # INTEGER NOT NULL
     active = fields.Boolean(string="Active", default=True)
@@ -23,9 +23,9 @@ class Thuoc(models.Model):
         ('out_of_stock', 'Hết hàng')
     ], string="Trạng thái", required=True, copy=False, default='available')
 
-    tuongtacthuoc_ids = fields.One2many("benhvien.tuong_tac_thuoc","ma_thuoc_1",string="Tương tác thuốc")
+    tuongtacthuoc_ids = fields.One2many("hospital.tuong_tac_thuoc","ma_thuoc_1",string="Tương tác thuốc")
 
-    lohang_ids = fields.One2many("benhvien.lo_hang","thuoc",string="Thông tin lô hàng")
+    lohang_ids = fields.One2many("hospital.lo_hang","thuoc",string="Thông tin lô hàng")
 
     _sql_constraints = [
         ('unique_ma_thuoc', 'unique(ma_thuoc)', 'Mã thuốc phải là duy nhất!'),
@@ -41,8 +41,8 @@ class Thuoc(models.Model):
 
         # Kiểm tra nếu 'ma_thuoc' không có trong 'vals' hoặc giá trị là 'New'
         if vals.get('ma_thuoc', 'MED0001') == 'MED0001':
-            # Lấy số tiếp theo từ sequence 'benhvien.medicine' để tạo mã thuốc
-            vals['ma_thuoc'] = self.env['ir.sequence'].next_by_code('benhvien.thuoc') or 'MED0001'
+            # Lấy số tiếp theo từ sequence 'hospital.medicine' để tạo mã thuốc
+            vals['ma_thuoc'] = self.env['ir.sequence'].next_by_code('hospital.thuoc') or 'MED0001'
 
         # Gọi phương thức create gốc để tạo bản ghi trong database
         return super(Thuoc, self).create(vals)

@@ -2,7 +2,7 @@
 <odoo>
     <record id="seq_don_vi_tinh_code" model="ir.sequence">
         <field name="name">Don Vi Tinh Code</field>
-        <field name="code">benhvien.don_vi_tinh</field>
+        <field name="code">hospital.don_vi_tinh</field>
         <field name="prefix">DVT</field>
         <field name="padding">4</field>
         <field name="number_next">1</field>
