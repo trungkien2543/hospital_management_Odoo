@@ -1,5 +1,5 @@
 {
-    'name': "Quan ly phong kham",
+    'name': "Quan ly khoa va phong kham",
     'version': '1.1',
     'depends': ['base'],
     'author': "Your Name",

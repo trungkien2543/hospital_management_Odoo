@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="action_phongkham_information" model="ir.actions.act_window">
-            <field name="name">Phong kham Information Action</field>
+            <field name="name">Danh sách Phòng khám</field>
             <field name="res_model">benhvien.phongkham</field>
             <field name="view_mode">list,form</field>
             <field name="help" type="html">
@@ -25,7 +25,7 @@
 
 
         <record id="action_khoa" model="ir.actions.act_window">
-            <field name="name">Khoa Action</field>
+            <field name="name">Danh sách Khoa</field>
             <field name="res_model">benhvien.khoa</field>
             <field name="view_mode">list,form</field>
             <field name="help" type="html">
