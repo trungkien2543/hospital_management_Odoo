@@ -2,7 +2,7 @@
 <odoo>
     <record id="seq_phieu_nhap_code" model="ir.sequence">
         <field name="name">Phieu Nhap Code</field>
-        <field name="code">hospital.phieu_nhap</field>
+        <field name="code">benhvien.phieu_nhap</field>
         <field name="prefix">PN</field>  <!-- Tiền tố (có thể thay đổi) -->
         <field name="padding">4</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
         <field name="number_next">1</field>
