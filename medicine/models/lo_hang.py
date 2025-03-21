@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class LoHang(models.Model):
-    _name = "hospital.lo_hang"
+    _name = "benhvien.lo_hang"
     _description = "Lô Hàng Dược Phẩm"
     _rec_name = "ma_lo_hang"  # Hiển thị tên lô hàng trên các form liên quan
 
@@ -18,9 +18,11 @@ class LoHang(models.Model):
     ], string="Trạng Thái", default="con_hang", required=True)
     tinh_trang_chat_luong = fields.Text(string="Tình Trạng Chất Lượng")
 
-    thuoc = fields.Many2one("hospital.thuoc", string="Thuốc", required=True)
+    thuoc = fields.Many2one("benhvien.thuoc", string="Thuốc", required=True)
 
-    phieu_nhap = fields.Many2one("hospital.phieu_nhap", string="Phiếu Nhập", required=True)
+    supplier_id = fields.Many2one('res.partner', string="Nhà cung cấp", domain=[('supplier_rank', '>', 0)])
+
+    phieu_nhap = fields.Many2one("benhvien.phieu_nhap", string="Phiếu Nhập", required=True)
 
 
     _sql_constraints = [

@@ -4,16 +4,26 @@
     <!-- Định nghĩa action để hiển thị danh sách thuốc -->
     <record id="action_medicine_list" model="ir.actions.act_window">
         <field name="name">Danh sách thuốc</field>
-        <field name="res_model">hospital.thuoc</field>
+        <field name="res_model">benhvien.thuoc</field>
         <field name="view_mode">list,form</field>
     </record>
 
     <!--  Định nghĩa action để hiển thị danh sách đơn vị tính  -->
     <record id="action_don_vi_tinh_list" model="ir.actions.act_window">
         <field name="name">Đơn vị tính</field>
-        <field name="res_model">hospital.don_vi_tinh</field>
+        <field name="res_model">benhvien.don_vi_tinh</field>
         <field name="view_mode">list,form</field>
     </record>
+
+    <!--  Định nghĩa action để hiển thị danh sách đơn vị tính  -->
+    <record id="action_lo_hang_list" model="ir.actions.act_window">
+        <field name="name">Lô hàng</field>
+        <field name="res_model">benhvien.lo_hang</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+
 
 
 </odoo>

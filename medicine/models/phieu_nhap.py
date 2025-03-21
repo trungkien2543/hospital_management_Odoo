@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class PhieuNhap(models.Model):
-    _name = 'hospital.phieu_nhap'
+    _name = 'benhvien.phieu_nhap'
     _description = 'Phiếu Nhập'
     _rec_name = "ma_phieu_nhap"
 
@@ -18,5 +18,5 @@ class PhieuNhap(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('ma_phieu_nhap', 'PN0001') == 'PN0001':
-            vals['ma_phieu_nhap'] = self.env['ir.sequence'].next_by_code('hospital.phieu_nhap') or 'PN0001'
+            vals['ma_phieu_nhap'] = self.env['ir.sequence'].next_by_code('benhvien.phieu_nhap') or 'PN0001'
         return super(PhieuNhap, self).create(vals)
