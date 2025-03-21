@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="phongkham_menu" name="Phòng khám" action="action_phongkham_information">
+            <menuitem id="sudungphongkham" name="Sử dụng Phòng khám" action="action_sudungphongkham"/>
+        </menuitem>
+
+        <record id="action_phongkham_information" model="ir.actions.act_window">
+            <field name="name">Phong kham Information Action</field>
+            <field name="res_model">benhvien.phongkham</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new phong kham for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_sudungphongkham" model="ir.actions.act_window">
+            <field name="name">Su dung Phong kham Information Action</field>
+            <field name="res_model">benhvien.sudungphongkham</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new su dung phong kham for more!
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

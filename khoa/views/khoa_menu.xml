@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="action_khoa" model="ir.actions.act_window">
+            <field name="name">Khoa Action</field>
+            <field name="res_model">benhvien.khoa</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Khoa for more!
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="khoa_menu" name="Khoa bệnh viện" action="action_khoa"/>
+
+
+    </data>
+</odoo>

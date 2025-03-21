@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Menu chính -->
+        <menuitem id="phongbenh_menu" name="Phòng bệnh" action="action_phongbenh_information">
+            <menuitem id="giuongbenh_menu" name="Giường bệnh" action="action_giuongbenh_information"/>
+            <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information"/>
+        </menuitem>
+
+
+        <record id="action_phongbenh_information" model="ir.actions.act_window">            <!--action phong benh -->
+            <field name="name">Phòng bệnh Information Action</field>
+            <field name="res_model">phongbenh.information</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Phòng bệnh for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_giuongbenh_information" model="ir.actions.act_window">           <!--action giuong benh -->
+            <field name="name">Giường bệnh Information Action</field>
+            <field name="res_model">giuongbenh.information</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Giường bệnh for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_sudunggiuongbenh_information" model="ir.actions.act_window">             <!--action su dung giuong benh -->
+            <field name="name">Sử dụng Giường bệnh</field>
+            <field name="res_model">benhvien.sudunggiuongbenh</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

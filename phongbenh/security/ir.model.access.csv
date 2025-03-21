@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_phongbenh_information,phongbenh.information,model_phongbenh_information,,1,1,1,1
+access_giuongbenh_information,giuongbenh.information,model_giuongbenh_information,,1,1,1,1
+access_benhvien_sudunggiuongbenh,benhvien.sudunggiuongbenh,model_benhvien_sudunggiuongbenh,,1,1,1,1

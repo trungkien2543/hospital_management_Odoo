@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="sudungphongkham_view" model="ir.ui.view">
+            <field name="name">Quan ly toan bo khoa benh vien</field>
+            <field name="model">benhvien.khoa</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

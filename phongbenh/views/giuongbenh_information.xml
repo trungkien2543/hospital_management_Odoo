@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="giuongbenh_information_form_view" model="ir.ui.view">               <!--view giuong benh -->
+            <field name="name">Giường Bệnh Information Action</field>
+            <field name="model">giuongbenh.information</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="code_phong"/>
+                    <field name="type"/>
+                    <field name="status"/>
+                    <button name="action_xem_giuong" type="object" string="Lịch sử và chỉnh sửa Sử dụng giường" class="oe_highlight"/>
+                    <button name="action_tao_giuong" type="object" string="Thêm sử dụng giường mới" class="oe_highlight"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_giuongbenh_list_by_phong" model="ir.actions.act_window">
+            <field name="name">Danh sách Giường bệnh</field>
+            <field name="res_model">giuongbenh.information</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[('code_phong', '=', active_id)]</field>
+        </record>
+
+    </data>
+</odoo>
