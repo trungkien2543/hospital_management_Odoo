@@ -2,20 +2,20 @@
 <odoo>
     <data>
 
-        <record id="action_khoa" model="ir.actions.act_window">
-            <field name="name">Khoa Action</field>
-            <field name="res_model">benhvien.khoa</field>
-            <field name="view_mode">list,form</field>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">
-                    Create a new Khoa for more!
-                </p>
-            </field>
-        </record>
+        <menuitem id="khoa_menu" name="Quản lý Khoa và phòng khám" action="action_khoa">
 
+            <menuitem id="qlphongkham_menu" name="Quản lý phòng khám">
+                <menuitem id="phongkham_menu"  action="action_phongkham_information"/>
+                <menuitem id="sudungphongkham" action="action_sudungphongkham"/>
+            </menuitem>
 
-        <menuitem id="khoa_menu" name="Khoa bệnh viện" action="action_khoa"/>
+            <menuitem id="qlphongbenh_menu" name="Quản lý phòng bệnh">
+                <menuitem id="phongbenh_menu" name="Phòng bệnh" action="action_phongbenh_information"/>
+                <menuitem id="giuongbenh_menu" name="Giường bệnh" action="action_giuongbenh_information"/>
+                <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information"/>
+            </menuitem>
 
+        </menuitem>
 
     </data>
 </odoo>
