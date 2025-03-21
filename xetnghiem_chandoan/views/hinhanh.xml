@@ -2,20 +2,20 @@
 <odoo>
     <data>
 
-        <record id="danhsachxetnghiem_view" model="ir.ui.view">
+        <record id="danhsachhinhanh_view" model="ir.ui.view">
             <field name="name">Quan ly xet nghiem</field>
-            <field name="model">benhvien.xetnghiem</field>
+            <field name="model">benhvien.hinhanh</field>
             <field name="arch" type="xml">
                 <list>
-                    <field name="ma_xet_nghiem"/>
-                    <field name="ten_loai_xet_nghiem"/>
+                    <field name="ma_chup"/>
+                    <field name="loai_hinh_anh_chup"/>
                     <field name="ma_benh_an"/>
-                    <field name="ten_bac_si"/>
+                    <field name="ma_bac_si_chup"/>
                     <field name="name"/>
-                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_chup"/>
                     <field name="thoi_gian_ket_thuc"/>
                     <field name="trang_thai"/>
-                    <field name="ket_qua"/>
+                    <field name="duong_dan_anh"/>
                 </list>
             </field>
         </record>

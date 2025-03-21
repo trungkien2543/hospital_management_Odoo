@@ -12,6 +12,7 @@
         'views/chandoan_action.xml',
         'views/chandoan_menu.xml',
         'views/xetnghiem.xml',
+        'views/hinhanh.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [

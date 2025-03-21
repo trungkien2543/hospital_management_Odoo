@@ -2,15 +2,14 @@
 <odoo>
     <data>
 
-        <menuitem id="khoa_menu" name="Quản lý xét nghiệm và chẩn đoán" action="action_xetnghiem">
+        <menuitem id="chandoan_xetnghiem_menu" name="Quản lý xét nghiệm và chẩn đoán" action="action_xetnghiem">
 
-            <menuitem id="qlphongkham_menu" name="Quản lý xét nghiệm">
+            <menuitem id="ql_xetnghiem_menu" name="Quản lý xét nghiệm" action="action_xetnghiem">
 
             </menuitem>
 
 
-            <menuitem id="qlphongkham_menu" name="Quản lý hình ảnh">
-
+            <menuitem id="ds_hinhanh_menu" name="Danh sách hình ảnh" action="action_hinhanh">
             </menuitem>
 
         </menuitem>
