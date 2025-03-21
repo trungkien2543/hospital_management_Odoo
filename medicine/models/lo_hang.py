@@ -4,10 +4,7 @@ class LoHang(models.Model):
     _name = "benhvien.lo_hang"
     _description = "Lô Hàng Dược Phẩm"
     _rec_name = "ma_lo_hang"  # Hiển thị tên lô hàng trên các form liên quan
-    _inherit = 'stock.picking'
 
-
-    is_medicine_transfer = fields.Boolean(string="Nhập/Xuất kho thuốc", default=False)
     ma_lo_hang = fields.Char(string="Mã Lô Hàng", required=True, copy=False)
     han_su_dung = fields.Date(string="Hạn Sử Dụng", required=True)
     ngay_nhap = fields.Date(string="Ngày Nhập", required=True, default=fields.Date.today)
@@ -25,7 +22,7 @@ class LoHang(models.Model):
 
     supplier_id = fields.Many2one('res.partner', string="Nhà cung cấp", domain=[('supplier_rank', '>', 0)])
 
-    # phieu_nhap = fields.Many2one("benhvien.phieu_nhap", string="Phiếu Nhập", required=True)
+    phieu_nhap = fields.Many2one("benhvien.phieu_nhap", string="Phiếu Nhập", required=True)
 
 
     _sql_constraints = [
