@@ -1,0 +1,21 @@
+﻿id,name,type,khoa
+PKHAM001,Phòng khám Nội tổng quát,public,Nội tổng quát
+PKHAM002,Phòng khám Nội tim mạch,public,Nội tim mạch
+PKHAM003,Phòng khám Nội tiết,public,Nội tiết
+PKHAM004,Phòng khám Tiêu hóa,public,Tiêu hóa
+PKHAM005,Phòng khám Thần kinh,public,Thần kinh
+PKHAM006,Phòng khám Hô hấp,public,Hô hấp
+PKHAM007,Phòng khám Chấn thương chỉnh hình,public,Chấn thương chỉnh hình
+PKHAM008,Phòng khám Da liễu,public,Da liễu
+PKHAM009,Phòng khám Nhi khoa,public,Nhi khoa
+PKHAM010,Phòng khám Sản phụ khoa,public,Sản phụ khoa
+PKHAM011,Phòng xét nghiệm Nội tổng quát,private,Nội tổng quát
+PKHAM012,Phòng xét nghiệm Nội tim mạch,private,Nội tim mạch
+PKHAM013,Phòng xét nghiệm Nội tiết,private,Nội tiết
+PKHAM014,Phòng xét nghiệm Tiêu hóa,private,Tiêu hóa
+PKHAM015,Phòng xét nghiệm Thần kinh,private,Thần kinh
+PKHAM016,Phòng xét nghiệm Hô hấp,private,Hô hấp
+PKHAM017,Phòng xét nghiệm Chấn thương chỉnh hình,private,Chấn thương chỉnh hình
+PKHAM018,Phòng xét nghiệm Da liễu,private,Da liễu
+PKHAM019,Phòng xét nghiệm Nhi khoa,private,Nhi khoa
+PKHAM020,Phòng xét nghiệm Sản phụ khoa,private,Sản phụ khoa

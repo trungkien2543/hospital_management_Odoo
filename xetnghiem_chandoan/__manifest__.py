@@ -13,7 +13,10 @@
         'views/chandoan_menu.xml',
         'views/xetnghiem.xml',
         'views/hinhanh.xml',
+        'views/loaixetnghiem.xml',
+        'views/loaihinhanh.xml',
         'security/ir.model.access.csv',
+        'data/loaixetnghiem_data.csv',
     ],
     'demo': [
     ],

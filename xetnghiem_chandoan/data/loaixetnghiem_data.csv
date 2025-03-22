@@ -1,0 +1,14 @@
+﻿id,ma_loai,name,mo_ta
+loai_xet_nghiem_1,XN001,Xét nghiệm máu,Kiểm tra tổng quát về các chỉ số máu.
+loai_xet_nghiem_2,XN002,Xét nghiệm nước tiểu,Đánh giá tình trạng sức khỏe qua nước tiểu.
+loai_xet_nghiem_3,XN003,Xét nghiệm đường huyết,Kiểm tra mức đường trong máu.
+loai_xet_nghiem_4,XN004,Xét nghiệm chức năng gan,Đánh giá tình trạng và hoạt động của gan.
+loai_xet_nghiem_5,XN005,Xét nghiệm chức năng thận,Kiểm tra mức độ hoạt động của thận.
+loai_xet_nghiem_6,XN006,Xét nghiệm mỡ máu,Đánh giá mức cholesterol và triglyceride.
+loai_xet_nghiem_7,XN007,Xét nghiệm điện giải,Kiểm tra nồng độ các chất điện giải trong máu.
+loai_xet_nghiem_8,XN008,Xét nghiệm đông máu,Đánh giá khả năng đông máu của cơ thể.
+loai_xet_nghiem_9,XN009,Xét nghiệm tổng phân tích tế bào máu,Kiểm tra số lượng và loại tế bào trong máu.
+loai_xet_nghiem_10,XN010,Xét nghiệm vi khuẩn HP,Kiểm tra vi khuẩn Helicobacter pylori gây viêm loét dạ dày.
+loai_xet_nghiem_11,XN011,Xét nghiệm HIV,Kiểm tra sự hiện diện của virus HIV trong cơ thể.
+loai_xet_nghiem_12,XN012,Xét nghiệm viêm gan B,Kiểm tra tình trạng nhiễm virus viêm gan B.
+loai_xet_nghiem_13,XN013,Xét nghiệm ung thư,Kiểm tra các dấu ấn ung thư trong cơ thể.
