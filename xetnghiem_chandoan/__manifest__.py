@@ -1,5 +1,5 @@
 {
-    'name': "Quan ly khoa va phong kham",
+    'name': "Quan ly xet nghiem va chan doan",
     'version': '1.1',
     'depends': ['base'],
     'author': "Your Name",
@@ -9,19 +9,14 @@
         This module helps in managing hospital records, including patients, doctors, and appointments.
     """,
     'data': [
-        'views/khoa_action.xml',
-        'views/khoa_menu.xml',
-        'views/khoa.xml',
-        'views/phongkham.xml',
-        'views/sudungphongkham.xml',
-        'views/phongbenh.xml',
-        'views/giuongbenh.xml',
-        'views/sudunggiuongbenh.xml',
+        'views/chandoan_action.xml',
+        'views/chandoan_menu.xml',
+        'views/xetnghiem.xml',
+        'views/hinhanh.xml',
+        'views/loaixetnghiem.xml',
+        'views/loaihinhanh.xml',
         'security/ir.model.access.csv',
-        'data/khoa_sequence.xml',
-        'data/phongkham_sequence.xml',
-        'data/phongbenh_sequence.xml',
-        'data/giuongbenh_sequence.xml',
+        'data/loaixetnghiem_data.csv',
     ],
     'demo': [
     ],

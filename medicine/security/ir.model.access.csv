@@ -1,5 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hospital_thuoc,access_hospital_thuoc,model_hospital_thuoc,base.group_user,1,1,1,1
-access_hospital_don_vi_tinh,access_hospital_don_vi_tinh,model_hospital_don_vi_tinh,base.group_user,1,1,1,1
-access_hospital_tuong_tac_thuoc,access_hospital_tuong_tac_thuoc,model_hospital_tuong_tac_thuoc,base.group_user,1,1,1,1
-access_hospital_lo_hang,access_hospital_lo_hang,model_hospital_lo_hang,base.group_user,1,1,1,1
+access_benhvien_thuoc,access_benhvien_thuoc,model_benhvien_thuoc,base.group_user,1,1,1,1
+access_benhvien_don_vi_tinh,access_benhvien_don_vi_tinh,model_benhvien_don_vi_tinh,base.group_user,1,1,1,1
+access_benhvien_tuong_tac_thuoc,access_benhvien_tuong_tac_thuoc,model_benhvien_tuong_tac_thuoc,base.group_user,1,1,1,1
+access_benhvien_lo_hang,access_benhvien_lo_hang,model_benhvien_lo_hang,base.group_user,1,1,1,1
+access_benhvien_phieu_nhap,Phieu Nhap Kho,model_benhvien_phieu_nhap,base.group_user,1,1,1,1

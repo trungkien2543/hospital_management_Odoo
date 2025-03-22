@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="danhsachhinhanh_view" model="ir.ui.view">
+            <field name="name">Quan ly xet nghiem</field>
+            <field name="model">benhvien.hinhanh</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_chup"/>
+                    <field name="loai_hinh_anh_chup"/>
+                    <field name="ma_benh_an"/>
+                    <field name="ma_bac_si_chup"/>
+                    <field name="name"/>
+                    <field name="thoi_gian_chup"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="trang_thai"/>
+                    <field name="duong_dan_anh"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

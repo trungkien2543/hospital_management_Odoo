@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="khoa_code_incre" model="ir.sequence">
+        <field name="name">Khoa Code</field>
+        <field name="code">benhvien.khoa</field>
+        <field name="prefix">KHOA</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">3</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>
