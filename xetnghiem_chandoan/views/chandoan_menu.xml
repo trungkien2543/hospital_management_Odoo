@@ -4,12 +4,13 @@
 
         <menuitem id="chandoan_xetnghiem_menu" name="Quản lý xét nghiệm và chẩn đoán" action="action_xetnghiem">
 
-            <menuitem id="ql_xetnghiem_menu" name="Quản lý xét nghiệm" action="action_xetnghiem">
-
+            <menuitem id="ql_xetnghiem_menu" name="Quản lý xét nghiệm">
+                <menuitem id="ds_loaixetnghiem_menu" name="Danh sách loại xét nghiệm" action="action_loaixetnghiem"/>
             </menuitem>
 
-
-            <menuitem id="ds_hinhanh_menu" name="Danh sách hình ảnh" action="action_hinhanh">
+            <menuitem id="ql_hinhanh_menu" name="Quản lý hình ảnh">
+                <menuitem id="ds_hinhanh_menu" action="action_hinhanh"/>
+                <menuitem id="ds_loaihinhanh_menu" name="Danh sách loại hình ảnh" action="action_loaihinhanh"/>
             </menuitem>
 
         </menuitem>

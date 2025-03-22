@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_benhvien_xetnghiem,benhvien.xetnghiem,model_benhvien_xetnghiem,,1,1,1,1
 access_benhvien_hinhanh,benhvien.hinhanh,model_benhvien_hinhanh,,1,1,1,1
+access_benhvien_loaihinhanh,benhvien.loaihinhanh,model_benhvien_loaihinhanh,,1,1,1,1
+access_benhvien_loaixetnghiem,benhvien.loaixetnghiem,model_benhvien_loaixetnghiem,,1,1,1,1

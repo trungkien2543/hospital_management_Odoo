@@ -1,0 +1,4 @@
+﻿id,ma_loai,name,mo_ta
+loai_xet_nghiem_1,XN001,Xét nghiệm máu,Kiểm tra tổng quát về các chỉ số máu.
+loai_xet_nghiem_2,XN002,Xét nghiệm nước tiểu,Đánh giá tình trạng sức khỏe qua nước tiểu.
+loai_xet_nghiem_3,XN003,Xét nghiệm đường huyết,Kiểm tra mức đường trong máu.
