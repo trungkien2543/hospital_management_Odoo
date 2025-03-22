@@ -2,11 +2,12 @@
 <odoo>
     <data>
 
-        <record id="sudungphongkham_view" model="ir.ui.view">
-            <field name="name">Quan ly toan bo khoa benh vien</field>
+        <record id="khoa_view" model="ir.ui.view">
+            <field name="name">Khoa View</field>
             <field name="model">benhvien.khoa</field>
             <field name="arch" type="xml">
                 <list>
+                    <field name="ma_khoa"/>
                     <field name="name"/>
                     <field name="description"/>
                 </list>

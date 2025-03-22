@@ -1,21 +1,21 @@
 ﻿id,name,type,khoa
-phongkham_1,Phòng khám Nội tổng quát,public,Nội tổng quát
-phongkham_2,Phòng khám Nội tim mạch,public,Nội tim mạch
-phongkham_3,Phòng khám Nội tiết,public,Nội tiết
-phongkham_4,Phòng khám Tiêu hóa,public,Tiêu hóa
-phongkham_5,Phòng khám Thần kinh,public,Thần kinh
-phongkham_6,Phòng khám Hô hấp,public,Hô hấp
-phongkham_7,Phòng khám Chấn thương chỉnh hình,public,Chấn thương chỉnh hình
-phongkham_8,Phòng khám Da liễu,public,Da liễu
-phongkham_9,Phòng khám Nhi khoa,public,Nhi khoa
-phongkham_10,Phòng khám Sản phụ khoa,public,Sản phụ khoa
-phongxetnghiem_1,Phòng xét nghiệm Nội tổng quát,private,Nội tổng quát
-phongxetnghiem_2,Phòng xét nghiệm Nội tim mạch,private,Nội tim mạch
-phongxetnghiem_3,Phòng xét nghiệm Nội tiết,private,Nội tiết
-phongxetnghiem_4,Phòng xét nghiệm Tiêu hóa,private,Tiêu hóa
-phongxetnghiem_5,Phòng xét nghiệm Thần kinh,private,Thần kinh
-phongxetnghiem_6,Phòng xét nghiệm Hô hấp,private,Hô hấp
-phongxetnghiem_7,Phòng xét nghiệm Chấn thương chỉnh hình,private,Chấn thương chỉnh hình
-phongxetnghiem_8,Phòng xét nghiệm Da liễu,private,Da liễu
-phongxetnghiem_9,Phòng xét nghiệm Nhi khoa,private,Nhi khoa
-phongxetnghiem_10,Phòng xét nghiệm Sản phụ khoa,private,Sản phụ khoa
+PKHAM001,Phòng khám Nội tổng quát,public,Nội tổng quát
+PKHAM002,Phòng khám Nội tim mạch,public,Nội tim mạch
+PKHAM003,Phòng khám Nội tiết,public,Nội tiết
+PKHAM004,Phòng khám Tiêu hóa,public,Tiêu hóa
+PKHAM005,Phòng khám Thần kinh,public,Thần kinh
+PKHAM006,Phòng khám Hô hấp,public,Hô hấp
+PKHAM007,Phòng khám Chấn thương chỉnh hình,public,Chấn thương chỉnh hình
+PKHAM008,Phòng khám Da liễu,public,Da liễu
+PKHAM009,Phòng khám Nhi khoa,public,Nhi khoa
+PKHAM010,Phòng khám Sản phụ khoa,public,Sản phụ khoa
+PKHAM011,Phòng xét nghiệm Nội tổng quát,private,Nội tổng quát
+PKHAM012,Phòng xét nghiệm Nội tim mạch,private,Nội tim mạch
+PKHAM013,Phòng xét nghiệm Nội tiết,private,Nội tiết
+PKHAM014,Phòng xét nghiệm Tiêu hóa,private,Tiêu hóa
+PKHAM015,Phòng xét nghiệm Thần kinh,private,Thần kinh
+PKHAM016,Phòng xét nghiệm Hô hấp,private,Hô hấp
+PKHAM017,Phòng xét nghiệm Chấn thương chỉnh hình,private,Chấn thương chỉnh hình
+PKHAM018,Phòng xét nghiệm Da liễu,private,Da liễu
+PKHAM019,Phòng xét nghiệm Nhi khoa,private,Nhi khoa
+PKHAM020,Phòng xét nghiệm Sản phụ khoa,private,Sản phụ khoa

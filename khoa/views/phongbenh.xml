@@ -2,8 +2,8 @@
 <odoo>
     <data>
         <record id="phongbenh_information_form_view" model="ir.ui.view">            <!--view phong benh -->
-            <field name="name">Phòng Bệnh Information Action</field>
-            <field name="model">phongbenh.information</field>
+            <field name="name">Phòng Bệnh View</field>
+            <field name="model">benhvien.phongbenh</field>
             <field name="arch" type="xml">
                 <list>
                     <field name="name"/>

@@ -2,7 +2,7 @@
 from odoo import api, fields, models
 
 class PhongbenhInformation(models.Model):
-    _name = "phongbenh.information"
+    _name = "benhvien.phongbenh"
     _description = "PhongBenh Management"
 
     name = fields.Char(string="Tên Phòng Bệnh", required=True)

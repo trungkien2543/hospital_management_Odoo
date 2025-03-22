@@ -2,11 +2,11 @@
 from odoo import api, fields, models
 
 class GiuongbenhInformation(models.Model):
-    _name = "giuongbenh.information"
+    _name = "benhvien.giuongbenh"
     _description = "Giuongbenh Management"
 
     name = fields.Char(string="Số thứ tự giường", required=True)
-    code_phong = fields.Many2one("phongbenh.information", string="Phòng bệnh")
+    code_phong = fields.Many2one("benhvien.phongbenh", string="Phòng bệnh")
     type = fields.Selection([('private','VIP'),('public','Thường')], default='public', string='Loại giường')
     status = fields.Selection([
         ('free', 'Không sử dụng'),

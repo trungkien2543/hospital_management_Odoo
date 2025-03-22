@@ -5,9 +5,9 @@ class Sudunggiuongbenh(models.Model):
     _name = "benhvien.sudunggiuongbenh"
     _description = "SudungGiuongbenh Management"
 
-    code_phong = fields.Many2one("phongbenh.information", string="Phòng Bệnh", required=True)
+    code_phong = fields.Many2one("benhvien.phongbenh", string="Phòng Bệnh", required=True)
     code_giuong = fields.Many2one(
-        "giuongbenh.information",
+        "benhvien.giuongbenh",
         string="Số Giường",
         domain="[('code_phong', '=', code_phong)]"  # Chỉ hiển thị giường của phòng đã chọn
     )
