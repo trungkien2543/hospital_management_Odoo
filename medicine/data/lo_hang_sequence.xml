@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="seq_lo_hang" model="ir.sequence">
+        <field name="name">Mã Lô Hàng</field>
+        <field name="code">benhvien.lo_hang</field>
+        <field name="prefix"></field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

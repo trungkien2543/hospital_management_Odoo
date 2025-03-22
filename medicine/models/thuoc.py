@@ -1,11 +1,13 @@
 from odoo import fields, models, api
+from odoo.api import readonly
+
 
 class Thuoc(models.Model):
     _name = "benhvien.thuoc"
     _description = "Medicine Manage"
     _rec_name = "ten_thuoc"
 
-    ma_thuoc = fields.Char(string="Mã thuốc", required=True, copy=False, readonly=True, default="MED0001")
+    ma_thuoc = fields.Char(string="Mã thuốc", required=True, copy=False, readonly=True,default="MED0001")
     ten_thuoc = fields.Text(string="Tên thuốc", required=True)  # TEXT NOT NULL
     nhom_thuoc = fields.Text(string="Nhóm thuốc", required=True)  # TEXT NOT NULL
     dang_bao_che = fields.Text(string="Dạng bào chế", required=True)  # TEXT NOT NULL
@@ -15,13 +17,13 @@ class Thuoc(models.Model):
     tac_dung_phu = fields.Text(string="Tác dụng phụ", required=True)  # TEXT NOT NULL
     don_vi_tinh = fields.Many2one("benhvien.don_vi_tinh",string="Đơn vị tính", required=True)  # INTEGER NOT NULL
     ghi_chu = fields.Text(string="Ghi chú", required=True)  # TEXT NOT NULL
-    so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True, default=0)  # INTEGER NOT NULL
+    so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True,readonly=True, default=0)  # INTEGER NOT NULL
     active = fields.Boolean(string="Active", default=True)
     state = fields.Selection([
         ('available', 'Còn hàng'),
         ('low_stock', 'Sắp hết hàng'),
         ('out_of_stock', 'Hết hàng')
-    ], string="Trạng thái", required=True, copy=False, default='available')
+    ], string="Trạng thái", required=True, copy=False, readonly=True,default='out_of_stock',compute="_compute_state")
 
     tuongtacthuoc_ids = fields.One2many("benhvien.tuong_tac_thuoc","ma_thuoc_1",string="Tương tác thuốc")
 
@@ -47,3 +49,16 @@ class Thuoc(models.Model):
 
         # Gọi phương thức create gốc để tạo bản ghi trong database
         return super(Thuoc, self).create(vals_list)
+
+    @api.depends("so_luong_ton_kho")
+    def _compute_state(self):
+        """
+        Hàm tính toán trạng thái thuốc dựa trên số lượng tồn kho.
+        """
+        for record in self:
+            if record.so_luong_ton_kho <= 0:
+                record.state = 'out_of_stock'  # Hết hàng
+            elif record.so_luong_ton_kho < 10:
+                record.state = 'low_stock'  # Sắp hết hàng
+            else:
+                record.state = 'available'  # Còn hàng

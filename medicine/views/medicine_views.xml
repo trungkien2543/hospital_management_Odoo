@@ -90,7 +90,7 @@
                             </field>
                         </page>
                         <page string="Thông tin lô hàng">
-                            <field name="lohang_ids" readonly="1">
+                            <field name="lohang_ids" readonly="1" edit="false">
                                 <list>
                                     <field name="ma_lo_hang"/>
                                     <field name="han_su_dung"/>
