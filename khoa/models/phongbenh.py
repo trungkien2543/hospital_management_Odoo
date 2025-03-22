@@ -10,6 +10,12 @@ class PhongbenhInformation(models.Model):
     khoa = fields.Many2one('benhvien.khoa', string="Tên Khoa", required=True)
     bed_count = fields.Integer(string="Số Lượng Giường", default=1)
 
+    giuongbenh_ids = fields.One2many(
+        "benhvien.giuongbenh",
+        "code_phong",
+        string="Danh sách các giường trong phòng"
+    )
+
     @api.model
     def create(self, vals):
         if vals.get('ma_phong', "New") == "New":
@@ -20,7 +26,7 @@ class PhongbenhInformation(models.Model):
         return {
             'name': 'Danh sách Giường bệnh',
             'type': 'ir.actions.act_window',
-            'res_model': 'giuongbenh.information',
+            'res_model': 'benhvien.giuongbenh',
             'view_mode': 'list,form',
             'domain': [('code_phong', '=', self.id)],  # Chỉ hiển thị giường thuộc phòng này
             'target': 'current'

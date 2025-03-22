@@ -9,6 +9,18 @@ class Khoa(models.Model):
     name = fields.Char(string="Tên khoa")
     description = fields.Text(string="Mô tả khoa")
 
+    phongkham_ids = fields.One2many(
+        "benhvien.phongkham",
+        "khoa",
+        string="Danh sách phòng khám"
+    )
+
+    phongbenh_ids = fields.One2many(
+        "benhvien.phongbenh",
+        "khoa",
+        string="Danh sách phòng bệnh"
+    )
+
     @api.model
     def create(self, vals):
         if vals.get('ma_khoa', "New") == "New":
