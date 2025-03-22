@@ -10,6 +10,11 @@ class PhongkhamInformation(models.Model):
     type = fields.Selection([('private','Xét nghiệm'),('public','Phòng khám')], default='public', string='Loại phòng khám')
     khoa = fields.Many2one("benhvien.khoa", string="Khoa", required=True)
 
+    sudungphong_ids = fields.One2many(
+        "benhvien.sudungphongkham",
+        "name",
+        string="Lịch sử sử dụng phòng"
+    )
 
     @api.model
     def create(self, vals):

@@ -10,7 +10,6 @@
                     <field name="name"/>
                     <field name="khoa"/>
                     <field name="bed_count"/>
-                    <button name="action_xem_ds_giuong" type="object" string="Xem Giường" class="oe_highlight"/>
                 </list>
             </field>
         </record>

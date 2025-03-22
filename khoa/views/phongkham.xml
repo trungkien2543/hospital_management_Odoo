@@ -11,9 +11,6 @@
                     <field name="name"/>
                     <field name="type"/>
                     <field name="khoa"/>
-                    <button name="action_xem_phong" type="object" string="Lịch sử và chỉnh sửa Sử dụng Phòng khám" class="oe_highlight"/>
-                    <button name="action_tao_phong" type="object" string="Thêm sử dụng Phòng khám mới" class="oe_highlight"/>
-
                 </list>
             </field>
         </record>
