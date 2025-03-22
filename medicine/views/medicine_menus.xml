@@ -8,7 +8,8 @@
         </menuitem>
 
         <menuitem id="pharmacy_stock_menu" name="Kho dược phẩm">
-            <menuitem id="menu_lo_hang"  action="action_lo_hang_list"/>
+             <!-- Menu -->
+            <menuitem id="menu_phieu_nhap" name="Phiếu Nhập Kho" action="action_phieu_nhap"/>
         </menuitem>
     </menuitem>
 

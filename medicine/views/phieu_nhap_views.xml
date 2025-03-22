@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_phieu_nhap_tree" model="ir.ui.view">
+        <field name="name">phieu.nhap.list</field>
+        <field name="model">benhvien.phieu_nhap</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="ma_phieu_nhap"/>
+                <field name="nha_cung_cap"/>
+                <field name="tong_tien"/>
+                <field name="hinh_thuc_thanh_toan"/>
+                <field name="trang_thai"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_phieu_nhap_form" model="ir.ui.view">
+        <field name="name">phieu.nhap.form</field>
+        <field name="model">benhvien.phieu_nhap</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_phieu_nhap" readonly="1"/>
+                            <field name="nha_cung_cap"/>
+                            <field name="hinh_thuc_thanh_toan"/>
+                        </group>
+                        <group>
+                            <field name="tong_tien" readonly="1"/>
+                            <field name="trang_thai"/>
+                            <field name="ghi_chu" widget="text"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lô Hàng Nhập Kho">
+                            <field name="lo_hang_ids">
+                                <list editable="bottom">
+                                    <field name="ma_lo_hang"/>
+                                    <field name="gia_nhap"/>
+                                    <field name="so_luong_ton_kho"/>
+                                    <field name="thuoc"/>
+                                    <field name="tinh_trang_chat_luong"/>
+                                    <field name="han_su_dung"/>
+                                    <field name="gia_ban" readonly="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
