@@ -1,0 +1,60 @@
+﻿id,name,code_phong,type,status
+giuongbenh_1_1,Giường 1,Phòng bệnh Nội tổng quát,public,free
+giuongbenh_1_2,Giường 2,Phòng bệnh Nội tổng quát,public,free
+giuongbenh_1_3,Giường 3,Phòng bệnh Nội tổng quát,public,free
+giuongbenh_1_4,Giường 4,Phòng bệnh Nội tổng quát,public,free
+giuongbenh_1_5,Giường 5,Phòng bệnh Nội tổng quát,public,free
+
+giuongbenh_2_1,Giường 1,Phòng bệnh Nội tim mạch,public,free
+giuongbenh_2_2,Giường 2,Phòng bệnh Nội tim mạch,public,free
+giuongbenh_2_3,Giường 3,Phòng bệnh Nội tim mạch,public,free
+giuongbenh_2_4,Giường 4,Phòng bệnh Nội tim mạch,public,free
+giuongbenh_2_5,Giường 5,Phòng bệnh Nội tim mạch,public,free
+
+giuongbenh_3_1,Giường 1,Phòng bệnh Nội tiết,public,free
+giuongbenh_3_2,Giường 2,Phòng bệnh Nội tiết,public,free
+giuongbenh_3_3,Giường 3,Phòng bệnh Nội tiết,public,free
+giuongbenh_3_4,Giường 4,Phòng bệnh Nội tiết,public,free
+giuongbenh_3_5,Giường 5,Phòng bệnh Nội tiết,public,free
+
+giuongbenh_4_1,Giường 1,Phòng bệnh Tiêu hóa,public,free
+giuongbenh_4_2,Giường 2,Phòng bệnh Tiêu hóa,public,free
+giuongbenh_4_3,Giường 3,Phòng bệnh Tiêu hóa,public,free
+giuongbenh_4_4,Giường 4,Phòng bệnh Tiêu hóa,public,free
+giuongbenh_4_5,Giường 5,Phòng bệnh Tiêu hóa,public,free
+
+giuongbenh_5_1,Giường 1,Phòng bệnh Thần kinh,public,free
+giuongbenh_5_2,Giường 2,Phòng bệnh Thần kinh,public,free
+giuongbenh_5_3,Giường 3,Phòng bệnh Thần kinh,public,free
+giuongbenh_5_4,Giường 4,Phòng bệnh Thần kinh,public,free
+giuongbenh_5_5,Giường 5,Phòng bệnh Thần kinh,public,free
+
+giuongbenh_6_1,Giường 1,Phòng bệnh Hô hấp,public,free
+giuongbenh_6_2,Giường 2,Phòng bệnh Hô hấp,public,free
+giuongbenh_6_3,Giường 3,Phòng bệnh Hô hấp,public,free
+giuongbenh_6_4,Giường 4,Phòng bệnh Hô hấp,public,free
+giuongbenh_6_5,Giường 5,Phòng bệnh Hô hấp,public,free
+
+giuongbenh_7_1,Giường 1,Phòng bệnh Chấn thương chỉnh hình,public,free
+giuongbenh_7_2,Giường 2,Phòng bệnh Chấn thương chỉnh hình,public,free
+giuongbenh_7_3,Giường 3,Phòng bệnh Chấn thương chỉnh hình,public,free
+giuongbenh_7_4,Giường 4,Phòng bệnh Chấn thương chỉnh hình,public,free
+giuongbenh_7_5,Giường 5,Phòng bệnh Chấn thương chỉnh hình,public,free
+
+giuongbenh_8_1,Giường 1,Phòng bệnh Da liễu,public,free
+giuongbenh_8_2,Giường 2,Phòng bệnh Da liễu,public,free
+giuongbenh_8_3,Giường 3,Phòng bệnh Da liễu,public,free
+giuongbenh_8_4,Giường 4,Phòng bệnh Da liễu,public,free
+giuongbenh_8_5,Giường 5,Phòng bệnh Da liễu,public,free
+
+giuongbenh_9_1,Giường 1,Phòng bệnh Nhi khoa,public,free
+giuongbenh_9_2,Giường 2,Phòng bệnh Nhi khoa,public,free
+giuongbenh_9_3,Giường 3,Phòng bệnh Nhi khoa,public,free
+giuongbenh_9_4,Giường 4,Phòng bệnh Nhi khoa,public,free
+giuongbenh_9_5,Giường 5,Phòng bệnh Nhi khoa,public,free
+
+giuongbenh_10_1,Giường 1,Phòng bệnh Sản phụ khoa,public,free
+giuongbenh_10_2,Giường 2,Phòng bệnh Sản phụ khoa,public,free
+giuongbenh_10_3,Giường 3,Phòng bệnh Sản phụ khoa,public,free
+giuongbenh_10_4,Giường 4,Phòng bệnh Sản phụ khoa,public,free
+giuongbenh_10_5,Giường 5,Phòng bệnh Sản phụ khoa,public,free

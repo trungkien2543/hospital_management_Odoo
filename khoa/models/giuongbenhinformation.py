@@ -10,9 +10,7 @@ class GiuongbenhInformation(models.Model):
     type = fields.Selection([('private','VIP'),('public','Thường')], default='public', string='Loại giường')
     status = fields.Selection([
         ('free', 'Không sử dụng'),
-        ('used', 'Sử dụng'),
-        ('maintenance', 'Bảo trì'),
-        ('broken', 'Hỏng')
+        ('used', 'Sử dụng')
     ], default='free', string='Trạng thái')
 
 
