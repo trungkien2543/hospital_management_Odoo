@@ -1,0 +1,32 @@
+<odoo>
+    <record id="view_my_experience_list" model="ir.ui.view">
+        <field name="name">my.experience.list</field>
+        <field name="model">my.experience</field>
+        <field name="arch" type="xml">
+            <list string="Experiences">
+                <field name="title"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="employee_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_my_experience_form" model="ir.ui.view">
+        <field name="name">my.experience.form</field>
+        <field name="model">my.experience</field>
+        <field name="arch" type="xml">
+            <form string="Experience">
+                <sheet>
+                    <group>
+                        <field name="title"/>
+                        <field name="description"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="employee_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
