@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="seq_medicine_code" model="ir.sequence">
+    <record id="phongkham_code_incre" model="ir.sequence">
         <field name="name">Phòng khám Code</field>
         <field name="code">benhvien.phongkham</field>
         <field name="prefix">PKHAM</field>  <!-- Tiền tố (có thể thay đổi) -->

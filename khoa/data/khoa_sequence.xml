@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="seq_medicine_code" model="ir.sequence">
+    <record id="khoa_code_incre" model="ir.sequence">
         <field name="name">Khoa Code</field>
         <field name="code">benhvien.khoa</field>
         <field name="prefix">KHOA</field>  <!-- Tiền tố (có thể thay đổi) -->

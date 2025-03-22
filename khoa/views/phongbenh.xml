@@ -6,6 +6,7 @@
             <field name="model">benhvien.phongbenh</field>
             <field name="arch" type="xml">
                 <list>
+                    <field name="ma_phong"/>
                     <field name="name"/>
                     <field name="khoa"/>
                     <field name="bed_count"/>
