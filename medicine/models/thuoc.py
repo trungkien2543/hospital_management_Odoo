@@ -33,16 +33,17 @@ class Thuoc(models.Model):
         ('check_so_luong_ton_kho', 'CHECK(so_luong_ton_kho >= 0)', 'Số lượng tồn kho không thể âm!')
     ]
 
-    @api.model
-    def create(self, vals):
+    @api.model_create_multi
+    def create(self, vals_list):
         """
         Ghi đè phương thức create để tự động tạo mã thuốc (ma_thuoc) khi thêm mới bản ghi.
         """
 
-        # Kiểm tra nếu 'ma_thuoc' không có trong 'vals' hoặc giá trị là 'New'
-        if vals.get('ma_thuoc', 'MED0001') == 'MED0001':
-            # Lấy số tiếp theo từ sequence 'benhvien.medicine' để tạo mã thuốc
-            vals['ma_thuoc'] = self.env['ir.sequence'].next_by_code('benhvien.thuoc') or 'MED0001'
+        for vals in vals_list:
+            # Kiểm tra nếu 'ma_thuoc' không có trong 'vals' hoặc giá trị là 'MED0001'
+            if 'ma_thuoc' not in vals or vals['ma_thuoc'] == 'MED0001':
+                # Lấy số tiếp theo từ sequence 'benhvien.thuoc' để tạo mã thuốc
+                vals['ma_thuoc'] = self.env['ir.sequence'].next_by_code('benhvien.thuoc') or 'MED0001'
 
         # Gọi phương thức create gốc để tạo bản ghi trong database
-        return super(Thuoc, self).create(vals)
+        return super(Thuoc, self).create(vals_list)

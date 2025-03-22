@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="seq_phieu_nhap_code" model="ir.sequence">
-        <field name="name">Phieu Nhap Code</field>
+    <record id="seq_phieu_nhap" model="ir.sequence">
+        <field name="name">Mã Phiếu Nhập</field>
         <field name="code">benhvien.phieu_nhap</field>
-        <field name="prefix">PN</field>  <!-- Tiền tố (có thể thay đổi) -->
-        <field name="padding">4</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
-        <field name="number_next">1</field>
-        <field name="number_increment">1</field>
+        <field name="prefix">PN</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
     </record>
 </odoo>
