@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
-    <record id="lichhen_action" model="ir.actions.act_window">
-        <field name="name">Đặt lịch hẹn</field>
-        <field name="res_model">benhvien.lichhen</field>
-        <field name="view_mode">list,form</field>
-    </record>
-</odoo>
