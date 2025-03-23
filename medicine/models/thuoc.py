@@ -38,7 +38,7 @@ class Thuoc(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         """
-        Ghi đè phương thức create để tự động tạo mã thuốc (ma_thuoc) khi thêm mới bản ghi.
+        Ghi đè phương thức create để tự động tạo mã thuốc (ma_thuoc) khi thêm mới bản ghi. a
         """
 
         for vals in vals_list:
