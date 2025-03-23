@@ -21,3 +21,4 @@ class MyEmployee(models.Model):
 
     experience_ids = fields.One2many('my.experience', 'employee_id', string="Kinh nghiệm")
     skill_ids = fields.One2many('my.skill', 'employee_id', string="Kỹ năng")
+    khoa = fields.Many2one('benhvien.khoa', string="Khoa")

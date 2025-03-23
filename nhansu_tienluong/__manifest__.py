@@ -1,7 +1,7 @@
 {
     'name': 'Nhân sự & Tiền lương',
     'version': '1.0',
-    'depends': ['base'],
+    'depends': ['khoa'],
     'author': 'Tran khanh duy',
     'category': 'Hopital',
     'summary': 'Quản lý phụ cấp và tiền lương nhân sự',
