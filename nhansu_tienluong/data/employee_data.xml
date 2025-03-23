@@ -1,0 +1,94 @@
+<odoo>
+    <!-- Dữ liệu mẫu cho nhân sự -->
+    <record id="employee_1" model="my.employee">
+        <field name="employee_code">EMP001</field>
+        <field name="name">Nguyễn Văn A</field>
+        <field name="job_position">Lập trình viên</field>
+        <field name="address">Hà Nội</field>
+        <field name="birth_date">1995-06-15</field>
+        <field name="gender">male</field>
+        <field name="cccd">123456789012</field>
+        <field name="email">nguyenvana@example.com</field>
+        <field name="phone">0901234567</field>
+    </record>
+
+    <record id="employee_2" model="my.employee">
+        <field name="employee_code">EMP002</field>
+        <field name="name">Trần Thị B</field>
+        <field name="job_position">Nhân viên kinh doanh</field>
+        <field name="address">TP. Hồ Chí Minh</field>
+        <field name="birth_date">1998-03-20</field>
+        <field name="gender">female</field>
+        <field name="cccd">987654321098</field>
+        <field name="email">tranthib@example.com</field>
+        <field name="phone">0987654321</field>
+        <field name="manager_id" ref="employee_1"/>
+    </record>
+
+    <!-- Dữ liệu mẫu cho kinh nghiệm -->
+    <record id="experience_1" model="my.experience">
+        <field name="experience_code">1</field>
+        <field name="title">Phát triển ứng dụng web</field>
+        <field name="description">Tham gia phát triển hệ thống quản lý bán hàng</field>
+        <field name="start_date">2020-01-01 08:00:00</field>
+        <field name="end_date">2022-12-31 17:00:00</field>
+        <field name="employee_id" ref="employee_1"/>
+    </record>
+
+    <record id="experience_2" model="my.experience">
+        <field name="experience_code">2</field>
+        <field name="title">Tư vấn khách hàng</field>
+        <field name="description">Hỗ trợ khách hàng trong quá trình sử dụng sản phẩm</field>
+        <field name="start_date">2021-06-01 09:00:00</field>
+        <field name="end_date">2023-06-01 18:00:00</field>
+        <field name="employee_id" ref="employee_2"/>
+    </record>
+
+    <!-- Dữ liệu mẫu cho kỹ năng -->
+    <record id="skill_1" model="my.skill">
+        <field name="skill_code">1</field>
+        <field name="skill_type">Lập trình</field>
+        <field name="title">Python</field>
+        <field name="level">5</field>
+        <field name="employee_id" ref="employee_1"/>
+    </record>
+
+    <record id="skill_2" model="my.skill">
+        <field name="skill_code">2</field>
+        <field name="skill_type">Giao tiếp</field>
+        <field name="title">Tư vấn khách hàng</field>
+        <field name="level">4</field>
+        <field name="employee_id" ref="employee_2"/>
+    </record>
+
+
+    <record id="allowance_travel" model="hr.allowance">
+        <field name="code">A001</field>
+        <field name="name">Phụ cấp đi lại</field>
+        <field name="amount">500000</field>
+    </record>
+
+    <record id="allowance_food" model="hr.allowance">
+        <field name="code">A002</field>
+        <field name="name">Phụ cấp ăn uống</field>
+        <field name="amount">300000</field>
+    </record>
+
+    <record id="allowance_detail_emp1" model="hr.allowance.detail">
+        <field name="employee_id" ref="employee_1"/>
+        <field name="allowance_id" ref="allowance_travel"/>
+    </record>
+
+    <record id="salary_emp1" model="hr.salary">
+        <field name="code">S001</field>
+        <field name="employee_id" ref="employee_1"/>
+        <field name="month_year">2025-03-01</field>
+        <field name="working_days">22</field>
+        <field name="overtime_hours">10</field>
+        <field name="base_salary">8000000</field>
+        <field name="salary_coefficient">1.2</field>
+        <field name="allowance">500000</field>
+        <field name="tax_income">1000000</field>
+        <field name="note">Lương tháng 3/2025</field>
+    </record>
+</odoo>
