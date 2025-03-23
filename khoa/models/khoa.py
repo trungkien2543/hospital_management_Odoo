@@ -9,10 +9,12 @@ class Khoa(models.Model):
     name = fields.Char(string="Tên khoa")
     description = fields.Text(string="Mô tả khoa")
 
+    # nhansu_ids = fields.One2many("benhvien.nhansu", "khoa", string="Danh sách nhân viên")
+
     phongkham_ids = fields.One2many(
         "benhvien.phongkham",
         "khoa",
-        string="Danh sách phòng khám"
+        string="Danh sách phòng khám và các phòng chức năng"
     )
 
     phongbenh_ids = fields.One2many(
@@ -20,6 +22,28 @@ class Khoa(models.Model):
         "khoa",
         string="Danh sách phòng bệnh"
     )
+
+    so_phong_kham_xet_nghiem = fields.Integer(
+        string="Số phòng khám",
+        compute="_compute_so_phong_kham_xet_nghiem",
+        store=True
+    )
+
+    so_phong_benh = fields.Integer(
+        string="Số phòng bệnh",
+        compute="_compute_so_phong_benh",
+        store=True
+    )
+
+    @api.depends("phongkham_ids")
+    def _compute_so_phong_kham_xet_nghiem(self):
+        for record in self:
+            record.so_phong_kham_xet_nghiem = len(record.phongkham_ids)
+
+    @api.depends("phongkham_ids", "phongbenh_ids")
+    def _compute_so_phong_benh(self):
+        for record in self:
+            record.so_phong_benh = len(record.phongbenh_ids)
 
     @api.model
     def create(self, vals):

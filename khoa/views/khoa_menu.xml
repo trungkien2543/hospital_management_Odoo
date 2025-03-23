@@ -6,6 +6,7 @@
 
             <menuitem id="qlphongkham_menu" name="Quản lý phòng khám">
                 <menuitem id="phongkham_menu"  action="action_phongkham_information"/>
+                <menuitem id="loaiphongkham_menu"  action="action_loaiphongkham"/>
                 <menuitem id="sudungphongkham" action="action_sudungphongkham"/>
             </menuitem>
 

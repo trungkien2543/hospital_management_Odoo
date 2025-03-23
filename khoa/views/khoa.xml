@@ -10,6 +10,8 @@
                     <field name="ma_khoa"/>
                     <field name="name"/>
                     <field name="description"/>
+                    <field name="so_phong_kham_xet_nghiem" width="150"/>
+                    <field name="so_phong_benh" width="150"/>
                 </list>
             </field>
         </record>
