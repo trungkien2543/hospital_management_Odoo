@@ -5,7 +5,7 @@
         Testing Purpuses.
     ''',
     'version': '18.0.1.0.0',
-    'category': 'Thong tin benh nhan',
+    'category': 'Healthcare',
     'license': 'LGPL-3',
     'author': 'Odooistic',
     'website': 'https://www.youtube.com/',
