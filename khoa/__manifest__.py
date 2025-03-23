@@ -13,6 +13,7 @@
         'views/khoa_menu.xml',
         'views/khoa.xml',
         'views/phongkham.xml',
+        'views/loaiphongkham.xml',
         'views/sudungphongkham.xml',
         'views/phongbenh.xml',
         'views/giuongbenh.xml',
@@ -22,6 +23,7 @@
         'data/phongkham_sequence.xml',
         'data/phongbenh_sequence.xml',
         'data/giuongbenh_sequence.xml',
+        'data/loaiphongkham_sequence.xml',
     ],
     'demo': [
     ],

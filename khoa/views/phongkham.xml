@@ -9,7 +9,7 @@
                 <list>
                     <field name="ma_phong"/>
                     <field name="name"/>
-                    <field name="type"/>
+                    <field name="loai_phong"/>
                     <field name="khoa"/>
                 </list>
             </field>
