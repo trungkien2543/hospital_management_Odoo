@@ -2,12 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Medicine Manage',
+    'name': 'Quan ly thuoc',
     'version': '1.0.0',
     'summary': 'Manage your stock and logistics activities',
     'website': '',
     'depends': [],
-    'category': 'Hopital',
+    'category': 'Healthcare',
     'sequence': 25,
     'demo': [
 
