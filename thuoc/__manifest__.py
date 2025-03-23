@@ -4,7 +4,7 @@
 {
     'name': 'Quan ly thuoc',
     'version': '1.0.0',
-    'summary': 'Manage your stock and logistics activities',
+    'summary': 'Manage your stock and logistics activities ',
     'website': '',
     'depends': [],
     'category': 'Healthcare',
