@@ -42,7 +42,6 @@
                                     <field name="thuoc"/>
                                     <field name="tinh_trang_chat_luong"/>
                                     <field name="han_su_dung"/>
-                                    <field name="gia_ban" readonly="1"/>
                                 </list>
                             </field>
                         </page>

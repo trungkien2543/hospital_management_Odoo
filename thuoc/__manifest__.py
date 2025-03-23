@@ -20,9 +20,7 @@
         'views/don_vi_tinh_views.xml',
         'views/tuong_tac_thuoc.xml',
         'views/phieu_nhap_views.xml',
-        'data/medicine_sequence.xml',
-        'data/phieu_nhap_sequence.xml',
-        'data/lo_hang_sequence.xml'
+        'data/sequence.xml'
     ],
     'installable': True,
     'application': True,
