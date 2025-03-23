@@ -1,0 +1,31 @@
+<odoo>
+    <record id="allowance_travel" model="hr.allowance">
+        <field name="code">A001</field>
+        <field name="name">Phụ cấp đi lại</field>
+        <field name="amount">500000</field>
+    </record>
+
+    <record id="allowance_food" model="hr.allowance">
+        <field name="code">A002</field>
+        <field name="name">Phụ cấp ăn uống</field>
+        <field name="amount">300000</field>
+    </record>
+
+    <record id="allowance_detail_emp1" model="hr.allowance.detail">
+        <field name="employee_id" ref="employee_1"/>
+        <field name="allowance_id" ref="allowance_travel"/>
+    </record>
+
+    <record id="salary_emp1" model="hr.salary">
+        <field name="code">S001</field>
+        <field name="employee_id" ref="employee_1"/>
+        <field name="month_year">2025-03-01</field>
+        <field name="working_days">22</field>
+        <field name="overtime_hours">10</field>
+        <field name="base_salary">8000000</field>
+        <field name="salary_coefficient">1.2</field>
+        <field name="allowance">500000</field>
+        <field name="tax_income">1000000</field>
+        <field name="note">Lương tháng 3/2025</field>
+    </record>
+</odoo>
