@@ -9,8 +9,8 @@
 
         <menuitem id="pharmacy_stock_menu" name="Kho dược phẩm">
              <!-- Menu -->
-            <menuitem id="menu_phieu_nhap" name="Phiếu Nhập Kho" action="action_phieu_nhap"/>
-            <menuitem id="menu_phieu_xuat" name="Phiếu Xuất Kho" action="action_phieu_xuat"/>
+            <menuitem id="pharmacy_stock_menu_phieu_nhap" action="action_phieu_nhap"/>
+            <menuitem id="pharmacy_stock_menu_phieu_xuat" action="action_phieu_xuat"/>
         </menuitem>
     </menuitem>
 

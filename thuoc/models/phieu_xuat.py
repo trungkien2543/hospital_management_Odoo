@@ -9,13 +9,15 @@ class PhieuXuatKho(models.Model):
     ngay_xuat = fields.Date(string="Ngày Xuất", required=True, default=fields.Date.today)
     tong_tien = fields.Float(string="Tổng Tiền", compute="_compute_tong_tien", store=True)
     ghi_chu = fields.Text(string="Ghi Chú")
-    hoa_don = fields.Many2one('account.move', string="Hóa Đơn")
 
-    @api.depends('hoa_don')
+
+    chi_tiet_xuat = fields.One2many("benhvien.chi_tiet_phieu_xuat", "ma_phieu", string="Chi Tiết Xuất")
+
+    @api.depends('chi_tiet_xuat.thanh_tien')
     def _compute_tong_tien(self):
+        """Tính tổng tiền dựa vào thành tiền của các chi tiết phiếu xuất."""
         for record in self:
-            record.tong_tien = record.hoa_don.amount_total if record.hoa_don else 0.0
-
+            record.tong_tien = sum(record.chi_tiet_xuat.mapped("thanh_tien"))
 
 
     @api.model_create_multi

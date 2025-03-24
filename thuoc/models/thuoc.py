@@ -18,7 +18,7 @@ class Thuoc(models.Model):
     don_vi_tinh = fields.Many2one("benhvien.don_vi_tinh",string="Đơn vị tính", required=True)  # INTEGER NOT NULL
     ghi_chu = fields.Text(string="Ghi chú", required=True)  # TEXT NOT NULL
     gia_ban = fields.Float(string="Giá Bán", compute="_compute_gia_ban", store=True)
-    so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True,readonly=True, default=0)  # INTEGER NOT NULL
+    so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True,readonly=True, default=0, compute='_compute_so_luong_ton_kho')  # INTEGER NOT NULL
     active = fields.Boolean(string="Active", default=True)
     state = fields.Selection([
         ('available', 'Còn hàng'),
@@ -72,3 +72,9 @@ class Thuoc(models.Model):
                 record.gia_ban = max(record.lohang_ids.mapped("gia_nhap"))
             else:
                 record.gia_ban = 0.0  # Nếu không có lô hàng, giá bán mặc định là 0
+
+    @api.depends("lohang_ids.so_luong_ton_kho")
+    def _compute_so_luong_ton_kho(self):
+        """Tính tổng số lượng tồn kho dựa trên số lượng tồn của các lô hàng."""
+        for record in self:
+            record.so_luong_ton_kho = sum(record.lohang_ids.mapped("so_luong_ton_kho"))

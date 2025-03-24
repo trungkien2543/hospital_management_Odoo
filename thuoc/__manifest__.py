@@ -20,6 +20,7 @@
         'views/don_vi_tinh_views.xml',
         'views/tuong_tac_thuoc.xml',
         'views/phieu_nhap_views.xml',
+        'views/phieu_xuat_views.xml',
         'data/sequence.xml'
     ],
     'installable': True,
