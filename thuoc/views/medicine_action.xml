@@ -30,4 +30,12 @@
     </record>
 
 
+    <!-- Action -->
+    <record id="action_don_thuoc" model="ir.actions.act_window">
+        <field name="name">Đơn thuốc</field>
+        <field name="res_model">benhvien.don_thuoc</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
 </odoo>

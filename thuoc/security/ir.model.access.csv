@@ -6,3 +6,5 @@ access_benhvien_lo_hang,access_benhvien_lo_hang,model_benhvien_lo_hang,base.grou
 access_benhvien_phieu_nhap,Phieu Nhap Kho,model_benhvien_phieu_nhap,base.group_user,1,1,1,1
 access_benhvien_phieu_xuat,Phieu Xuat Kho,model_benhvien_phieu_xuat,base.group_user,1,1,1,1
 access_benhvien_chi_tiet_phieu_xuat,Chi Tiet Phieu Xuat Kho,model_benhvien_chi_tiet_phieu_xuat,base.group_user,1,1,1,1
+access_benhvien_don_thuoc,Don Thuoc,model_benhvien_don_thuoc,base.group_user,1,1,1,1
+access_benhvien_chi_tiet_don_thuoc,Chi Tiet Don Thuoc,model_benhvien_chi_tiet_don_thuoc,base.group_user,1,1,1,1
