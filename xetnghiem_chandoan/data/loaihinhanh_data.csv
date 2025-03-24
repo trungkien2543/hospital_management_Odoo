@@ -1,11 +1,11 @@
 ﻿id,ma_loai,name,mo_ta
-loai_hinh_anh_1,HA001,X-quang phổi,Chụp X-quang để kiểm tra phổi và đường hô hấp.
-loai_hinh_anh_2,HA002,CT Scan đầu,Chụp cắt lớp vi tính vùng đầu để kiểm tra não.
-loai_hinh_anh_3,HA003,MRI cột sống,Chụp cộng hưởng từ để đánh giá cột sống.
-loai_hinh_anh_4,HA004,Siêu âm ổ bụng,Siêu âm kiểm tra các cơ quan trong ổ bụng.
-loai_hinh_anh_5,HA005,Nội soi dạ dày,Kiểm tra dạ dày bằng ống nội soi.
-loai_hinh_anh_6,HA006,Chụp mạch vành,Kiểm tra mạch vành của tim bằng tia X.
-loai_hinh_anh_7,HA007,Siêu âm tim,Kiểm tra cấu trúc và chức năng của tim.
-loai_hinh_anh_8,HA008,MRI khớp gối,Chụp cộng hưởng từ để đánh giá tổn thương khớp gối.
-loai_hinh_anh_9,HA009,X-quang xương,Chụp X-quang để kiểm tra xương và khớp.
-loai_hinh_anh_10,HA010,Chụp nhũ ảnh,Chụp X-quang tuyến vú để phát hiện ung thư vú.
+loai_hinh_anh_1,HA,X-quang phổi,Chụp X-quang để kiểm tra phổi và đường hô hấp.
+loai_hinh_anh_2,HA,CT Scan đầu,Chụp cắt lớp vi tính vùng đầu để kiểm tra não.
+loai_hinh_anh_3,HA,MRI cột sống,Chụp cộng hưởng từ để đánh giá cột sống.
+loai_hinh_anh_4,HA,Siêu âm ổ bụng,Siêu âm kiểm tra các cơ quan trong ổ bụng.
+loai_hinh_anh_5,HA,Nội soi dạ dày,Kiểm tra dạ dày bằng ống nội soi.
+loai_hinh_anh_6,HA,Chụp mạch vành,Kiểm tra mạch vành của tim bằng tia X.
+loai_hinh_anh_7,HA,Siêu âm tim,Kiểm tra cấu trúc và chức năng của tim.
+loai_hinh_anh_8,HA,MRI khớp gối,Chụp cộng hưởng từ để đánh giá tổn thương khớp gối.
+loai_hinh_anh_9,HA,X-quang xương,Chụp X-quang để kiểm tra xương và khớp.
+loai_hinh_anh_10,HA,Chụp nhũ ảnh,Chụp X-quang tuyến vú để phát hiện ung thư vú.

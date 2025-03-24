@@ -17,6 +17,7 @@
         'views/loaihinhanh.xml',
         'security/ir.model.access.csv',
         'data/loaixetnghiem_data.csv',
+        'data/sequence.xml',
     ],
     'demo': [
     ],
