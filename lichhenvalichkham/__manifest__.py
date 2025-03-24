@@ -18,6 +18,9 @@
         'views/datlichhen_action.xml',
         'views/datlichhen_menu.xml',
         'security/ir.model.access.csv',
+        'views/lichkham_view.xml',
+        'views/lichkham_action.xml',
+        'views/lichkham_menu.xml',
     ],
 
     'installable': True,

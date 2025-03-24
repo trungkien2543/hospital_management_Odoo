@@ -10,7 +10,8 @@
                 <field name="phone"/>
                 <field name="email"/>
                 <field name="bac_si"/>
-                <field name="appointment_date"/>
+                <field name="ngay_kham"/>
+                <field name="khung_gio"/>
                 <field name="trang_thai"/>
             </list>
         </field>
@@ -31,12 +32,14 @@
                             <field name="bac_si"/>
                         </group>
                         <group>
-                            <field name="appointment_date"/>
+                            <field name="ngay_kham"/>
+                            <field name="khung_gio"/>
                             <field name="ngay_dat_lich" readonly="1"/>
                             <field name="ly_do_kham" widget="text"/>
                             <field name="trang_thai"/>
                         </group>
                     </group>
+
                 </sheet>
             </form>
         </field>
