@@ -6,7 +6,7 @@ class PhieuXuatKho(models.Model):
     _description = 'Phiếu Xuất Kho'
 
     ma_phieu_xuat = fields.Char(string="Mã Phiếu Xuất", required=True, copy=False, readonly=True, default="New")
-    ngay_xuat = fields.Date(string="Ngày Xuất", required=True, default=fields.Date.today)
+    ngay_xuat = fields.Date(string="Ngày Xuất", required=True, default=fields.Date.today,readonly=True)
     tong_tien = fields.Float(string="Tổng Tiền", compute="_compute_tong_tien", store=True)
     ghi_chu = fields.Text(string="Ghi Chú")
 

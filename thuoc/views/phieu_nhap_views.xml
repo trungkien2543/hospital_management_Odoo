@@ -9,7 +9,7 @@
                 <field name="nha_cung_cap"/>
                 <field name="tong_tien"/>
                 <field name="hinh_thuc_thanh_toan"/>
-                <field name="trang_thai"/>
+                <field name="ngay_nhap"/>
             </list>
         </field>
     </record>
@@ -28,8 +28,8 @@
                         </group>
                         <group>
                             <field name="tong_tien" readonly="1"/>
-                            <field name="trang_thai"/>
                             <field name="ghi_chu" widget="text"/>
+                            <field name="ngay_nhap"/>
                         </group>
                     </group>
                     <notebook>

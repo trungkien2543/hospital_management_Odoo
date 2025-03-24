@@ -17,7 +17,7 @@ class Thuoc(models.Model):
     tac_dung_phu = fields.Text(string="Tác dụng phụ", required=True)  # TEXT NOT NULL
     don_vi_tinh = fields.Many2one("benhvien.don_vi_tinh",string="Đơn vị tính", required=True)  # INTEGER NOT NULL
     ghi_chu = fields.Text(string="Ghi chú", required=True)  # TEXT NOT NULL
-    gia_ban = fields.Float(string="Giá Bán", compute="_compute_gia_ban", store=True)
+    gia_ban = fields.Float(string="Giá Bán", compute="_compute_gia_ban", store=True,readonly=True)
     so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True,readonly=True, default=0, compute='_compute_so_luong_ton_kho')  # INTEGER NOT NULL
     active = fields.Boolean(string="Active", default=True)
     state = fields.Selection([

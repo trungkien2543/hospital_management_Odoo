@@ -1,4 +1,6 @@
 from odoo import models, fields, api
+from odoo.api import readonly
+
 
 class PhieuNhap(models.Model):
     _name = "benhvien.phieu_nhap"
@@ -11,16 +13,11 @@ class PhieuNhap(models.Model):
         ('chuyen_khoan', 'Chuyển khoản'),
         ('the_tin_dung', 'Thẻ tín dụng')
     ], string="Hình Thức Thanh Toán", required=True)
+    ngay_nhap = fields.Date(string="Ngày nhập", required=True, default=fields.Date.today,readonly=True)
     ghi_chu = fields.Text(string="Ghi Chú")
     nha_cung_cap = fields.Many2one('res.partner', string="Nhà Cung Cấp", required=True)
     lo_hang_ids = fields.One2many('benhvien.lo_hang', 'phieu_nhap', string="Lô Hàng Nhập Kho")
 
-    trang_thai = fields.Selection([
-        ('draft', 'Nháp'),
-        ('confirmed', 'Đã Xác Nhận'),
-        ('done', 'Hoàn Thành'),
-        ('cancel', 'Hủy')
-    ], string="Trạng Thái", default="draft", required=True)
 
     @api.depends('lo_hang_ids.gia_nhap', 'lo_hang_ids.so_luong_ton_kho')
     def _compute_tong_tien(self):

@@ -78,6 +78,7 @@
                                     <field name="don_vi_tinh"/>
                                     <field name="active"/>
                                     <field name="ghi_chu"/>
+                                    <field name="gia_ban"/>
                                 </group>
                             </group>
                         </page>
