@@ -13,9 +13,8 @@
                     <field name="ma_bac_si_chup"/>
                     <field name="name"/>
                     <field name="thoi_gian_chup"/>
-                    <field name="thoi_gian_ket_thuc"/>
                     <field name="trang_thai"/>
-                    <field name="duong_dan_anh"/>
+                    <field name="hinh_anh" widget="image" width="150"/>
                 </list>
             </field>
         </record>

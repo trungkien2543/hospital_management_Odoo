@@ -20,10 +20,6 @@
         'views/sudunggiuongbenh.xml',
         'security/ir.model.access.csv',
         'data/khoa_sequence.xml',
-        'data/phongkham_sequence.xml',
-        'data/phongbenh_sequence.xml',
-        'data/giuongbenh_sequence.xml',
-        'data/loaiphongkham_sequence.xml',
     ],
     'demo': [
     ],
