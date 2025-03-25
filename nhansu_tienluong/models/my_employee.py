@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class MyEmployee(models.Model):
-    _name = 'my.employee'
+    _name = 'benhvien.nhansu'
     _description = 'Employee'
 
     employee_code = fields.Char(string="Mã nhân sự", required=True)  # varchar
@@ -17,8 +17,8 @@ class MyEmployee(models.Model):
     email = fields.Char(string="Email")  # varchar
     phone = fields.Char(string="Số điện thoại")  # varchar
     image = fields.Image(string="Ảnh")  # nvarchar
-    manager_id = fields.Many2one('my.employee', string="Quản lý")  # Many2one tham chiếu nhân viên khác
+    manager_id = fields.Many2one('benhvien.nhansu', string="Quản lý")  # Many2one tham chiếu nhân viên khác
 
-    experience_ids = fields.One2many('my.experience', 'employee_id', string="Kinh nghiệm")
-    skill_ids = fields.One2many('my.skill', 'employee_id', string="Kỹ năng")
+    experience_ids = fields.One2many('benhvien.nhansu.kinhnghiem', 'employee_id', string="Kinh nghiệm")
+    skill_ids = fields.One2many('benhvien.nhansu.kynang', 'employee_id', string="Kỹ năng")
     khoa = fields.Many2one('benhvien.khoa', string="Khoa")
