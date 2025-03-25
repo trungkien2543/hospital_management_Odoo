@@ -13,7 +13,6 @@
             <menuitem id="pharmacy_stock_menu_phieu_xuat" action="action_phieu_xuat"/>
         </menuitem>
 
-        <menuitem id="pharmacy_prescription" name="Kê đơn thuốc" action="action_don_thuoc"></menuitem>
 
     </menuitem>
 

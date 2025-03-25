@@ -1,7 +1,5 @@
-from email.policy import default
-
 from odoo import models, fields, api
-from odoo.api import readonly
+
 
 
 class DonThuoc(models.Model):

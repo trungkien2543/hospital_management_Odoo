@@ -7,7 +7,7 @@ class PhieuNhap(models.Model):
     _description = 'Phiếu Nhập Kho Dược Phẩm'
 
     ma_phieu_nhap = fields.Char(string="Mã Phiếu Nhập", required=True, copy=False, readonly=True, default='New')
-    tong_tien = fields.Float(string="Tổng Tiền", compute="_compute_tong_tien", store=True)
+    tong_tien = fields.Monetary(string="Tổng Tiền", compute="_compute_tong_tien", store=True, currency_field="currency_id")
     hinh_thuc_thanh_toan = fields.Selection([
         ('tien_mat', 'Tiền mặt'),
         ('chuyen_khoan', 'Chuyển khoản'),
@@ -18,7 +18,14 @@ class PhieuNhap(models.Model):
     nha_cung_cap = fields.Many2one('res.partner', string="Nhà Cung Cấp", required=True)
     lo_hang_ids = fields.One2many('benhvien.lo_hang', 'phieu_nhap', string="Lô Hàng Nhập Kho")
 
-
+    currency_id = fields.Many2one(
+        "res.currency",
+        string="Loại tiền tệ",
+        default=lambda self: self.env.company.currency_id,
+        readonly=True,
+        store=False  # Không lưu vào database
+    )
+    
     @api.depends('lo_hang_ids.gia_nhap', 'lo_hang_ids.so_luong_ton_kho')
     def _compute_tong_tien(self):
         for record in self:

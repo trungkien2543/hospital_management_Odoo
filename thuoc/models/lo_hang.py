@@ -9,7 +9,7 @@ class LoHang(models.Model):
     ma_lo_hang = fields.Char(string="Mã Lô Hàng", required=True, copy=False, readonly=True, default="New")
     han_su_dung = fields.Date(string="Hạn Sử Dụng", required=True)
     ngay_nhap = fields.Date(string="Ngày Nhập", required=True, default=fields.Date.today)
-    gia_nhap = fields.Float(string="Giá Nhập", required=True)
+    gia_nhap = fields.Monetary(string="Giá Nhập", required=True,currency_field="currency_id")
     so_luong_ton_kho = fields.Integer(string="Số lượng", required=True, default=0)
     trang_thai = fields.Selection([
         ('su_dung', 'Sử dụng'),
@@ -19,6 +19,14 @@ class LoHang(models.Model):
 
     thuoc = fields.Many2one("benhvien.thuoc", string="Thuốc", required=True)
     phieu_nhap = fields.Many2one("benhvien.phieu_nhap", string="Phiếu Nhập", required=True)
+
+    currency_id = fields.Many2one(
+        "res.currency",
+        string="Loại tiền tệ",
+        default=lambda self: self.env.company.currency_id,
+        readonly=True,
+        store=False  # Không lưu vào database
+    )
 
     _sql_constraints = [
         ('unique_ma_lo_hang', 'unique(ma_lo_hang)', 'Mã lô hàng phải là duy nhất!')

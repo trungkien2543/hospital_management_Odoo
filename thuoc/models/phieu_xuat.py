@@ -7,9 +7,16 @@ class PhieuXuatKho(models.Model):
 
     ma_phieu_xuat = fields.Char(string="Mã Phiếu Xuất", required=True, copy=False, readonly=True, default="New")
     ngay_xuat = fields.Date(string="Ngày Xuất", required=True, default=fields.Date.today,readonly=True)
-    tong_tien = fields.Float(string="Tổng Tiền", compute="_compute_tong_tien", store=True)
+    tong_tien = fields.Monetary(string="Tổng Tiền", compute="_compute_tong_tien", store=True, currency_field="currency_id")
     ghi_chu = fields.Text(string="Ghi Chú")
 
+    currency_id = fields.Many2one(
+        "res.currency",
+        string="Loại tiền tệ",
+        default=lambda self: self.env.company.currency_id,
+        readonly=True,
+        store=False  # Không lưu vào database
+    )
 
     chi_tiet_xuat = fields.One2many("benhvien.chi_tiet_phieu_xuat", "ma_phieu", string="Chi Tiết Xuất")
 

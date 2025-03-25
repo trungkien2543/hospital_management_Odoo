@@ -9,9 +9,17 @@ class ChiTietPhieuXuat(models.Model):
     ma_phieu = fields.Many2one("benhvien.phieu_xuat", string="Phiếu Xuất", required=True, ondelete="cascade")
     thuoc = fields.Many2one("benhvien.thuoc", string="Thuốc", required=True)
     so_luong = fields.Integer(string="Số Lượng", required=True, default=1)
-    don_gia = fields.Float(string="Đơn Giá", compute="_compute_don_gia", store=True)
-    thanh_tien = fields.Float(string="Thành Tiền", compute="_compute_thanh_tien", store=True)
+    don_gia = fields.Monetary(string="Đơn Giá", compute="_compute_don_gia", store=True,currency_field="currency_id")
+    thanh_tien = fields.Monetary(string="Thành Tiền", compute="_compute_thanh_tien", store=True,currency_field="currency_id")
     ma_lo_hang = fields.Many2one("benhvien.lo_hang", string="Lô Hàng", readonly=True)
+
+    currency_id = fields.Many2one(
+        "res.currency",
+        string="Loại tiền tệ",
+        default=lambda self: self.env.company.currency_id,
+        readonly=True,
+        store=False  # Không lưu vào database
+    )
 
     @api.depends("thuoc")
     def _compute_don_gia(self):

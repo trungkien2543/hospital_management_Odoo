@@ -15,7 +15,7 @@
                         <field name="dan_do"/>
                     </group>
                     <notebook>
-                        <page string="Lô Hàng Nhập Kho">
+                        <page string="Chi tiết đơn thuốc">
                             <field name="chi_tiet_don_thuoc_ids">
                                 <list editable="bottom">
                                     <field name="ma_thuoc"/>

@@ -1,4 +1,5 @@
 from odoo import models, fields,api
+from odoo.exceptions import UserError
 
 
 class ChiTietDonThuoc(models.Model):
@@ -16,3 +17,28 @@ class ChiTietDonThuoc(models.Model):
         store=True,
         readonly=True
     )
+
+    # @api.constrains là một decorator trong Odoo dùng để xác thực dữ liệu trên các trường cụ thể trước khi lưu vào database.
+    @api.constrains('ma_thuoc', 'ma_don_thuoc')
+    def _check_drug_interactions(self):
+        for record in self:
+            # Lấy tất cả thuốc đã có trong đơn thuốc hiện tại
+            other_drugs = self.env['benhvien.chi_tiet_don_thuoc'].search([
+                ('ma_don_thuoc', '=', record.ma_don_thuoc.id),
+                ('id', '!=', record.id)  # Loại bỏ bản ghi hiện tại (tránh kiểm tra chính nó)
+            ])
+
+            for other in other_drugs:
+                # Kiểm tra xem cặp thuốc này có trong bảng Tương tác thuốc không
+                interaction = self.env['benhvien.tuong_tac_thuoc'].search([
+                    '|',
+                    '&', ('ma_thuoc_1', '=', record.ma_thuoc.id), ('ma_thuoc_2', '=', other.ma_thuoc.id),
+                    '&', ('ma_thuoc_1', '=', other.ma_thuoc.id), ('ma_thuoc_2', '=', record.ma_thuoc.id),
+                    ('muc_do_nguy_hiem', '=', 'Nguy hiểm')
+                ], limit=1)
+
+                if interaction:
+                    raise UserError(
+                        f"⚠️ Thuốc '{record.ma_thuoc.ten_thuoc}' có tương tác nguy hiểm với '{other.ma_thuoc.ten_thuoc}'! "
+                        f"({interaction.mo_ta})"
+                    )

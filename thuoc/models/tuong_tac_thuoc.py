@@ -12,7 +12,6 @@ class TuongTacThuoc(models.Model):
     muc_do_nguy_hiem = fields.Selection([
         ('Thấp', 'Thấp'),
         ('Trung bình', 'Trung bình'),
-        ('Cao', 'Cao'),
         ('Nguy hiểm', 'Nguy hiểm')
     ], string="Mức độ nguy hiểm", required=True, default="Thấp")
 

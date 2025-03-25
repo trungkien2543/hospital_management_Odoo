@@ -9,7 +9,7 @@ class HoSoBenhAn(models.Model):
     ma_bac_si = fields.Text(string="Mã bác sĩ phụ trách", required=True)
     chuan_doan = fields.Text(string="Chuẩn đoán bệnh")
     trieu_chung = fields.Text(string="Triệu chứng")
-    don_thuoc = fields.Text(string="Đơn thuốc liên quan")
+    don_thuoc = fields.One2many('benhvien.don_thuoc','ma_don_thuoc',string="Đơn thuốc liên quan")
     ngay_kham = fields.Date(string="Ngày khám", required=True, default=fields.Date.context_today)
     ke_hoach_dieu_tri = fields.Text(string="Kế hoạch điều trị")
     hen_ngay_tai_kham = fields.Date(string="Hẹn ngày tái khám")

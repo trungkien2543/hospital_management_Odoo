@@ -91,11 +91,15 @@
                             <field name="trieu_chung"/>
                         </group>
                         <group>
-                            <field name="don_thuoc"/>
                             <field name="ngay_kham" required="1"/>
                             <field name="ke_hoach_dieu_tri"/>
                             <field name="hen_ngay_tai_kham"/>
                         </group>
+                        <notebook>
+                            <page string="Đơn thuốc liên quan">
+                                <field name="don_thuoc" mode="list,form"/>
+                            </page>
+                        </notebook>
                     </group>
                 </sheet>
             </form>

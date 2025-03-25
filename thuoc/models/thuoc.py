@@ -17,7 +17,7 @@ class Thuoc(models.Model):
     tac_dung_phu = fields.Text(string="Tác dụng phụ", required=True)  # TEXT NOT NULL
     don_vi_tinh = fields.Many2one("benhvien.don_vi_tinh",string="Đơn vị tính", required=True)  # INTEGER NOT NULL
     ghi_chu = fields.Text(string="Ghi chú", required=True)  # TEXT NOT NULL
-    gia_ban = fields.Float(string="Giá Bán", compute="_compute_gia_ban", store=True,readonly=True)
+    gia_ban = fields.Monetary(string="Giá Bán", compute="_compute_gia_ban", store=True,readonly=True,currency_field="currency_id")
     so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True,readonly=True, default=0, compute='_compute_so_luong_ton_kho')  # INTEGER NOT NULL
     active = fields.Boolean(string="Active", default=True)
     state = fields.Selection([
@@ -25,6 +25,14 @@ class Thuoc(models.Model):
         ('low_stock', 'Sắp hết hàng'),
         ('out_of_stock', 'Hết hàng')
     ], string="Trạng thái", required=True, copy=False, readonly=True,default='out_of_stock',compute="_compute_state")
+
+    currency_id = fields.Many2one(
+        "res.currency",
+        string="Loại tiền tệ",
+        default=lambda self: self.env.company.currency_id,
+        readonly=True,
+        store=False  # Không lưu vào database
+    )
 
     tuongtacthuoc_ids = fields.One2many("benhvien.tuong_tac_thuoc","ma_thuoc_1",string="Tương tác thuốc")
 
