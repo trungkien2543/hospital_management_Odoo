@@ -1,9 +1,9 @@
 <odoo>
-    <record id="view_my_experience_list" model="ir.ui.view">
-        <field name="name">my.experience.list</field>
-        <field name="model">my.experience</field>
+    <record id="view_benhvien_nhansu_kinhnghiem_list" model="ir.ui.view">
+        <field name="name">benhvien.nhansu.kinhnghiem.list</field>
+        <field name="model">benhvien.nhansu.kinhnghiem</field>
         <field name="arch" type="xml">
-            <list string="Experiences">
+            <list string="Kinh nghiệm">
                 <field name="title"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
@@ -12,11 +12,11 @@
         </field>
     </record>
 
-    <record id="view_my_experience_form" model="ir.ui.view">
-        <field name="name">my.experience.form</field>
-        <field name="model">my.experience</field>
+    <record id="view_benhvien_nhansu_kinhnghiem_form" model="ir.ui.view">
+        <field name="name">benhvien.nhansu.kinhnghiem.form</field>
+        <field name="model">benhvien.nhansu.kinhnghiem</field>
         <field name="arch" type="xml">
-            <form string="Experience">
+            <form string="Kinh nghiệm">
                 <sheet>
                     <group>
                         <field name="title"/>
