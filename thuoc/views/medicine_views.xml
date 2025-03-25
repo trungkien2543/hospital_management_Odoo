@@ -39,6 +39,7 @@
                     <field name="tac_dung_phu"/>
                     <field name="don_vi_tinh"/>
                     <field name="so_luong_ton_kho"/>
+                    <field name="gia_ban"/>
                     <field name="state" widget="pill"/>
                     <field name="active"/>
                     <field name="ghi_chu"/>
@@ -77,6 +78,7 @@
                                     <field name="don_vi_tinh"/>
                                     <field name="active"/>
                                     <field name="ghi_chu"/>
+                                    <field name="gia_ban"/>
                                 </group>
                             </group>
                         </page>
@@ -96,7 +98,6 @@
                                     <field name="han_su_dung"/>
                                     <field name="ngay_nhap"/>
                                     <field name="gia_nhap"/>
-                                    <field name="gia_ban"/>
                                     <field name="so_luong_ton_kho"/>
                                     <field name="trang_thai"/>
                                     <field name="tinh_trang_chat_luong"/>

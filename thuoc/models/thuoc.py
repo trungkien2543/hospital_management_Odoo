@@ -17,7 +17,8 @@ class Thuoc(models.Model):
     tac_dung_phu = fields.Text(string="Tác dụng phụ", required=True)  # TEXT NOT NULL
     don_vi_tinh = fields.Many2one("benhvien.don_vi_tinh",string="Đơn vị tính", required=True)  # INTEGER NOT NULL
     ghi_chu = fields.Text(string="Ghi chú", required=True)  # TEXT NOT NULL
-    so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True,readonly=True, default=0)  # INTEGER NOT NULL
+    gia_ban = fields.Float(string="Giá Bán", compute="_compute_gia_ban", store=True,readonly=True)
+    so_luong_ton_kho = fields.Integer(string="Số lượng tồn kho", required=True,readonly=True, default=0, compute='_compute_so_luong_ton_kho')  # INTEGER NOT NULL
     active = fields.Boolean(string="Active", default=True)
     state = fields.Selection([
         ('available', 'Còn hàng'),
@@ -62,3 +63,18 @@ class Thuoc(models.Model):
                 record.state = 'low_stock'  # Sắp hết hàng
             else:
                 record.state = 'available'  # Còn hàng
+
+    @api.depends("lohang_ids.gia_nhap")
+    def _compute_gia_ban(self):
+        """Cập nhật giá bán dựa trên giá nhập cao nhất từ các lô hàng."""
+        for record in self:
+            if record.lohang_ids:
+                record.gia_ban = max(record.lohang_ids.mapped("gia_nhap"))
+            else:
+                record.gia_ban = 0.0  # Nếu không có lô hàng, giá bán mặc định là 0
+
+    @api.depends("lohang_ids.so_luong_ton_kho")
+    def _compute_so_luong_ton_kho(self):
+        """Tính tổng số lượng tồn kho dựa trên số lượng tồn của các lô hàng."""
+        for record in self:
+            record.so_luong_ton_kho = sum(record.lohang_ids.mapped("so_luong_ton_kho"))

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+      <!-- View danh sách phiếu xuất -->
+    <record id="view_phieu_xuat_list" model="ir.ui.view">
+        <field name="name">phieu.xuat.list</field>
+        <field name="model">benhvien.phieu_xuat</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="ma_phieu_xuat"/>
+                <field name="ngay_xuat"/>
+                <field name="tong_tien"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View form phiếu xuất -->
+    <record id="view_phieu_xuat_form" model="ir.ui.view">
+        <field name="name">phieu.xuat.form</field>
+        <field name="model">benhvien.phieu_xuat</field>
+        <field name="arch" type="xml">
+            <form string="Phiếu Xuất">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_phieu_xuat"/>
+                            <field name="ngay_xuat"/>
+                        </group>
+                        <group>
+                            <field name="tong_tien" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Chi Tiết Xuất">
+                            <field name="chi_tiet_xuat" nolabel="1">
+                                <list editable="bottom">
+                                    <field name="thuoc"/>
+                                    <field name="so_luong"/>
+                                    <field name="don_gia"/>
+                                    <field name="thanh_tien"/>
+                                    <field name="ma_lo_hang"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

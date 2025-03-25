@@ -4,3 +4,5 @@ access_benhvien_don_vi_tinh,access_benhvien_don_vi_tinh,model_benhvien_don_vi_ti
 access_benhvien_tuong_tac_thuoc,access_benhvien_tuong_tac_thuoc,model_benhvien_tuong_tac_thuoc,base.group_user,1,1,1,1
 access_benhvien_lo_hang,access_benhvien_lo_hang,model_benhvien_lo_hang,base.group_user,1,1,1,1
 access_benhvien_phieu_nhap,Phieu Nhap Kho,model_benhvien_phieu_nhap,base.group_user,1,1,1,1
+access_benhvien_phieu_xuat,Phieu Xuat Kho,model_benhvien_phieu_xuat,base.group_user,1,1,1,1
+access_benhvien_chi_tiet_phieu_xuat,Chi Tiet Phieu Xuat Kho,model_benhvien_chi_tiet_phieu_xuat,base.group_user,1,1,1,1

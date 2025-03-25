@@ -4,7 +4,7 @@
 {
     'name': 'Quan ly thuoc',
     'version': '1.0.0',
-    'summary': 'Manage your stock and logistics activities',
+    'summary': 'Manage your stock and logistics activities ',
     'website': '',
     'depends': [],
     'category': 'Healthcare',
@@ -20,9 +20,8 @@
         'views/don_vi_tinh_views.xml',
         'views/tuong_tac_thuoc.xml',
         'views/phieu_nhap_views.xml',
-        'data/medicine_sequence.xml',
-        'data/phieu_nhap_sequence.xml',
-        'data/lo_hang_sequence.xml'
+        'views/phieu_xuat_views.xml',
+        'data/sequence.xml'
     ],
     'installable': True,
     'application': True,

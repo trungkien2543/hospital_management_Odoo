@@ -10,7 +10,6 @@ class LoHang(models.Model):
     han_su_dung = fields.Date(string="Hạn Sử Dụng", required=True)
     ngay_nhap = fields.Date(string="Ngày Nhập", required=True, default=fields.Date.today)
     gia_nhap = fields.Float(string="Giá Nhập", required=True)
-    gia_ban = fields.Float(string="Giá Bán", compute="_compute_gia_ban", store=True)
     so_luong_ton_kho = fields.Integer(string="Số lượng", required=True, default=0)
     trang_thai = fields.Selection([
         ('su_dung', 'Sử dụng'),
@@ -24,11 +23,6 @@ class LoHang(models.Model):
     _sql_constraints = [
         ('unique_ma_lo_hang', 'unique(ma_lo_hang)', 'Mã lô hàng phải là duy nhất!')
     ]
-
-    @api.depends("gia_nhap")
-    def _compute_gia_ban(self):
-        for record in self:
-            record.gia_ban = record.gia_nhap * 1.2  # Ví dụ: giá bán = giá nhập * 1.2
 
     @api.model_create_multi
     def create(self, vals_list):
