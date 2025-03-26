@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="thongtincanhan_action" model="ir.actions.act_window">
+        <field name="name">Thông tin cá nhân</field>
+        <field name="res_model">benhvien.benhnhan</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+
+    <record id="hosobenhan_action" model="ir.actions.act_window">
+        <field name="name">Hồ sơ bệnh án</field>
+        <field name="res_model">benhvien.hosobenhan</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

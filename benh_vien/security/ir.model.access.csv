@@ -37,3 +37,12 @@ access_benhvien_phieu_xuat,Phieu Xuat Kho,model_benhvien_phieu_xuat,base.group_u
 access_benhvien_chi_tiet_phieu_xuat,Chi Tiet Phieu Xuat Kho,model_benhvien_chi_tiet_phieu_xuat,base.group_user,1,1,1,1
 access_benhvien_don_thuoc,Don Thuoc,model_benhvien_don_thuoc,base.group_user,1,1,1,1
 access_benhvien_chi_tiet_don_thuoc,Chi Tiet Don Thuoc,model_benhvien_chi_tiet_don_thuoc,base.group_user,1,1,1,1
+
+
+
+
+access_benhvien_benhnhan,benhvien_benhnhan,model_benhvien_benhnhan,base.group_user,1,1,1,1
+access_benhvien_hosobenhan,benhvien_hosobenhan,model_benhvien_hosobenhan,base.group_user,1,1,1,1
+access_benhvien_lichhen,benhvien_lichhen,model_benhvien_lichhen,base.group_user,1,1,1,1
+access_benhvien_lichkham,benhvien_lichkham,model_benhvien_lichkham,base.group_user,1,1,1,1
+access_benhvien_giotrong,benhvien_giotrong,model_benhvien_giotrong,base.group_user,1,1,1,1
