@@ -9,7 +9,7 @@
                 <field name="job_position"/>
                 <field name="phone"/>
                 <field name="manager_id"/>
-                <field name="khoa"/>
+                <!-- <field name="khoa"/> -->
             </list>
         </field>
     </record>
@@ -32,7 +32,7 @@
                         <field name="phone"/>
                         <field name="image" widget="image"/>
                         <field name="manager_id"/>
-                        <field name="khoa"/>
+                        <!-- <field name="khoa"/> -->
                     </group>
                     <notebook>
                         <page string="Kinh nghiệm">

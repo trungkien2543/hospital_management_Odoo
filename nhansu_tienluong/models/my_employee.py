@@ -23,6 +23,7 @@ class MyEmployee(models.Model):
     experience_ids = fields.One2many('benhvien.nhansu.kinhnghiem', 'employee_code', string="Kinh nghiệm")
     skill_ids = fields.One2many('benhvien.nhansu.kynang', 'employee_code', string="Kỹ năng")
     khoa = fields.Many2one('benhvien.khoa', string="Khoa")
+    sudungphongkham_id = fields.Many2one("benhvien.sudungphongkham", string="Sử dụng phòng khám")
 
     _sql_constraints = [
         ('unique_employee_code', 'UNIQUE(employee_code)', 'Mã nhân sự phải là duy nhất!')
