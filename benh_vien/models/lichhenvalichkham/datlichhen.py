@@ -13,7 +13,7 @@ class DatLichHen(models.Model):
     ten_benh_nhan = fields.Many2one('benhvien.benhnhan', string="Bệnh nhân", required=True)
     phone = fields.Char(string="Số điện thoại")
     email = fields.Char(string="Email")
-    bac_si = fields.Many2one('my.employee', string="Bác sĩ phụ trách", required=True)
+    bac_si = fields.Many2one('benhvien.nhansu', string="Bác sĩ phụ trách", required=True)
     ngay_kham = fields.Date(string="Ngày khám", required=True)
     khung_gio = fields.Selection([
         ('08:00-10:00', '08:00 - 10:00'),

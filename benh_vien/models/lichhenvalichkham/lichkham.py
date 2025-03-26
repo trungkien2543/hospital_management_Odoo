@@ -9,7 +9,7 @@ class LichKham(models.Model):
     ma_lich_kham = fields.Char(string='Mã Lịch Khám', readonly=True, copy=False, default="New")
     ma_lich_hen = fields.Many2one('benhvien.lichhen', string="Lịch Hẹn Liên Quan", ondelete="cascade")
     ma_benh_nhan = fields.Many2one('benhvien.benhnhan', string='Bệnh Nhân', required=True)
-    ma_bac_si = fields.Many2one('my.employee', string='Mã Bác Sĩ', required=True)
+    ma_bac_si = fields.Many2one('benhvien.nhansu', string='Mã Bác Sĩ', required=True)
     ngay_kham = fields.Date(string="Ngày khám", required=True)
     khung_gio = fields.Selection([
         ('08:00-10:00', '08:00 - 10:00'),
