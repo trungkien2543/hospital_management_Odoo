@@ -12,10 +12,7 @@
 
     ],
     'data': [
-        'security/ir.model.access.csv',
-        'views/thanh_toan_actions.xml',
-        'views/thanh_toan_menus.xml',
-        'views/dich_vu_views.xml'
+
     ],
     'installable': True,
     'application': True,

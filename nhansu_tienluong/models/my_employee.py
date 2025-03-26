@@ -1,43 +1,24 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
 class MyEmployee(models.Model):
     _name = 'benhvien.nhansu'
     _description = 'Employee'
-    _rec_name = 'employee_code'  # Đặt employee_code làm tên hiển thị thay vì id
 
-    employee_code = fields.Char(string="Mã nhân sự", required=True, index=True)  # Khóa chính tùy chỉnh
-    name = fields.Char(string="Tên nhân sự", required=True)  
-    job_position = fields.Char(string="Tên công việc")  
-    address = fields.Char(string="Địa chỉ")  
-    birth_date = fields.Date(string="Ngày sinh")  
+    employee_code = fields.Char(string="Mã nhân sự", required=True)  # varchar
+    name = fields.Char(string="Tên nhân sự", required=True)  # nvarchar
+    job_position = fields.Char(string="Tên công việc")  # nvarchar
+    address = fields.Char(string="Địa chỉ")  # varchar
+    birth_date = fields.Date(string="Ngày sinh")  # date
     gender = fields.Selection([
         ('male', 'Nam'),
         ('female', 'Nữ')
-    ], string="Giới tính")  
-    cccd = fields.Char(string="CCCD")  
-    email = fields.Char(string="Email")  
-    phone = fields.Char(string="Số điện thoại")  
-    image = fields.Image(string="Ảnh")  
-    manager_id = fields.Many2one('benhvien.nhansu', string="Quản lý")  
+    ], string="Giới tính")  # bit (boolean nhưng thể hiện dưới dạng Selection)
+    cccd = fields.Char(string="CCCD")  # varchar
+    email = fields.Char(string="Email")  # varchar
+    phone = fields.Char(string="Số điện thoại")  # varchar
+    image = fields.Image(string="Ảnh")  # nvarchar
+    manager_id = fields.Many2one('benhvien.nhansu', string="Quản lý")  # Many2one tham chiếu nhân viên khác
 
-    experience_ids = fields.One2many('benhvien.nhansu.kinhnghiem', 'employee_code', string="Kinh nghiệm")
-    skill_ids = fields.One2many('benhvien.nhansu.kynang', 'employee_code', string="Kỹ năng")
-    sudungphongkham_id = fields.Many2one("benhvien.sudungphongkham", string="Sử dụng phòng khám")
+    experience_ids = fields.One2many('benhvien.nhansu.kinhnghiem', 'employee_id', string="Kinh nghiệm")
+    skill_ids = fields.One2many('benhvien.nhansu.kynang', 'employee_id', string="Kỹ năng")
     khoa = fields.Many2one('benhvien.khoa', string="Khoa")
-
-    _sql_constraints = [
-        ('unique_employee_code', 'UNIQUE(employee_code)', 'Mã nhân sự phải là duy nhất!')
-    ]
-
-    @api.model
-    def create(self, vals):
-        if 'employee_code' in vals and not vals['employee_code']:
-            vals['employee_code'] = self.env['ir.sequence'].next_by_code('benhvien.nhansu') or 'EMP0001'
-        return super(MyEmployee, self).create(vals)
-
-    def name_get(self):
-        result = []
-        for record in self:
-            name = f"[{record.employee_code}] {record.name}"
-            result.append((record.id, name))
-        return result

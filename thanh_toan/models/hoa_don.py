@@ -16,8 +16,5 @@ class HoaDon(models.Model):
         ('paid', 'Đã thanh toán'),
         ('due', 'Còn nợ')
     ], string="Trạng thái", default="draft")
-
     benh_an = fields.Many2one("benhvien.hosobenhan", string="Bệnh án")
-
-
     currency_id = fields.Many2one("res.currency", string="Loại tiền tệ")
