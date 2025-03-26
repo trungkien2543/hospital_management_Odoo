@@ -9,9 +9,7 @@
     'license': 'LGPL-3',
     'author': 'Odooistic',
     'website': 'https://www.youtube.com/',
-    'depends': [
-        'base',
-    ],
+    'depends': ['base', 'mail'],
     'data': [
         'data/sequence.xml',
         'views/datlichhen_view.xml',
@@ -21,6 +19,7 @@
         'views/lichkham_view.xml',
         'views/lichkham_action.xml',
         'views/lichkham_menu.xml',
+        'data/email_template.xml',
     ],
 
     'installable': True,

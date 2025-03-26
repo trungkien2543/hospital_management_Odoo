@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="email_template_lich_kham_xac_nhan" model="mail.template">
+            <field name="name">Xác Nhận Lịch Khám</field>
+            <field name="email_from">hospital@yourdomain.com</field>
+            <field name="subject">[Lịch Khám] Xác Nhận Lịch Hẹn</field>
+            <field name="model_id" ref="lichhenvalichkham.model_benhvien_lichkham"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html"><![CDATA[
+                <p>Xin chào <strong>${object.ma_benh_nhan.name}</strong>,</p>
+                <p>Bác sĩ đã xác nhận lịch khám của bạn với thông tin sau:</p>
+                <ul>
+                    <li><strong>Mã lịch khám:</strong> ${object.ma_lich_kham}</li>
+                    <li><strong>Ngày khám:</strong> ${object.ngay_kham}</li>
+                    <li><strong>Khung giờ:</strong> ${dict(object._fields['khung_gio'].selection).get(object.khung_gio)}</li>
+                    <li><strong>Bác sĩ:</strong> ${object.ma_bac_si.name}</li>
+                </ul>
+                <p>Vui lòng đến đúng giờ và mang theo giấy tờ cần thiết.</p>
+                <p>Trân trọng,</p>
+                <p>Phòng khám</p>
+            ]]></field>
+        </record>
+    </data>
+</odoo>

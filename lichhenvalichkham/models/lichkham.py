@@ -1,6 +1,6 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
-
+from odoo.tools.translate import _
 
 class LichKham(models.Model):
     _name = 'benhvien.lichkham'
@@ -50,8 +50,20 @@ class LichKham(models.Model):
         return result
 
     def action_xac_nhan(self):
-        """Bác sĩ xác nhận lịch khám"""
+        """Bác sĩ xác nhận lịch khám và gửi email cho bệnh nhân"""
         self.write({'trang_thai': 'da_xac_nhan'})
+
+        # Lấy template email
+        template = self.env.ref('lichhenvalichkham.email_template_lich_kham_xac_nhan')
+
+        # Kiểm tra xem template có tồn tại không
+        if template:
+            for record in self:
+                if record.ma_benh_nhan.email:
+                    template.send_mail(record.id, force_send=True)
+                else:
+                    raise ValidationError(_("Bệnh nhân chưa có email, không thể gửi xác nhận."))
+
 
     def action_huy_lich(self):
         """Bác sĩ hủy lịch khám"""
