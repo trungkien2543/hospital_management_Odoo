@@ -33,6 +33,7 @@
                         <field name="image" widget="image"/>
                         <field name="manager_id"/>
                         <field name="khoa"/>
+                        <field name="sudungphongkham_id"/>
                     </group>
                     <notebook>
                         <page string="Kinh nghiệm">

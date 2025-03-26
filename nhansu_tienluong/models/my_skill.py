@@ -8,4 +8,4 @@ class MySkill(models.Model):
     skill_type = fields.Char(string="Loại kỹ năng", required=True)  # nvarchar
     title = fields.Char(string="Tiêu đề", required=True)  # nvarchar
     level = fields.Integer(string="Phân cấp")  # int
-    employee_id = fields.Many2one('benhvien.nhansu', string="Mã nhân sự", required=True)  # varchar (liên kết với nhân viên)
+    employee_code = fields.Many2one('benhvien.nhansu', string="Nhân sự", required=True, ondelete='cascade')

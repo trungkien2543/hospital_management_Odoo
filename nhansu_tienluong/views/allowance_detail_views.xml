@@ -4,7 +4,7 @@
         <field name="model">benhvien.tienluong.chitietphucap</field>
         <field name="arch" type="xml">
             <list string="Chi tiết Phụ cấp">
-                <field name="employee_id"/>
+                <field name="employee_code"/>
                 <field name="allowance_id"/>
             </list>
         </field>
@@ -17,7 +17,7 @@
             <form string="Chi tiết Phụ cấp">
                 <sheet>
                     <group>
-                        <field name="employee_id"/>
+                        <field name="employee_code"/>
                         <field name="allowance_id"/>
                     </group>
                 </sheet>
