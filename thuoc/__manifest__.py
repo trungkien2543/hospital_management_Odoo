@@ -10,7 +10,6 @@
     'category': 'Healthcare',
     'sequence': 25,
     'demo': [
-
     ],
     'data': [
         'security/ir.model.access.csv',

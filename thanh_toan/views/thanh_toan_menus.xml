@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="purchase_management_menu" name="Quản lý thanh toán">
+        <!-- Menu quản lý kho dược phẩm -->
+        <menuitem id="purchase_menu" name="Thông tin hóa đơn">
+            <menuitem id="hoa_don_action_menu" action="action_hoa_don_list"/>
+            <menuitem id="dich_vu_action_menu" action="action_dich_vu_list"/>
+        </menuitem>
+
+    </menuitem>
+
+</odoo>
