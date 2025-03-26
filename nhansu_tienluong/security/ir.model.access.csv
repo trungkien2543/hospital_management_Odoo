@@ -1,7 +1,0 @@
-id,name,model_id:id,group_id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_allowance,access_hr_allowance,model_hr_allowance,,1,1,1,1
-access_hr_allowance_detail,access_hr_allowance_detail,model_hr_allowance_detail,,1,1,1,1
-access_hr_salary,access_hr_salary,model_hr_salary,,1,1,1,1
-access_my_employee,my.employee,model_my_employee,,1,1,1,1
-access_my_experience,my.experience,model_my_experience,,1,1,1,1
-access_my_skill,my.skill,model_my_skill,,1,1,1,1

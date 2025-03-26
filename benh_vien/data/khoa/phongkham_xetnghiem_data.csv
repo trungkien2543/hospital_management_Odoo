@@ -1,0 +1,21 @@
+﻿id,name,loai_phong,khoa
+PKHAM001,Phòng khám Nội tổng quát,Phòng khám,Nội tổng quát
+PKHAM002,Phòng khám Nội tim mạch,Phòng khám,Nội tim mạch
+PKHAM003,Phòng khám Nội tiết,Phòng khám,Nội tiết
+PKHAM004,Phòng khám Tiêu hóa,Phòng khám,Tiêu hóa
+PKHAM005,Phòng khám Thần kinh,Phòng khám,Thần kinh
+PKHAM006,Phòng khám Hô hấp,Phòng khám,Hô hấp
+PKHAM007,Phòng khám Chấn thương chỉnh hình,Phòng khám,Chấn thương chỉnh hình
+PKHAM008,Phòng khám Da liễu,Phòng khám,Da liễu
+PKHAM009,Phòng khám Nhi khoa,Phòng khám,Nhi khoa
+PKHAM010,Phòng khám Sản phụ khoa,Phòng khám,Sản phụ khoa
+PKHAM011,Phòng xét nghiệm Nội tổng quát,Xét nghiệm,Nội tổng quát
+PKHAM012,Phòng xét nghiệm Nội tim mạch,Xét nghiệm,Nội tim mạch
+PKHAM013,Phòng xét nghiệm Nội tiết,Xét nghiệm,Nội tiết
+PKHAM014,Phòng xét nghiệm Tiêu hóa,Xét nghiệm,Tiêu hóa
+PKHAM015,Phòng xét nghiệm Thần kinh,Xét nghiệm,Thần kinh
+PKHAM016,Phòng xét nghiệm Hô hấp,Xét nghiệm,Hô hấp
+PKHAM017,Phòng xét nghiệm Chấn thương chỉnh hình,Xét nghiệm,Chấn thương chỉnh hình
+PKHAM018,Phòng xét nghiệm Da liễu,Xét nghiệm,Da liễu
+PKHAM019,Phòng xét nghiệm Nhi khoa,Xét nghiệm,Nhi khoa
+PKHAM020,Phòng xét nghiệm Sản phụ khoa,Xét nghiệm,Sản phụ khoa

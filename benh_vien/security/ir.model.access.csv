@@ -1,0 +1,39 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+access_benhvien_phongkham,benhvien.phongkham,model_benhvien_phongkham,,1,1,1,1
+access_benhvien_loaiphongkham,benhvien.loaiphongkham,model_benhvien_loaiphongkham,,1,1,1,1
+access_benhvien_sudungphongkham,benhvien.sudungphongkham,model_benhvien_sudungphongkham,,1,1,1,1
+access_benhvien_khoa,benhvien.khoa,model_benhvien_khoa,,1,1,1,1
+access_benhvien_phongbenh,benhvien.phongbenh,model_benhvien_phongbenh,,1,1,1,1
+access_benhvien_giuongbenh,benhvien.giuongbenh,model_benhvien_giuongbenh,,1,1,1,1
+access_benhvien_sudunggiuongbenh,benhvien.sudunggiuongbenh,model_benhvien_sudunggiuongbenh,,1,1,1,1
+
+
+
+access_benhvien_xetnghiem,benhvien.xetnghiem,model_benhvien_xetnghiem,,1,1,1,1
+access_benhvien_hinhanh,benhvien.hinhanh,model_benhvien_hinhanh,,1,1,1,1
+access_benhvien_loaihinhanh,benhvien.loaihinhanh,model_benhvien_loaihinhanh,,1,1,1,1
+access_benhvien_loaixetnghiem,benhvien.loaixetnghiem,model_benhvien_loaixetnghiem,,1,1,1,1
+
+
+
+access_hr_allowance,access_hr_allowance,model_benhvien_tienluong_phucap,,1,1,1,1
+access_hr_allowance_detail,access_hr_allowance_detail,model_benhvien_tienluong_chitietphucap,,1,1,1,1
+access_hr_salary,access_hr_salary,model_benhvien_tienluong,,1,1,1,1
+access_my_employee,benhvien.nhansu,model_benhvien_nhansu,,1,1,1,1
+access_my_experience,benhvien.nhansu.kinhnghiem,model_benhvien_nhansu_kinhnghiem,,1,1,1,1
+access_my_skill,benhvien.nhansu.kynang,model_benhvien_nhansu_kynang,,1,1,1,1
+
+
+
+
+access_benhvien_thuoc,access_benhvien_thuoc,model_benhvien_thuoc,base.group_user,1,1,1,1
+access_benhvien_don_vi_tinh,access_benhvien_don_vi_tinh,model_benhvien_don_vi_tinh,base.group_user,1,1,1,1
+access_benhvien_tuong_tac_thuoc,access_benhvien_tuong_tac_thuoc,model_benhvien_tuong_tac_thuoc,base.group_user,1,1,1,1
+access_benhvien_lo_hang,access_benhvien_lo_hang,model_benhvien_lo_hang,base.group_user,1,1,1,1
+access_benhvien_phieu_nhap,Phieu Nhap Kho,model_benhvien_phieu_nhap,base.group_user,1,1,1,1
+access_benhvien_phieu_xuat,Phieu Xuat Kho,model_benhvien_phieu_xuat,base.group_user,1,1,1,1
+access_benhvien_chi_tiet_phieu_xuat,Chi Tiet Phieu Xuat Kho,model_benhvien_chi_tiet_phieu_xuat,base.group_user,1,1,1,1
+access_benhvien_don_thuoc,Don Thuoc,model_benhvien_don_thuoc,base.group_user,1,1,1,1
+access_benhvien_chi_tiet_don_thuoc,Chi Tiet Don Thuoc,model_benhvien_chi_tiet_don_thuoc,base.group_user,1,1,1,1

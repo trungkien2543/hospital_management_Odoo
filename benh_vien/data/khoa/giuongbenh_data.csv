@@ -1,0 +1,60 @@
+﻿id,name,code_phong,status
+GIUONG0001,Giường 1,Phòng bệnh Nội tổng quát,free
+GIUONG0002,Giường 2,Phòng bệnh Nội tổng quát,free
+GIUONG0003,Giường 3,Phòng bệnh Nội tổng quát,free
+GIUONG0004,Giường 4,Phòng bệnh Nội tổng quát,free
+GIUONG0005,Giường 5,Phòng bệnh Nội tổng quát,free
+
+GIUONG0006,Giường 6,Phòng bệnh Nội tim mạch,free
+GIUONG0007,Giường 7,Phòng bệnh Nội tim mạch,free
+GIUONG0008,Giường 8,Phòng bệnh Nội tim mạch,free
+GIUONG0009,Giường 9,Phòng bệnh Nội tim mạch,free
+GIUONG0010,Giường 10,Phòng bệnh Nội tim mạch,free
+
+GIUONG0011,Giường 11,Phòng bệnh Nội tiết,free
+GIUONG0012,Giường 12,Phòng bệnh Nội tiết,free
+GIUONG00113,Giường 13,Phòng bệnh Nội tiết,free
+GIUONG0014,Giường 14,Phòng bệnh Nội tiết,free
+GIUONG0015,Giường 15,Phòng bệnh Nội tiết,free
+
+GIUONG0016,Giường 16,Phòng bệnh Tiêu hóa,free
+GIUONG0017,Giường 17,Phòng bệnh Tiêu hóa,free
+GIUONG0018,Giường 18,Phòng bệnh Tiêu hóa,free
+GIUONG0019,Giường 19,Phòng bệnh Tiêu hóa,free
+GIUONG0020,Giường 20,Phòng bệnh Tiêu hóa,free
+
+GIUONG0021,Giường 21,Phòng bệnh Thần kinh,free
+GIUONG0022,Giường 22,Phòng bệnh Thần kinh,free
+GIUONG0023,Giường 23,Phòng bệnh Thần kinh,free
+GIUONG0024,Giường 24,Phòng bệnh Thần kinh,free
+GIUONG0025,Giường 25,Phòng bệnh Thần kinh,free
+
+GIUONG0026,Giường 26,Phòng bệnh Hô hấp,free
+GIUONG0027,Giường 27,Phòng bệnh Hô hấp,free
+GIUONG0028,Giường 28,Phòng bệnh Hô hấp,free
+GIUONG0029,Giường 29,Phòng bệnh Hô hấp,free
+GIUONG0030,Giường 30,Phòng bệnh Hô hấp,free
+
+GIUONG0031,Giường 31,Phòng bệnh Chấn thương chỉnh hình,free
+GIUONG0032,Giường 32,Phòng bệnh Chấn thương chỉnh hình,free
+GIUONG0033,Giường 33,Phòng bệnh Chấn thương chỉnh hình,free
+GIUONG0034,Giường 34,Phòng bệnh Chấn thương chỉnh hình,free
+GIUONG0035,Giường 35,Phòng bệnh Chấn thương chỉnh hình,free
+
+GIUONG0036,Giường 36,Phòng bệnh Da liễu,free
+GIUONG0037,Giường 37,Phòng bệnh Da liễu,free
+GIUONG0038,Giường 38,Phòng bệnh Da liễu,free
+GIUONG0039,Giường 39,Phòng bệnh Da liễu,free
+GIUONG0040,Giường 40,Phòng bệnh Da liễu,free
+
+GIUONG0041,Giường 41,Phòng bệnh Nhi khoa,free
+GIUONG0042,Giường 42,Phòng bệnh Nhi khoa,free
+GIUONG0043,Giường 43,Phòng bệnh Nhi khoa,free
+GIUONG0044,Giường 44,Phòng bệnh Nhi khoa,free
+GIUONG0045,Giường 45,Phòng bệnh Nhi khoa,free
+
+GIUONG0046,Giường 46,Phòng bệnh Sản phụ khoa,free
+GIUONG0047,Giường 47,Phòng bệnh Sản phụ khoa,free
+GIUONG0048,Giường 48,Phòng bệnh Sản phụ khoa,free
+GIUONG0049,Giường 49,Phòng bệnh Sản phụ khoa,free
+GIUONG0050,Giường 50,Phòng bệnh Sản phụ khoa,free

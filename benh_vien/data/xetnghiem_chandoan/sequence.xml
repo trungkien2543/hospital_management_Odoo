@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="xetnghiem_code_incre" model="ir.sequence">
+        <field name="name">Xet nghiem Code</field>
+        <field name="code">benhvien.xetnghiem</field>
+        <field name="prefix">XN</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">4</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="hinhanh_code_incre" model="ir.sequence">
+        <field name="name">Hinh anh Code</field>
+        <field name="code">benhvien.hinhanh</field>
+        <field name="prefix">HA</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">4</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="loaixetnghiem_code_incre" model="ir.sequence">
+        <field name="name">Loai xet nghiem Code</field>
+        <field name="code">benhvien.loaixetnghiem</field>
+        <field name="prefix">LXN</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">3</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="loaihinhanh_code_incre" model="ir.sequence">
+        <field name="name">Loai Hinh anh Code</field>
+        <field name="code">benhvien.loaihinhanh</field>
+        <field name="prefix">LHA</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">3</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+</odoo>
