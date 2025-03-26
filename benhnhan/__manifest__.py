@@ -11,7 +11,10 @@
     'website': 'https://www.youtube.com/',
     'depends': [
         'base',
-        'thuoc'
+        'thuoc',
+        'thanh_toan',
+        'xetnghiem_chandoan',
+        'khoa'
     ],
     'data': [
         'views/benhnhan_view.xml',

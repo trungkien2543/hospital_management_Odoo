@@ -13,7 +13,7 @@ class PhieuNhap(models.Model):
         ('chuyen_khoan', 'Chuyển khoản'),
         ('the_tin_dung', 'Thẻ tín dụng')
     ], string="Hình Thức Thanh Toán", required=True)
-    ngay_nhap = fields.Date(string="Ngày nhập", required=True, default=fields.Date.today,readonly=True)
+    ngay_nhap = fields.Datetime(string="Ngày nhập", required=True, default=fields.Datetime.now,readonly=True)
     ghi_chu = fields.Text(string="Ghi Chú")
     nha_cung_cap = fields.Many2one('res.partner', string="Nhà Cung Cấp", required=True)
     lo_hang_ids = fields.One2many('benhvien.lo_hang', 'phieu_nhap', string="Lô Hàng Nhập Kho")
@@ -36,6 +36,7 @@ class PhieuNhap(models.Model):
         """
         Ghi đè phương thức create để tự động tạo mã phiếu nhập (ma_phieu_nhap) khi thêm mới bản ghi.
         """
+
         for vals in vals_list:
             if not vals.get('ma_phieu_nhap') or vals['ma_phieu_nhap'] == 'PN0001':
                 vals['ma_phieu_nhap'] = self.env['ir.sequence'].next_by_code('benhvien.phieu_nhap') or 'PN0001'

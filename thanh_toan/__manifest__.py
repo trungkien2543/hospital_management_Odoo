@@ -8,9 +8,6 @@
     'depends': [],
     'category': 'Healthcare',
     'sequence': 25,
-    'demo': [
-
-    ],
     'data': [
         'security/ir.model.access.csv',
         'views/thanh_toan_actions.xml',
