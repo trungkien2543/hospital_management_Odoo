@@ -5,7 +5,7 @@ class Salary(models.Model):
     _description = 'Tiền Lương'
 
     code = fields.Char(string="Mã tiền lương", required=True)
-    employee_id = fields.Many2one('benhvien.nhansu', string="Nhân sự", required=True)
+    employee_code = fields.Many2one('benhvien.nhansu', string="Nhân sự", required=True)
     month_year = fields.Date(string="Tháng năm", required=True)
     working_days = fields.Integer(string="Số ngày công")
     overtime_hours = fields.Integer(string="Số giờ làm thêm")
