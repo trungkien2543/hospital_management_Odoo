@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <menuitem id="lichhenvalichkham_menu" name="Lịch hẹn và lịch khám">
-        <menuitem id="lichkham_menu" name="Lịch khám" action="lichkham_action">
+        <menuitem id="lichkham_menu" name="Lịch khám" action="lichkham_action" >
         </menuitem>
     </menuitem>
 </odoo>

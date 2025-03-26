@@ -6,9 +6,6 @@
         <field name="arch" type="xml">
             <list>
                 <field name="ma_lich_hen"/>
-                <field name="ten_benh_nhan"/>
-                <field name="phone"/>
-                <field name="email"/>
                 <field name="bac_si"/>
                 <field name="ngay_kham"/>
                 <field name="khung_gio"/>
@@ -39,6 +36,17 @@
                             <field name="trang_thai"/>
                         </group>
                     </group>
+
+                    <notebook>
+                        <page string="Thời gian đặt lịch">
+                            <field name="gio_trong_ids">
+                                <list>
+                                    <field name="khung_gio"/>
+                                    <field name="mo_ta"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
 
                 </sheet>
             </form>
