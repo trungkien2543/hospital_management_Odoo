@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="pharmacy_management_menu" name="Quản lý thuốc">
+        <!-- Menu quản lý kho dược phẩm -->
+        <menuitem id="pharmacy_menu" name="Thông tin dược phẩm">
+            <menuitem id="pharmacy_action_menu" action="action_medicine_list"/>
+            <menuitem id="pharmacy_don_vi_tinh_action_menu" action="action_don_vi_tinh_list"/>
+        </menuitem>
+
+        <menuitem id="pharmacy_stock_menu" name="Kho dược phẩm">
+             <!-- Menu -->
+            <menuitem id="pharmacy_stock_menu_phieu_nhap" action="action_phieu_nhap"/>
+            <menuitem id="pharmacy_stock_menu_phieu_xuat" action="action_phieu_xuat"/>
+        </menuitem>
+
+
+    </menuitem>
+
+</odoo>

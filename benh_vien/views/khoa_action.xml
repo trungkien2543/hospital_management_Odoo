@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="action_phongkham_information" model="ir.actions.act_window">
+            <field name="name">Danh sách Phòng khám và các phòng chức năng</field>
+            <field name="res_model">benhvien.phongkham</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new phong kham for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_loaiphongkham" model="ir.actions.act_window">
+            <field name="name">Loại Phòng khám</field>
+            <field name="res_model">benhvien.loaiphongkham</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new loai phong kham for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_sudungphongkham" model="ir.actions.act_window">
+            <field name="name">Sử dụng Phòng khám</field>
+            <field name="res_model">benhvien.sudungphongkham</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new su dung phong kham for more!
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_khoa" model="ir.actions.act_window">
+            <field name="name">Danh sách Khoa</field>
+            <field name="res_model">benhvien.khoa</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Khoa for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_phongbenh_information" model="ir.actions.act_window">            <!--action phong benh -->
+            <field name="name">Phòng bệnh Information Action</field>
+            <field name="res_model">benhvien.phongbenh</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Phòng bệnh for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_giuongbenh_information" model="ir.actions.act_window">           <!--action giuong benh -->
+            <field name="name">Giường bệnh Information Action</field>
+            <field name="res_model">benhvien.giuongbenh</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Giường bệnh for more!
+                </p>
+            </field>
+        </record>
+
+        <record id="action_sudunggiuongbenh_information" model="ir.actions.act_window">             <!--action su dung giuong benh -->
+            <field name="name">Sử dụng Giường bệnh</field>
+            <field name="res_model">benhvien.sudunggiuongbenh</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+﻿ma_loai,name,mo_ta
+LPK001,Phòng khám,Phòng khám bệnh thông thường
+LPK002,Xét nghiệm,Phòng xét nghiệm y tế
+LPK003,Phẫu thuật,Phòng thực hiện các ca phẫu thuật
+LPK004,Chẩn đoán hình ảnh,Phòng chụp X-quang, siêu âm
+LPK005,Vật lý trị liệu,Phòng phục hồi chức năng
+LPK006,Nội soi,Phòng nội soi tiêu hóa, hô hấp
+LPK007,Răng - Hàm - Mặt,Phòng khám nha khoa và răng hàm mặt

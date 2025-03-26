@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="khoa_code_incre" model="ir.sequence">
+        <field name="name">Khoa Code</field>
+        <field name="code">benhvien.khoa</field>
+        <field name="prefix">KHOA</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">3</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="giuongbenh_code_incre" model="ir.sequence">
+        <field name="name">Giuong benh Code</field>
+        <field name="code">benhvien.giuongbenh</field>
+        <field name="prefix">GIUONG</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">4</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="loaiphongkham_code_incre" model="ir.sequence">
+        <field name="name">Loại Phòng khám Code</field>
+        <field name="code">benhvien.loaiphongkham</field>
+        <field name="prefix">LPK</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">3</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="phongkham_code_incre" model="ir.sequence">
+        <field name="name">Phòng khám Code</field>
+        <field name="code">benhvien.phongkham</field>
+        <field name="prefix">PKHAM</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">3</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="phongbenh_code_incre" model="ir.sequence">
+        <field name="name">Phòng benh Code</field>
+        <field name="code">benhvien.phongbenh</field>
+        <field name="prefix">PBENH</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">3</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+
+    <!-- Quản lý thuốc   -->
+     <record id="seq_phieu_nhap" model="ir.sequence">
+        <field name="name">Mã Phiếu Nhập</field>
+        <field name="code">benhvien.phieu_nhap</field>
+        <field name="prefix">PN</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_phieu_xuat" model="ir.sequence">
+        <field name="name">Mã Phiếu Xuất</field>
+        <field name="code">benhvien.phieu_xuat</field>
+        <field name="prefix">PX</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+     <record id="seq_medicine_code" model="ir.sequence">
+        <field name="name">Medicine Code</field>
+        <field name="code">benhvien.thuoc</field>
+        <field name="prefix">MED</field>  <!-- Tiền tố (có thể thay đổi) -->
+        <field name="padding">4</field>  <!-- Độ dài số (MED0001, MED0002, ...) -->
+    </record>
+
+    <record id="seq_lo_hang" model="ir.sequence">
+        <field name="name">Mã Lô Hàng</field>
+        <field name="code">benhvien.lo_hang</field>
+        <field name="prefix"></field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_don_vi_tinh_code" model="ir.sequence">
+        <field name="name">Don Vi Tinh Code</field>
+        <field name="code">benhvien.don_vi_tinh</field>
+        <field name="prefix">DVT</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+
+</odoo>

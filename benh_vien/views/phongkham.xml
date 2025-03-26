@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="hospital_information_form_view" model="ir.ui.view">
+            <field name="name">Hospital Information Action</field>
+            <field name="model">benhvien.phongkham</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_phong"/>
+                    <field name="name"/>
+                    <field name="loai_phong"/>
+                    <field name="khoa"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

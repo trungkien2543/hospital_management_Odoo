@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="giuongbenh_information_form_view" model="ir.ui.view">               <!--view giuong benh -->
+            <field name="name">Giường Bệnh View</field>
+            <field name="model">benhvien.giuongbenh</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_giuong"/>
+                    <field name="name"/>
+                    <field name="code_phong"/>
+                    <field name="status"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_giuongbenh_list_by_phong" model="ir.actions.act_window">
+            <field name="name">Danh sách Giường bệnh</field>
+            <field name="res_model">benhvien.giuongbenh</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[('code_phong', '=', active_id)]</field>
+        </record>
+
+    </data>
+</odoo>
