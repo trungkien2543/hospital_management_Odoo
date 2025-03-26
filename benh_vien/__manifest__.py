@@ -9,16 +9,30 @@
         This module helps in managing hospital records, including patients, doctors, and appointments.
     """,
     'data': [
-        'views/khoa_action.xml',
+
         'views/nhansu_action.xml',
-        'views/khoa_menu.xml',
-        'views/khoa.xml',
-        'views/phongkham.xml',
-        'views/loaiphongkham.xml',
-        'views/sudungphongkham.xml',
-        'views/phongbenh.xml',
-        'views/giuongbenh.xml',
-        'views/sudunggiuongbenh.xml',
+
+        # Views cho khoa
+        'views/khoa/khoa_action.xml',
+        'views/khoa/khoa_menu.xml',
+        'views/khoa/khoa.xml',
+        'views/khoa/phongkham.xml',
+        'views/khoa/loaiphongkham.xml',
+        'views/khoa/sudungphongkham.xml',
+        'views/khoa/phongbenh.xml',
+        'views/khoa/giuongbenh.xml',
+        'views/khoa/sudunggiuongbenh.xml',
+
+
+        'views/xetnghiem_chandoan/chandoan_action.xml',
+        'views/xetnghiem_chandoan/chandoan_menu.xml',
+        'views/xetnghiem_chandoan/xetnghiem.xml',
+        'views/xetnghiem_chandoan/hinhanh.xml',
+        'views/xetnghiem_chandoan/loaixetnghiem.xml',
+        'views/xetnghiem_chandoan/loaihinhanh.xml',
+        # 'data/loaixetnghiem_data.csv',
+        'data/xetnghiem_chandoan/sequence.xml',
+
 
         'views/salary_views.xml',
         'views/allowance_views.xml',
@@ -39,7 +53,8 @@
 
 
         'security/ir.model.access.csv',
-        'data/khoa_sequence.xml',
+
+        'data/khoa/khoa_sequence.xml',
         'data/thuoc/sequence.xml'
     ],
     'demo': [
