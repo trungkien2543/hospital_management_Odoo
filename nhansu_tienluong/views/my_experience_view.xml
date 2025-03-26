@@ -7,7 +7,7 @@
                 <field name="title"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
-                <field name="employee_id"/>
+                <field name="employee_code"/>
             </list>
         </field>
     </record>
@@ -23,7 +23,7 @@
                         <field name="description"/>
                         <field name="start_date"/>
                         <field name="end_date"/>
-                        <field name="employee_id"/>
+                        <field name="employee_code"/>
                     </group>
                 </sheet>
             </form>

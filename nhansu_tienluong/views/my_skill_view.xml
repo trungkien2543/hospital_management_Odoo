@@ -7,7 +7,7 @@
                 <field name="title"/>
                 <field name="skill_type"/>
                 <field name="level"/>
-                <field name="employee_id"/>
+                <field name="employee_code"/>
             </list>
         </field>
     </record>
@@ -22,7 +22,7 @@
                         <field name="title"/>
                         <field name="skill_type"/>
                         <field name="level"/>
-                        <field name="employee_id"/>
+                        <field name="employee_code"/>
                     </group>
                 </sheet>
             </form>
