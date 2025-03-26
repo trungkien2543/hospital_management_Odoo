@@ -11,6 +11,7 @@
     'website': 'https://www.youtube.com/',
     'depends': [
         'base',
+        'thuoc'
     ],
     'data': [
         'views/benhnhan_view.xml',
