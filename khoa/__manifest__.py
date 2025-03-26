@@ -1,7 +1,9 @@
 {
     'name': "Quan ly khoa va phong kham",
     'version': '1.1',
-    'depends': ['nhansu_tienluong'],
+    'depends': [
+        # 'nhansu_tienluong'
+    ],
     'author': "Your Name",
     'category': 'Healthcare',
     'summary': "A module for managing hospital operations, patients, and doctors",
