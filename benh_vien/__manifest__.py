@@ -1,5 +1,5 @@
 {
-    'name': "Quản lý bênh viện",
+    'name': "Quản lý bệnh viện",
     'version': '1.1',
     'depends': ['base'],
     'author': "Nhóm 3_DACN",
