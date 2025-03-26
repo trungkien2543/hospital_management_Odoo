@@ -3,9 +3,8 @@ from odoo import models,fields
 class DichVu(models.Model):
     _name = "benhvien.dich_vu"
     _description = "Dịch vụ"
-    _rec_name = "ten_dich_vu"
 
-    ten_dich_vu = fields.Char(string="Tên dịch vụ", required=True, copy=False)
+    name = fields.Char(string="Tên dịch vụ", required=True, copy=False)
     don_gia = fields.Monetary(string="Đơn giá", required=True, currency_field="currency_id")
     mo_ta = fields.Text(string="Mô tả")
     currency_id = fields.Many2one("res.currency", string="Loại tiền tệ")

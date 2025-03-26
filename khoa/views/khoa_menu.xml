@@ -2,21 +2,27 @@
 <odoo>
     <data>
 
-        <menuitem id="khoa_menu" name="Quản lý Khoa và phòng khám" action="action_khoa">
+        <!-- Menu chính -->
+        <menuitem id="khoa_menu" name="Quản lý Khoa và phòng khám" action="action_khoa"/>
 
-            <menuitem id="qlphongkham_menu" name="Quản lý phòng khám">
-                <menuitem id="phongkham_menu"  action="action_phongkham_information"/>
-                <menuitem id="loaiphongkham_menu"  action="action_loaiphongkham"/>
-                <menuitem id="sudungphongkham" action="action_sudungphongkham"/>
-            </menuitem>
+        <!-- Menu Quản lý phòng khám -->
+        <menuitem id="qlphongkham_menu" name="Quản lý phòng khám" parent="khoa_menu"/>
+        <menuitem id="phongkham_menu"  action="action_phongkham_information" parent="qlphongkham_menu"/>
+        <menuitem id="loaiphongkham_menu"  action="action_loaiphongkham" parent="qlphongkham_menu"/>
+        <menuitem id="sudungphongkham" action="action_sudungphongkham" parent="qlphongkham_menu"/>
 
-            <menuitem id="qlphongbenh_menu" name="Quản lý phòng bệnh">
-                <menuitem id="phongbenh_menu" name="Phòng bệnh" action="action_phongbenh_information"/>
-                <menuitem id="giuongbenh_menu" name="Giường bệnh" action="action_giuongbenh_information"/>
-                <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information"/>
-            </menuitem>
+        <!-- Menu Quản lý phòng bệnh -->
+        <menuitem id="qlphongbenh_menu" name="Quản lý phòng bệnh" parent="khoa_menu"/>
+        <menuitem id="phongbenh_menu" name="Phòng bệnh" action="action_phongbenh_information" parent="qlphongbenh_menu"/>
+        <menuitem id="giuongbenh_menu" name="Giường bệnh" action="action_giuongbenh_information" parent="qlphongbenh_menu"/>
+        <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information" parent="qlphongbenh_menu"/>
 
-        </menuitem>
+        <!-- Menu Quản lý nhân sự (nằm riêng ở menu chính) -->
+        <menuitem id="qlnhansu_menu" name="Quản lý nhân sự"/>
+        <menuitem id="menu_benhvien_nhansu" name="Nhân viên" action="action_benhvien_nhansu" parent="qlnhansu_menu"/>
+        <menuitem id="menu_benhvien_tienluong" name="Bảng Lương" action="action_benhvien_tienluong" parent="qlnhansu_menu"/>
+        <menuitem id="menu_benhvien_tienluong_chitietphucap" name="Chi tiết Phụ cấp" action="action_benhvien_tienluong_chitietphucap" parent="qlnhansu_menu"/>
+        <menuitem id="menu_benhvien_tienluong_phucap" name="Phụ cấp" action="action_benhvien_tienluong_phucap" parent="qlnhansu_menu"/>
 
     </data>
 </odoo>

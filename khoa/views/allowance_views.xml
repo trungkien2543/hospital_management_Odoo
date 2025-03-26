@@ -26,15 +26,4 @@
             </form>
         </field>
     </record>
-
-    <menuitem id="menu_benhvien_tienluong_root" name="Lương, phụ cấp"/>
-
-    <record id="action_benhvien_tienluong_phucap" model="ir.actions.act_window">
-        <field name="name">Phụ cấp</field>
-        <field name="res_model">benhvien.tienluong.phucap</field>
-        <field name="view_mode">list,form</field>
-    </record>
-    
-    <menuitem id="menu_benhvien_tienluong_phucap" name="Phụ cấp" parent="menu_benhvien_tienluong_root" action="action_benhvien_tienluong_phucap"/>
-    
 </odoo>

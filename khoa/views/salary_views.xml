@@ -5,7 +5,7 @@
         <field name="arch" type="xml">
             <list string="Bảng Lương">
                 <field name="code"/>
-                <field name="employee_id"/>
+                <field name="employee_code"/>
                 <field name="month_year"/>
                 <field name="working_days"/>
                 <field name="overtime_hours"/>
@@ -26,7 +26,7 @@
                 <sheet>
                     <group>
                         <field name="code"/>
-                        <field name="employee_id"/>
+                        <field name="employee_code"/>
                         <field name="month_year"/>
                         <field name="working_days"/>
                         <field name="overtime_hours"/>
@@ -43,12 +43,8 @@
     
     <menuitem id="menu_benhvien_tienluong_root" name="Lương, phụ cấp"/>
 
-    <record id="action_benhvien_tienluong" model="ir.actions.act_window">
-        <field name="name">Bảng Lương</field>
-        <field name="res_model">benhvien.tienluong</field>
-        <field name="view_mode">list,form</field>
-    </record>
+
     
-    <menuitem id="menu_benhvien_tienluong" name="Bảng Lương" parent="menu_benhvien_tienluong_root" action="action_benhvien_tienluong"/>
+
 
 </odoo>
