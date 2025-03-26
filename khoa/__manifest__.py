@@ -1,5 +1,5 @@
 {
-    'name': "Quan ly khoa va phong kham",
+    'name': "Quản lý Khoa và Nhân sự",
     'version': '1.1',
     'depends': ['base'],
     'author': "Your Name",
