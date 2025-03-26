@@ -6,7 +6,7 @@ class SudungPhongkham(models.Model):
     _description = "Su dung Phong kham Management"
 
     name = fields.Many2one("benhvien.phongkham", string="Phòng khám", required=True)
-    doctor_id = fields.Char(string="Bác sĩ", required=True)
+    # bacsi_ids = fields.One2many("benhvien.bacsi", "sudungphongkham_id", string="Danh sách bác sĩ")
     start_time = fields.Datetime(string="Thời gian bắt đầu", required=True)
     end_time = fields.Datetime(string="Thời gian kết thúc", required=True)
     status = fields.Selection([
