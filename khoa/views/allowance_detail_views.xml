@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_benhvien_tienluong_chitietphucap_list" model="ir.ui.view">
+        <field name="name">benhvien.tienluong.chitietphucap.list</field>
+        <field name="model">benhvien.tienluong.chitietphucap</field>
+        <field name="arch" type="xml">
+            <list string="Chi tiết Phụ cấp">
+                <field name="employee_code"/>
+                <field name="allowance_id"/>
+            </list>
+        </field>
+    </record>
+</odoo>

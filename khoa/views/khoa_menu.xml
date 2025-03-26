@@ -16,6 +16,13 @@
                 <menuitem id="sudunggiuongbenh_menu" name="Sử dụng Giường bệnh" action="action_sudunggiuongbenh_information"/>
             </menuitem>
 
+            <menuitem id="qlnhansu_menu" name="Quản lý nhan su">
+                <menuitem id="menu_benhvien_nhansu" name="Nhân viên" parent="menu_benhvien_nhansu_root" action="action_benhvien_nhansu"/>
+                <menuitem id="menu_benhvien_tienluong" name="Bảng Lương" parent="menu_benhvien_tienluong_root" action="action_benhvien_tienluong"/>
+                <menuitem id="menu_benhvien_tienluong_chitietphucap" name="Chi tiết Phụ cấp" parent="menu_benhvien_tienluong_root" action="action_benhvien_tienluong_chitietphucap"/>
+                <menuitem id="menu_benhvien_tienluong_phucap" name="Phụ cấp" parent="menu_benhvien_tienluong_root" action="action_benhvien_tienluong_phucap"/>
+            </menuitem>
+
         </menuitem>
 
     </data>
