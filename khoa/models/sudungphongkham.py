@@ -6,6 +6,8 @@ class SudungPhongkham(models.Model):
     _description = "Su dung Phong kham Management"
 
     name = fields.Many2one("benhvien.phongkham", string="Phòng khám", required=True)
+
+    doctor_id = fields.Char(string="Bác sĩ", required=True)
     # doctor_id = fields.One2many(
     #     "benhvien.nhansu",
     #     "sudungphongkham_id",

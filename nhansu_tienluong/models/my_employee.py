@@ -22,4 +22,3 @@ class MyEmployee(models.Model):
     experience_ids = fields.One2many('benhvien.nhansu.kinhnghiem', 'employee_id', string="Kinh nghiệm")
     skill_ids = fields.One2many('benhvien.nhansu.kynang', 'employee_id', string="Kỹ năng")
     khoa = fields.Many2one('benhvien.khoa', string="Khoa")
-    sudungphongkham_id = fields.Many2one("benhvien.sudungphongkham", string="Sử dụng phòng khám")  # Quan hệ nhiều bác sĩ với một lần sử dụng phòng khám
