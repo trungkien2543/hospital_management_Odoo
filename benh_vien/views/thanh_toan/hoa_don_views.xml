@@ -33,7 +33,24 @@
                         <field name="so_tien_bhyt"/>
                         <field name="trang_thai"/>
                         <field name="benh_an_id"/>
+                        <field name="currency_id"/>
                     </group>
+                    <notebook>
+                        <page string="Chi tiết dịch vụ">
+                            <field name="chi_tiet_hoa_don_ids">
+                                <list editable="bottom">
+                                    <field name="dich_vu"/>
+                                    <field name="so_luong"/>
+                                    <field name="don_gia"/>
+                                    <field name="thanh_tien"/>
+                                    <field name="currency_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Xuất kho thuốc">
+                             <field name="phieu_xuat_ids" mode="list,form"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

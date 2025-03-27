@@ -26,6 +26,9 @@ class Thuoc(models.Model):
         ('out_of_stock', 'Hết hàng')
     ], string="Trạng thái", required=True, copy=False, readonly=True,default='out_of_stock',compute="_compute_state")
 
+    bhyt = fields.Boolean(string='Cho phép BHYT')
+
+
     currency_id = fields.Many2one(
         "res.currency",
         string="Loại tiền tệ",
