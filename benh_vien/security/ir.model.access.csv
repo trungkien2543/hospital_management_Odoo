@@ -46,3 +46,9 @@ access_benhvien_hosobenhan,benhvien_hosobenhan,model_benhvien_hosobenhan,base.gr
 access_benhvien_lichhen,benhvien_lichhen,model_benhvien_lichhen,base.group_user,1,1,1,1
 access_benhvien_lichkham,benhvien_lichkham,model_benhvien_lichkham,base.group_user,1,1,1,1
 access_benhvien_giotrong,benhvien_giotrong,model_benhvien_giotrong,base.group_user,1,1,1,1
+
+
+
+access_benhvien_hoa_don,access_benhvien_hoa_don,model_benhvien_hoa_don,base.group_user,1,1,1,1
+access_benhvien_chi_tiet_hoa_don,access_benhvien_chi_tiet_hoa_don,model_benhvien_chi_tiet_hoa_don,base.group_user,1,1,1,1
+access_benhvien_dich_vu,access_benhvien_dich_vu,model_benhvien_dich_vu,base.group_user,1,1,1,1

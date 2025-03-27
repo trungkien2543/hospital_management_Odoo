@@ -9,6 +9,7 @@
                 <field name="ma_phieu_xuat"/>
                 <field name="ngay_xuat"/>
                 <field name="tong_tien"/>
+                <field name="currency_id"/>
             </list>
         </field>
     </record>
@@ -27,6 +28,7 @@
                         </group>
                         <group>
                             <field name="tong_tien" readonly="1"/>
+                            <field name="currency_id"/>
                         </group>
                     </group>
                     <notebook>
@@ -38,6 +40,7 @@
                                     <field name="don_gia"/>
                                     <field name="thanh_tien"/>
                                     <field name="ma_lo_hang"/>
+                                    <field name="currency_id"/>
                                 </list>
                             </field>
                         </page>

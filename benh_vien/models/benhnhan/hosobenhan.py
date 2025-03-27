@@ -1,6 +1,7 @@
 from odoo import api, fields, models, exceptions
 
 
+
 class HoSoBenhAn(models.Model):
     _name = 'benhvien.hosobenhan'
     _description = 'Quản lý hồ sơ bệnh án'
@@ -15,13 +16,24 @@ class HoSoBenhAn(models.Model):
     ke_hoach_dieu_tri = fields.Text(string="Kế hoạch điều trị")
     hen_ngay_tai_kham = fields.Date(string="Hẹn ngày tái khám")
 
-    # hoa_don = fields.One2many("benhvien.hoa_don","id","Hóa đơn")
-    #
+    hoa_don_ids = fields.Many2one(
+        'benhvien.hoa_don',
+        string="Hóa đơn",
+        ondelete="cascade",
+        readonly=True
+    )
+
+
+
     # sudunggiuongbenh = fields.One2many("benhvien.sudunggiuongbenh","benhan_id","Sử dụng giường bệnh")
     #
     # xetnghiem = fields.One2many("benhvien.xetnghiem","ma_benh_an","Xét nghiệm")
     #
     # hinhanh = fields.One2many("benhvien.hinhanh","ma_benh_an","Hình ảnh")
+
+    _sql_constraints = [
+        ('unique_hoa_don', 'UNIQUE(hoa_don_id)', 'Mỗi hồ sơ bệnh án chỉ có thể có một hóa đơn!')
+    ]
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -33,23 +45,23 @@ class HoSoBenhAn(models.Model):
 
         records = super().create(vals_list)
 
-        # for record in records:
-        #     # Tạo hóa đơn trống khi tạo hồ sơ bệnh án
-        #     self.env['benhvien.hoa_don'].create({
-        #         'benh_an': record.id,
-        #         'tong_tien': 0.0,
-        #         'so_tien_da_thanh_toan': 0.0,
-        #         'con_no': 0.0,
-        #         'so_tien_benh_nhan': 0.0,
-        #         'so_tien_BHYT': 0.0,
-        #         'trang_thai': 'draft',
-        #         'currency_id': self.env.company.currency_id.id
-        #     })
+        for record in records:
+            hoa_don = self.env['benhvien.hoa_don'].create({
+                'benh_an_id': record.id,
+                'ngay_lap': fields.Date.context_today(self),
+                'tong_tien': 0.0,
+                'con_no': 0.0,
+                'so_tien_benh_nhan': 0.0,
+                'so_tien_bhyt': 0.0,
+                'trang_thai': 'draft',
+                'currency_id': self.env.company.currency_id.id,
+            })
+            record.hoa_don_ids = hoa_don
 
         return records
 
-    # @api.constrains('hoa_don')
-    # def _check_hoa_don(self):
-    #     for record in self:
-    #         if len(record.hoa_don) > 1:
-    #             raise exceptions.ValidationError("Chỉ được phép có một hóa đơn cho mỗi hồ sơ bệnh án!")
+    @api.onchange('hoa_don_id')
+    def _onchange_hoa_don_id(self):
+        """ Khi chọn hóa đơn bên bệnh án, cập nhật bệnh án trong hóa đơn """
+        if self.hoa_don_ids:
+            self.hoa_don_ids.benh_an_id = self

@@ -73,6 +73,13 @@
         'views/lichhenvalichkham/lichkham_action.xml',
         'views/lichhenvalichkham/lichkham_menu.xml',
         'data/lichhenvalichkham/email_template.xml',
+
+        #thanh toan
+        'views/thanh_toan/thanh_toan_action.xml',
+        'views/thanh_toan/thanh_toan_menus.xml',
+        'views/thanh_toan/dich_vu_views.xml',
+        'views/thanh_toan/hoa_don_views.xml',
+
     ],
     'demo': [
     ],
