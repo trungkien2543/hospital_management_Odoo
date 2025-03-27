@@ -24,12 +24,13 @@ class HoSoBenhAn(models.Model):
     )
 
 
+    sudunggiuongbenh = fields.One2many("benhvien.sudunggiuongbenh","benhan_id","Sử dụng giường bệnh")
 
-    # sudunggiuongbenh = fields.One2many("benhvien.sudunggiuongbenh","benhan_id","Sử dụng giường bệnh")
-    #
-    # xetnghiem = fields.One2many("benhvien.xetnghiem","ma_benh_an","Xét nghiệm")
-    #
-    # hinhanh = fields.One2many("benhvien.hinhanh","ma_benh_an","Hình ảnh")
+    xetnghiem = fields.One2many("benhvien.xetnghiem","ma_benh_an","Xét nghiệm")
+
+    hinhanh = fields.One2many("benhvien.hinhanh","ma_benh_an","Hình ảnh")
+
+
 
     _sql_constraints = [
         ('unique_hoa_don', 'UNIQUE(hoa_don_id)', 'Mỗi hồ sơ bệnh án chỉ có thể có một hóa đơn!')

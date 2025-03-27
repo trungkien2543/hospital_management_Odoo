@@ -6,7 +6,7 @@ class HoaDon(models.Model):
     _name = 'benhvien.hoa_don'
     _description = 'Hóa Đơn'
 
-    ngay_lap = fields.Datetime(string='Ngày Lập',default=fields.Datetime.now,readonly=True)
+    ngay_lap = fields.Datetime(string='Ngày chỉnh sửa gần nhất',default=fields.Datetime.now,readonly=True)
     tong_tien = fields.Monetary(string='Tổng Tiền', currency_field='currency_id', readonly=True)
     ghi_chu = fields.Text(string='Ghi Chú')
     con_no = fields.Monetary(string='Còn Nợ', currency_field='currency_id',readonly=True)

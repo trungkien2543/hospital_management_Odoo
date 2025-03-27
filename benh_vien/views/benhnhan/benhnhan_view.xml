@@ -100,7 +100,7 @@
                                 <field name="don_thuoc" mode="list,form"/>
                             </page>
                              <page string="Hóa đơn liên quan">
-                                <field name="hoa_don_ids"/>
+                                <field name="hoa_don_ids" mode="list,form"/>
                             </page>
                         </notebook>
                     </group>
