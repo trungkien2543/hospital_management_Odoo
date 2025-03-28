@@ -5,7 +5,7 @@ class Xetnghiem(models.Model):
     _description = "Xet Nghiem Management"
 
     ma_xet_nghiem = fields.Char(string="Mã xét nghiệm", required=True, copy=False, readonly=True, default="Không cần nhập")
-    ten_loai_xet_nghiem = fields.Many2one('benhvien.loaixetnghiem', string="Loại xét nghiệm", required=True)
+    ten_loai_xet_nghiem = fields.Many2one('benhvien.loaichandoan', string="Loại xét nghiệm", required=True)
     ma_benh_an = fields.Char(string="Mã bệnh án", required=True)
     ten_bac_si = fields.Char(string="Ten bác sĩ", required=True)
     name = fields.Char(string="Tên mẫu xét nghiệm", required=True)

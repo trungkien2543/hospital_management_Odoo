@@ -28,8 +28,7 @@
         'views/xetnghiem_chandoan/chandoan_menu.xml',
         'views/xetnghiem_chandoan/xetnghiem.xml',
         'views/xetnghiem_chandoan/hinhanh.xml',
-        'views/xetnghiem_chandoan/loaixetnghiem.xml',
-        'views/xetnghiem_chandoan/loaihinhanh.xml',
+        'views/xetnghiem_chandoan/loaichandoan.xml',
         # 'data/loaixetnghiem_data.csv',
         'data/xetnghiem_chandoan/sequence.xml',
 
