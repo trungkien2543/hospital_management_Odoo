@@ -7,9 +7,10 @@
         <field name="arch" type="xml">
             <list>
                 <field name="ten_dich_vu"/>
-                <field name="don_gia"/>
                 <field name="mo_ta"/>
                 <field name="bhyt"/>
+                <field name="loai_chan_doan"/>
+                <field name="don_gia"/>
                 <field name="currency_id"/>
             </list>
         </field>
@@ -23,9 +24,10 @@
                 <sheet>
                     <group>
                         <field name="ten_dich_vu"/>
-                        <field name="don_gia"/>
                         <field name="mo_ta"/>
                         <field name="bhyt"/>
+                        <field name="loai_chan_doan"/>
+                        <field name="don_gia"/>
                         <field name="currency_id"/>
                     </group>
                 </sheet>

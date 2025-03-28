@@ -1,7 +1,5 @@
 from odoo import models, fields, api
 
-
-
 class HoaDon(models.Model):
     _name = 'benhvien.hoa_don'
     _description = 'Hóa Đơn'
@@ -14,6 +12,9 @@ class HoaDon(models.Model):
     so_tien_bhyt = fields.Monetary(string='Số Tiền BHYT', currency_field='currency_id',readonly=True)
     trang_thai = fields.Selection([('draft', 'Khởi tạo'), ('unpaid', 'Chưa Thanh Toán'), ('paid', 'Đã Thanh Toán')],
                                   string='Trạng Thái',readonly=True, compute="_compute_trang_thai",store=True)
+
+    co_ap_dung_bhyt = fields.Boolean(string='Có Áp Dụng BHYT', default=False, readonly=True)
+
 
     benh_an_id = fields.Many2one(
         'benhvien.hosobenhan',

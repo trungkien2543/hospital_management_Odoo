@@ -7,6 +7,7 @@
         <field name="arch" type="xml">
             <list create="false">
                 <field name="ngay_lap"/>
+                <field name="co_ap_dung_bhyt"/>
                 <field name="tong_tien"/>
                 <field name="con_no"/>
                 <field name="so_tien_benh_nhan"/>
@@ -25,15 +26,20 @@
             <form create="false">
                 <sheet>
                     <group>
-                        <field name="ngay_lap"/>
-                        <field name="tong_tien"/>
-                        <field name="ghi_chu"/>
-                        <field name="con_no"/>
-                        <field name="so_tien_benh_nhan"/>
-                        <field name="so_tien_bhyt"/>
-                        <field name="trang_thai"/>
-                        <field name="benh_an_id"/>
-                        <field name="currency_id"/>
+                        <group>
+                            <field name="ngay_lap"/>
+                            <field name="trang_thai"/>
+                            <field name="benh_an_id"/>
+                             <field name="ghi_chu"/>
+                            <field name="currency_id"/>
+                        </group>
+                        <group>
+                            <field name="co_ap_dung_bhyt"/>
+                            <field name="tong_tien"/>
+                            <field name="con_no"/>
+                            <field name="so_tien_benh_nhan"/>
+                            <field name="so_tien_bhyt"/>
+                        </group>
                     </group>
                     <notebook>
                         <page string="Chi tiết dịch vụ">

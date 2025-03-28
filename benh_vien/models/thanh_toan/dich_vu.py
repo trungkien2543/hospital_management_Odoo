@@ -6,13 +6,15 @@ class DichVu(models.Model):
     _description = 'Dịch Vụ'
     _rec_name = 'ten_dich_vu'
 
-    ten_dich_vu = fields.Char(string='Tên Dịch Vụ')
+    ten_dich_vu = fields.Char(string='Tên Dịch Vụ',required=True)
 
-    don_gia = fields.Monetary(string='Đơn Giá', currency_field='currency_id')
+    don_gia = fields.Monetary(string='Đơn Giá', currency_field='currency_id',required=True)
 
-    mo_ta = fields.Text(string='Mô Tả')
+    mo_ta = fields.Text(string='Mô Tả',required=True)
 
     bhyt = fields.Boolean(string='Cho phép BHYT', default=False)
+
+    loai_chan_doan = fields.Many2one("benhvien.loaichandoan","Loại chẩn đoán")
 
     currency_id = fields.Many2one(
         'res.currency', 

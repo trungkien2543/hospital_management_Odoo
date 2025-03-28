@@ -1,11 +1,29 @@
-ten_dich_vu,don_gia,mo_ta,currency_id/id
-Khám tổng quát,200000,Khám sức khỏe tổng quát,base.VND
-Xét nghiệm máu,150000,Xét nghiệm máu cơ bản,base.VND
-Siêu âm,300000,Siêu âm bụng tổng quát,base.VND
-Chụp X-quang,250000,Chụp X-quang phổi,base.VND
-Khám chuyên khoa,500000,Khám theo chuyên khoa,base.VND
-Điện tâm đồ,350000,Kiểm tra hoạt động của tim,base.VND
-Nội soi dạ dày,600000,Nội soi kiểm tra dạ dày,base.VND
-Xét nghiệm đường huyết,100000,Kiểm tra lượng đường trong máu,base.VND
-Chụp cộng hưởng từ (MRI),1500000,Chụp MRI toàn thân,base.VND
-Tiêm chủng,300000,Tiêm vaccine phòng bệnh,base.VND
+ten_dich_vu,don_gia,mo_ta,bhyt,loai_chan_doan,currency_id/id
+Xét nghiệm máu,150000,Kiểm tra tổng quát về các chỉ số máu.,True,Xét nghiệm máu,base.VND
+Xét nghiệm nước tiểu,100000,Đánh giá tình trạng sức khỏe qua nước tiểu.,True,Xét nghiệm nước tiểu,base.VND
+Xét nghiệm đường huyết,120000,Kiểm tra mức đường trong máu.,False,Xét nghiệm đường huyết,base.VND
+X-quang phổi,250000,Chụp X-quang để kiểm tra phổi và đường hô hấp.,True,X-quang phổi,base.VND
+CT Scan đầu,500000,Chụp cắt lớp vi tính vùng đầu để kiểm tra não.,False,CT Scan đầu,base.VND
+MRI cột sống,700000,Chụp cộng hưởng từ để đánh giá cột sống.,False,MRI cột sống,base.VND
+Siêu âm ổ bụng,200000,Siêu âm kiểm tra các cơ quan trong ổ bụng.,True,Siêu âm ổ bụng,base.VND
+Nội soi dạ dày,350000,Kiểm tra dạ dày bằng ống nội soi.,False,Nội soi dạ dày,base.VND
+Chụp mạch vành,900000,Kiểm tra mạch vành của tim bằng tia X.,False,Chụp mạch vành,base.VND
+Siêu âm tim,400000,Kiểm tra cấu trúc và chức năng của tim.,True,Siêu âm tim,base.VND
+Xét nghiệm vi khuẩn HP,300000,Kiểm tra vi khuẩn Helicobacter pylori gây viêm loét dạ dày.,False,Xét nghiệm vi khuẩn HP,base.VND
+Xét nghiệm HIV,500000,Kiểm tra sự hiện diện của virus HIV trong cơ thể.,False,Xét nghiệm HIV,base.VND
+Xét nghiệm viêm gan B,400000,Kiểm tra tình trạng nhiễm virus viêm gan B.,False,Xét nghiệm viêm gan B,base.VND
+Xét nghiệm ung thư,800000,Kiểm tra các dấu ấn ung thư trong cơ thể.,False,Xét nghiệm ung thư,base.VND
+Xét nghiệm chức năng gan,350000,Đánh giá tình trạng và hoạt động của gan.,True,Xét nghiệm chức năng gan,base.VND
+Xét nghiệm chức năng thận,320000,Kiểm tra mức độ hoạt động của thận.,True,Xét nghiệm chức năng thận,base.VND
+Xét nghiệm mỡ máu,200000,Đánh giá mức cholesterol và triglyceride.,True,Xét nghiệm mỡ máu,base.VND
+Xét nghiệm điện giải,250000,Kiểm tra nồng độ các chất điện giải trong máu.,True,Xét nghiệm điện giải,base.VND
+Xét nghiệm đông máu,280000,Đánh giá khả năng đông máu của cơ thể.,False,Xét nghiệm đông máu,base.VND
+Xét nghiệm tổng phân tích tế bào máu,450000,Kiểm tra số lượng và loại tế bào trong máu.,False,Xét nghiệm tổng phân tích tế bào máu,base.VND
+MRI khớp gối,750000,Chụp cộng hưởng từ để đánh giá tổn thương khớp gối.,False,MRI khớp gối,base.VND
+X-quang xương,180000,Chụp X-quang để kiểm tra xương và khớp.,True,X-quang xương,base.VND
+Chụp nhũ ảnh,600000,Chụp X-quang tuyến vú để phát hiện ung thư vú.,False,Chụp nhũ ảnh,base.VND
+Xét nghiệm kháng thể Covid-19,400000,Xét nghiệm kiểm tra kháng thể Covid-19 sau tiêm vaccine.,False,Xét nghiệm máu,base.VND
+Xét nghiệm vi khuẩn lao,500000,Kiểm tra vi khuẩn lao trong cơ thể.,False,Xét nghiệm vi khuẩn HP,base.VND
+Khám tổng quát,200000,Khám sức khỏe tổng quát,False,,base.VND
+Khám chuyên khoa,500000,Khám theo chuyên khoa,True,,base.VND
+Tiêm chủng,300000,Tiêm vaccine phòng bệnh,False,,base.VND

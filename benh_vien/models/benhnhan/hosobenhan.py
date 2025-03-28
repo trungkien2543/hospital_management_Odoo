@@ -48,14 +48,24 @@ class HoSoBenhAn(models.Model):
         records = super().create(vals_list)
 
         for record in records:
+            bhyt_exists = bool(self.env['benhvien.bhyt'].search([
+                ('ma_benh_nhan', '=', record.ma_benh_nhan.id),
+                ('ngay_hieu_luc', '<=', fields.Date.today()),
+                ('ngay_het_han', '>=', fields.Date.today())
+            ], limit=1))
+
+            print(bhyt_exists)  # True nếu có BHYT hợp lệ, False nếu không có
+
+        for record in records:
             hoa_don = self.env['benhvien.hoa_don'].create({
                 'benh_an_id': record.id,
-                'ngay_lap': fields.Date.context_today(self),
+                'ngay_lap': fields.Datetime.now() ,
                 'tong_tien': 0.0,
                 'con_no': 0.0,
                 'so_tien_benh_nhan': 0.0,
                 'so_tien_bhyt': 0.0,
                 'trang_thai': 'draft',
+                'co_ap_dung_bhyt': bhyt_exists,
                 'currency_id': self.env.company.currency_id.id,
             })
             record.hoa_don_ids = hoa_don
