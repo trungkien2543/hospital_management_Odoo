@@ -5,7 +5,7 @@ class Hinhanh(models.Model):
     _description = "Hinh Anh Management"
 
     ma_chup = fields.Char(string="Mã chụp", required=True, copy=False, readonly=True, default="Không cần nhập")
-    loai_hinh_anh_chup = fields.Many2one('benhvien.loaihinhanh', string="Loại hình ảnh", required=True)
+    loai_hinh_anh_chup = fields.Many2one('benhvien.loaichandoan', string="Loại hinh anh", required=True)
     ma_bac_si_chup = fields.Char(string="Mã bác sĩ chụp", required=True)
     ma_benh_an = fields.Char(string="Mã bệnh án", required=True)
     name = fields.Char(string="Tên ảnh chụp", required=True)

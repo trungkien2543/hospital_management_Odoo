@@ -13,8 +13,7 @@ access_benhvien_sudunggiuongbenh,benhvien.sudunggiuongbenh,model_benhvien_sudung
 
 access_benhvien_xetnghiem,benhvien.xetnghiem,model_benhvien_xetnghiem,,1,1,1,1
 access_benhvien_hinhanh,benhvien.hinhanh,model_benhvien_hinhanh,,1,1,1,1
-access_benhvien_loaihinhanh,benhvien.loaihinhanh,model_benhvien_loaihinhanh,,1,1,1,1
-access_benhvien_loaixetnghiem,benhvien.loaixetnghiem,model_benhvien_loaixetnghiem,,1,1,1,1
+access_benhvien_loaichandoan,benhvien.loaichandoan,model_benhvien_loaichandoan,,1,1,1,1
 
 
 
