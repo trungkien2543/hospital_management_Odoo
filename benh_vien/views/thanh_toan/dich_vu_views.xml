@@ -9,6 +9,7 @@
                 <field name="ten_dich_vu"/>
                 <field name="don_gia"/>
                 <field name="mo_ta"/>
+                <field name="bhyt"/>
                 <field name="currency_id"/>
             </list>
         </field>
@@ -24,6 +25,7 @@
                         <field name="ten_dich_vu"/>
                         <field name="don_gia"/>
                         <field name="mo_ta"/>
+                        <field name="bhyt"/>
                         <field name="currency_id"/>
                     </group>
                 </sheet>

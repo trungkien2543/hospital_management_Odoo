@@ -12,7 +12,7 @@ class DichVu(models.Model):
 
     mo_ta = fields.Text(string='Mô Tả')
 
-    bhyt = fields.Boolean(string='Cho phép BHYT')
+    bhyt = fields.Boolean(string='Cho phép BHYT', default=False)
 
     currency_id = fields.Many2one(
         'res.currency', 

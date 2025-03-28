@@ -123,4 +123,44 @@
         </field>
     </record>
 
+
+
+       <!-- Tree View (Danh sách BHYT) -->
+    <record id="view_bhyt_tree" model="ir.ui.view">
+        <field name="name">bhyt.tree</field>
+        <field name="model">benhvien.bhyt</field>
+        <field name="arch" type="xml">
+            <list string="Danh sách BHYT">
+                <field name="ma_bhyt"/>
+                <field name="ma_benh_nhan"/>
+                <field name="noi_dang_ky"/>
+                <field name="ngay_hieu_luc"/>
+                <field name="ngay_het_han"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View (Chi tiết BHYT) -->
+    <record id="view_bhyt_form" model="ir.ui.view">
+        <field name="name">bhyt.form</field>
+        <field name="model">benhvien.bhyt</field>
+        <field name="arch" type="xml">
+            <form string="Thông tin BHYT">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_bhyt"/>
+                            <field name="ma_benh_nhan"/>
+                            <field name="noi_dang_ky"/>
+                        </group>
+                        <group>
+                            <field name="ngay_hieu_luc"/>
+                            <field name="ngay_het_han"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
 </odoo>

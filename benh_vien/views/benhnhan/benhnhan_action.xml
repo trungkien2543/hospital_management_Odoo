@@ -11,4 +11,11 @@
         <field name="res_model">benhvien.hosobenhan</field>
         <field name="view_mode">list,form</field>
     </record>
+
+    <!-- Action (Mở BHYT trong menu) -->
+    <record id="action_bhyt" model="ir.actions.act_window">
+        <field name="name">Bảo Hiểm Y Tế</field>
+        <field name="res_model">benhvien.bhyt</field>
+        <field name="view_mode">list,form</field>
+    </record>
 </odoo>

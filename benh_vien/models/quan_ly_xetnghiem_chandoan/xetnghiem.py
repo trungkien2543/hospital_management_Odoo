@@ -15,6 +15,7 @@ class Xetnghiem(models.Model):
         ('dang_lay_mau', 'Đang lấy mẫu'),
         ('dang_xet_nghiem', 'Đang xét nghiệm')
     ], default='dang_lay_mau', string='Trạng thái')
+
     ket_qua = fields.Text(string="Kết quả")
 
     @api.model
