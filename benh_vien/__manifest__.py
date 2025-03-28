@@ -1,7 +1,7 @@
 {
     'name': "Quản lý bệnh viện",
     'version': '1.1',
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
     'author': "Nhóm 3_DACN",
     'category': 'Healthcare',
     'summary': "A module for managing hospital operations, patients, and doctors",
@@ -54,7 +54,31 @@
         'security/ir.model.access.csv',
 
         'data/khoa/khoa_sequence.xml',
-        'data/thuoc/sequence.xml'
+        'data/thuoc/sequence.xml',
+        
+        #benhnhan
+        'views/benhnhan/benhnhan_view.xml',
+        'views/benhnhan/benhnhan_action.xml',
+        'views/benhnhan/benhnhan_menu.xml',
+        'data/benhnhan/sequence.xml',
+        'data/benhnhan/patient_data.xml',
+
+        #lichhenvalichkham
+        'data/lichhenvalichkham/sequence.xml',
+        'views/lichhenvalichkham/datlichhen_view.xml',
+        'views/lichhenvalichkham/datlichhen_action.xml',
+        'views/lichhenvalichkham/datlichhen_menu.xml',
+        'views/lichhenvalichkham/lichkham_view.xml',
+        'views/lichhenvalichkham/lichkham_action.xml',
+        'views/lichhenvalichkham/lichkham_menu.xml',
+        'data/lichhenvalichkham/email_template.xml',
+
+        #thanh toan
+        'views/thanh_toan/thanh_toan_action.xml',
+        'views/thanh_toan/thanh_toan_menus.xml',
+        'views/thanh_toan/dich_vu_views.xml',
+        'views/thanh_toan/hoa_don_views.xml',
+
     ],
     'demo': [
     ],

@@ -10,6 +10,7 @@
                 <field name="tong_tien"/>
                 <field name="hinh_thuc_thanh_toan"/>
                 <field name="ngay_nhap"/>
+                <field name="currency_id"/>
             </list>
         </field>
     </record>
@@ -30,6 +31,7 @@
                             <field name="tong_tien" readonly="1"/>
                             <field name="ghi_chu" widget="text"/>
                             <field name="ngay_nhap"/>
+                            <field name="currency_id"/>
                         </group>
                     </group>
                     <notebook>
@@ -42,6 +44,7 @@
                                     <field name="thuoc"/>
                                     <field name="tinh_trang_chat_luong"/>
                                     <field name="han_su_dung"/>
+                                    <field name="currency_id"/>
                                 </list>
                             </field>
                         </page>

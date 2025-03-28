@@ -19,6 +19,7 @@
                         <field name="state" widget="pill"/>
                         <field name="active"/>
                         <field name="ghi_chu"/>
+                        <field name="currency_id"/>
     <!--                    <field name="state" select="multi"/>  &lt;!&ndash; Tìm kiếm nâng cao &ndash;&gt;-->
                 </search>
             </field>
@@ -43,6 +44,7 @@
                     <field name="state" widget="pill"/>
                     <field name="active"/>
                     <field name="ghi_chu"/>
+                    <field name="currency_id"/>
             </list>
         </field>
     </record>
@@ -79,6 +81,7 @@
                                     <field name="active"/>
                                     <field name="ghi_chu"/>
                                     <field name="gia_ban"/>
+                                    <field name="currency_id"/>
                                 </group>
                             </group>
                         </page>

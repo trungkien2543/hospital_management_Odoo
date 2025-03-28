@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_hoa_don_tree" model="ir.ui.view">
+        <field name="name">benhvien.hoa_don.list</field>
+        <field name="model">benhvien.hoa_don</field>
+        <field name="arch" type="xml">
+            <list create="false">
+                <field name="ngay_lap"/>
+                <field name="tong_tien"/>
+                <field name="con_no"/>
+                <field name="so_tien_benh_nhan"/>
+                <field name="so_tien_bhyt"/>
+                <field name="trang_thai"/>
+                <field name="benh_an_id"/>
+                <field name="currency_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_hoa_don_form" model="ir.ui.view">
+        <field name="name">benhvien.hoa_don.form</field>
+        <field name="model">benhvien.hoa_don</field>
+        <field name="arch" type="xml">
+            <form create="false">
+                <sheet>
+                    <group>
+                        <field name="ngay_lap"/>
+                        <field name="tong_tien"/>
+                        <field name="ghi_chu"/>
+                        <field name="con_no"/>
+                        <field name="so_tien_benh_nhan"/>
+                        <field name="so_tien_bhyt"/>
+                        <field name="trang_thai"/>
+                        <field name="benh_an_id"/>
+                        <field name="currency_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Chi tiết dịch vụ">
+                            <field name="chi_tiet_hoa_don_ids">
+                                <list editable="bottom">
+                                    <field name="dich_vu"/>
+                                    <field name="so_luong"/>
+                                    <field name="don_gia"/>
+                                    <field name="thanh_tien"/>
+                                    <field name="currency_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Xuất kho thuốc">
+                             <field name="phieu_xuat_ids" mode="list,form"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+</odoo>
+

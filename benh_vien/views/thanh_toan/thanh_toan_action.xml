@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_hoa_don" model="ir.actions.act_window">
+        <field name="name">Hóa Đơn</field>
+        <field name="res_model">benhvien.hoa_don</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" eval="' '"/>  <!-- Xóa trợ giúp để ẩn nút Create -->
+    </record>
+    <record id="action_dich_vu" model="ir.actions.act_window">
+        <field name="name">Dịch Vụ</field>
+        <field name="res_model">benhvien.dich_vu</field>
+        <field name="view_mode">list,form</field>
+    </record>
+<!--    <record id="action_ma_thanh_toan" model="ir.actions.act_window">-->
+<!--        <field name="name">Mã Thanh Toán</field>-->
+<!--        <field name="res_model">benhvien.ma_thanh_toan</field>-->
+<!--        <field name="view_mode">list,form</field>-->
+<!--    </record>-->
+<!--    <record id="action_phuong_thuc_thanh_toan" model="ir.actions.act_window">-->
+<!--        <field name="name">Phương Thức Thanh Toán</field>-->
+<!--        <field name="res_model">benhvien.phuong_thuc_thanh_toan</field>-->
+<!--        <field name="view_mode">list,form</field>-->
+<!--    </record>-->
+</odoo>

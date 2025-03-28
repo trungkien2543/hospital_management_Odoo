@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_benhnhan_form" model="ir.ui.view">
+        <field name="name">Thong tin benh nhan form</field>
+        <field name="model">benhvien.benhnhan</field>
+        <field name="arch" type="xml">
+            <form string="Quản lý thông tin bệnh nhân">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_benh_nhan" readonly="1"/>
+                            <field name="ho_ten"/>
+                            <field name="ngay_sinh"/>
+                            <field name="gioi_tinh" widget="selection"/>
+                            <field name="sdt"/>
+                            <field name="email"/>
+
+                        </group>
+                        <group>
+                            <field name="dia_chi"/>
+                            <field name="lich_su_benh_ly"/>
+                            <field name="nguoi_lien_he"/>
+                            <field name="nhom_mau"/>
+                            <field name="ngay_tao" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_benhnhan_list" model="ir.ui.view">
+        <field name="name">Thong tin benh nhan list</field>
+        <field name="model">benhvien.benhnhan</field>
+        <field name="arch" type="xml">
+            <list string="Danh sách bệnh nhân">
+                <field name="image" widget="image" invisible="context.get('hide_image', False)"/>
+                <field name="ma_benh_nhan"/>
+                <field name="ho_ten"/>
+                <field name="ngay_sinh"/>
+                <field name="gioi_tinh" widget="selection"/>
+                <field name="sdt"/>
+                <field name="email"/>
+                <field name="dia_chi"/>
+                <field name="nguoi_lien_he"/>
+                <field name="lich_su_benh_ly"/>
+                <field name="nhom_mau"/>
+                <field name="ngay_tao"/>
+            </list>
+        </field>
+    </record>
+
+
+    <!-- Kanban View -->
+    <record id="view_benhnhan_kanban" model="ir.ui.view">
+        <field name="name">benhvien.benhnhan.kanban</field>
+        <field name="model">benhvien.benhnhan</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="card">  
+                        <div class="o_kanban_card">
+                            <field name="image" widget="image" class="o_kanban_image" />
+                            <div class="o_kanban_details">
+                                <strong><field name="ho_ten"/></strong>
+                                <div><field name="sdt"/></div>
+                                <div><field name="email"/></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="view_hosobenhan_form" model="ir.ui.view">
+        <field name="name">hosobenhan.form</field>
+        <field name="model">benhvien.hosobenhan</field>
+        <field name="arch" type="xml">
+            <form string="Quản lý hồ sơ bệnh án">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_ho_so" readonly="1"/>
+                            <field name="ma_benh_nhan" required="1"/>
+                            <field name="ma_bac_si" required="1"/>
+                            <field name="chuan_doan"/>
+                            <field name="trieu_chung"/>
+                        </group>
+                        <group>
+                            <field name="ngay_kham" required="1"/>
+                            <field name="ke_hoach_dieu_tri"/>
+                            <field name="hen_ngay_tai_kham"/>
+                        </group>
+                        <notebook>
+                            <page string="Đơn thuốc liên quan">
+                                <field name="don_thuoc" mode="list,form"/>
+                            </page>
+                             <page string="Hóa đơn liên quan">
+                                <field name="hoa_don_ids" mode="list,form"/>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_hosobenhan_list" model="ir.ui.view">
+        <field name="name">hosobenhan.list</field>
+        <field name="model">benhvien.hosobenhan</field>
+        <field name="arch" type="xml">
+            <list string="Danh sách hồ sơ bệnh án">
+                <field name="ma_ho_so"/>
+                <field name="ma_benh_nhan"/>
+                <field name="ma_bac_si"/>
+                <field name="chuan_doan"/>
+                <field name="ngay_kham"/>
+            </list>
+        </field>
+    </record>
+
+</odoo>
