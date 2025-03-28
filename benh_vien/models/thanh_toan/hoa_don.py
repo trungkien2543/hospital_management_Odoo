@@ -13,8 +13,6 @@ class HoaDon(models.Model):
     trang_thai = fields.Selection([('draft', 'Khởi tạo'), ('unpaid', 'Chưa Thanh Toán'), ('paid', 'Đã Thanh Toán')],
                                   string='Trạng Thái',readonly=True, compute="_compute_trang_thai",store=True)
 
-    co_ap_dung_bhyt = fields.Boolean(string='Có Áp Dụng BHYT', default=False, readonly=True)
-
 
     benh_an_id = fields.Many2one(
         'benhvien.hosobenhan',

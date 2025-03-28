@@ -1,5 +1,3 @@
-from email.policy import default
-
 from odoo import models, fields, api
 
 class ChiTietHoaDon(models.Model):
@@ -17,6 +15,8 @@ class ChiTietHoaDon(models.Model):
         default=lambda self: self.env.ref('base.VND').id,
         readonly=True
     )
+
+
 
     @api.depends("dich_vu")
     def _compute_don_gia(self):
