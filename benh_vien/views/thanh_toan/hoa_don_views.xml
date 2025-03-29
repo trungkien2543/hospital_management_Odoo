@@ -7,7 +7,6 @@
         <field name="arch" type="xml">
             <list create="false">
                 <field name="ngay_lap"/>
-                <field name="co_ap_dung_bhyt"/>
                 <field name="tong_tien"/>
                 <field name="con_no"/>
                 <field name="so_tien_benh_nhan"/>
@@ -18,6 +17,9 @@
             </list>
         </field>
     </record>
+
+
+
 
     <record id="view_hoa_don_form" model="ir.ui.view">
         <field name="name">benhvien.hoa_don.form</field>
@@ -34,7 +36,6 @@
                             <field name="currency_id"/>
                         </group>
                         <group>
-                            <field name="co_ap_dung_bhyt"/>
                             <field name="tong_tien"/>
                             <field name="con_no"/>
                             <field name="so_tien_benh_nhan"/>
@@ -49,6 +50,8 @@
                                     <field name="so_luong"/>
                                     <field name="don_gia"/>
                                     <field name="thanh_tien"/>
+                                    <field name="gia_bhyt"/>
+                                    <field name="ghi_chu"/>
                                     <field name="currency_id"/>
                                 </list>
                             </field>
