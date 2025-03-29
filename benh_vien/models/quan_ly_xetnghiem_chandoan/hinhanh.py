@@ -6,8 +6,8 @@ class Hinhanh(models.Model):
 
     ma_chup = fields.Char(string="Mã chụp", required=True, copy=False, readonly=True, default="Không cần nhập")
     loai_hinh_anh_chup = fields.Many2one('benhvien.loaichandoan', string="Loại hinh anh", required=True)
-    ma_bac_si_chup = fields.Char(string="Mã bác sĩ chụp", required=True)
-    ma_benh_an = fields.Char(string="Mã bệnh án", required=True)
+    ma_bac_si_chup = fields.Many2one("benhvien.nhansu", string="Bác Sĩ Phụ Trách", required=True)
+    ma_benh_an = fields.Many2one("benhvien.hosobenhan", string="Mã Bệnh án", required=True)
     name = fields.Char(string="Tên ảnh chụp", required=True)
     thoi_gian_chup = fields.Datetime(string="Thời gian chụp", required=True)
     trang_thai = fields.Selection([

@@ -102,6 +102,15 @@
                              <page string="Hóa đơn liên quan">
                                 <field name="hoa_don_ids" mode="inline"/>
                             </page>
+                            <page string="Giường bệnh">
+                                <field name="sudunggiuongbenh" mode="list,form"/>
+                            </page>
+                            <page string="Xét nghiệm">
+                                <field name="xetnghiem" mode="list,form"/>
+                            </page>
+                            <page string="Hình ảnh">
+                                <field name="hinhanh" mode="list,form"/>
+                            </page>
                         </notebook>
                     </group>
                 </sheet>

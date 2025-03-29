@@ -3,7 +3,7 @@
 class MyEmployee(models.Model):
     _name = 'benhvien.nhansu'
     _description = 'Employee'
-    _rec_name = 'employee_code'  # Đặt employee_code làm tên hiển thị thay vì id
+    _rec_name = 'name'  # Đặt employee_code làm tên hiển thị thay vì id
 
     employee_code = fields.Char(string="Mã nhân sự", required=True, index=True)  # Khóa chính tùy chỉnh
     name = fields.Char(string="Tên nhân sự", required=True)  
