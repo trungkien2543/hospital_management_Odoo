@@ -49,7 +49,7 @@ class HoaDon(models.Model):
     def _compute_tong_tien(self):
         """Tính tổng tiền dựa vào thành tiền của các dịch vụ."""
         for record in self:
-            record.tong_tien = sum(record.chi_tiet_hoa_don_ids.mapped("thanh_tien")) + sum(record.phieu_xuat_ids.mapped("tong_tien"))
+            record.tong_tien = sum(record.chi_tiet_hoa_don_ids.mapped("gia_bhyt")) + sum(record.phieu_xuat_ids.mapped("tong_tien"))
 
 
 
