@@ -9,8 +9,6 @@
                 <field name="ngay_lap"/>
                 <field name="tong_tien"/>
                 <field name="con_no"/>
-                <field name="so_tien_benh_nhan"/>
-                <field name="so_tien_bhyt"/>
                 <field name="trang_thai"/>
                 <field name="benh_an_id"/>
                 <field name="currency_id"/>
@@ -38,8 +36,11 @@
                         <group>
                             <field name="tong_tien"/>
                             <field name="con_no"/>
+
                             <field name="so_tien_benh_nhan"/>
+                            <field name="so_tien_benh_nhan_da_tra"/>
                             <field name="so_tien_bhyt"/>
+                            <field name="so_tien_bhyt_da_tra"/>
                         </group>
                     </group>
                     <notebook>

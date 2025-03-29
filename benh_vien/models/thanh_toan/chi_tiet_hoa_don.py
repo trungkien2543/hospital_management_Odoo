@@ -12,7 +12,7 @@ class ChiTietHoaDon(models.Model):
     hoa_don_id = fields.Many2one('benhvien.hoa_don', string='Hóa Đơn',readonly=True)
     dich_vu = fields.Many2one('benhvien.dich_vu', string='Dịch Vụ',required =True)
     so_luong = fields.Integer(string='Số Lượng',required =True,default=1)
-    thanh_tien = fields.Monetary(string='Thành Tiền', currency_field='currency_id',readonly=True,compute = '_compute_thanh_tien',store=True)
+    thanh_tien = fields.Monetary(string='Tiền Bệnh Nhân Trả', currency_field='currency_id',readonly=True,compute = '_compute_thanh_tien',store=True)
     don_gia = fields.Monetary(string='Đơn giá', currency_field='currency_id', compute = '_compute_don_gia',store=True,readonly=True)
     currency_id = fields.Many2one(
         'res.currency',
@@ -22,7 +22,7 @@ class ChiTietHoaDon(models.Model):
     )
 
 
-    gia_bhyt = fields.Monetary(string='Giá sau BHYT', currency_field='currency_id',readonly=True,compute = '_compute_gia_bhyt',store=True)
+    gia_bhyt = fields.Monetary(string='Tiền BHYT trả', currency_field='currency_id',readonly=True,compute = '_compute_gia_bhyt',store=True)
 
     ghi_chu = fields.Selection(
         [
@@ -58,23 +58,21 @@ class ChiTietHoaDon(models.Model):
     def _compute_gia_bhyt(self):
         """Kiểm tra bảo hiểm của bệnh nhân và cập nhật giá sau BHYT (chỉ khi thêm mới)."""
         today = date.today()
-        discount_rate = 0.5  # Giảm 50% nếu áp dụng BHYT
+        discount_rate = 0.6  # Tiền bệnh nhân trả giảm 60% nếu áp dụng BHYT
 
 
         for record in self:
 
-            print(f"Before Compute: {record.ghi_chu}, {record.gia_bhyt}")
-
 
             if not record.dich_vu.bhyt:
                 record.ghi_chu = 'dich_vu_khong_bhyt'
-                record.gia_bhyt = record.thanh_tien
+                record.gia_bhyt = 0
                 continue
 
 
             patient = record.hoa_don_id.benh_an_id.ma_benh_nhan
             if not patient:
-                record.gia_bhyt = record.thanh_tien
+                record.gia_bhyt = 0
                 record.ghi_chu = 'khong_co_bhyt'
                 continue
 
@@ -87,20 +85,11 @@ class ChiTietHoaDon(models.Model):
             if bhyt_record:
                 if bhyt_record.ngay_het_han < today:
                     record.ghi_chu = 'bhyt_het_han'
-                    record.gia_bhyt = record.thanh_tien
+                    record.gia_bhyt = 0
                 else:
                     record.ghi_chu = 'ap_dung_bhyt'
                     record.gia_bhyt = record.thanh_tien * discount_rate
+                    record.thanh_tien -= record.gia_bhyt
             else:
                 record.ghi_chu = 'khong_co_bhyt'
-                record.gia_bhyt = record.thanh_tien
-
-            print(f"After Compute: {record.ghi_chu}, {record.gia_bhyt}")
-
-
-
-    def write(self, vals):
-        """Không cho phép chỉnh sửa bản ghi sau khi đã tạo"""
-        if self.ids:  # Nếu bản ghi đã có ID, tức là đã lưu vào database
-            raise UserError("Bạn không thể chỉnh sửa dịch vụ sau khi đã thêm.")
-        return super(ChiTietHoaDon, self).write(vals)
+                record.gia_bhyt = 0
