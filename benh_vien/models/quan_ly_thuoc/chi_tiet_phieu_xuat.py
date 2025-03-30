@@ -9,29 +9,55 @@ class ChiTietPhieuXuat(models.Model):
     ma_phieu = fields.Many2one("benhvien.phieu_xuat", string="Phiếu Xuất", required=True, ondelete="cascade")
     thuoc = fields.Many2one("benhvien.thuoc", string="Thuốc", required=True)
     so_luong = fields.Integer(string="Số Lượng", required=True, default=1)
-    don_gia = fields.Monetary(string="Đơn Giá", compute="_compute_don_gia", store=True,currency_field="currency_id")
-    thanh_tien = fields.Monetary(string="Thành Tiền", compute="_compute_thanh_tien", store=True,currency_field="currency_id")
+
+    don_gia_thuoc = fields.Monetary(string="Đơn Giá Thuốc", compute="_compute_don_gia_thuoc", store=True, currency_field="currency_id")
+    gia_chua_giam = fields.Monetary(string="Giá Thuốc Chưa Giảm", compute="_compute_gia_chua_giam", store=True, currency_field="currency_id")
+    mien_giam = fields.Monetary(string="Miễn Giảm", default=0.0, currency_field="currency_id")
+    phai_thu = fields.Monetary(string="Phải Thu", compute="_compute_phai_thu", store=True, currency_field="currency_id")
+
     ma_lo_hang = fields.Many2one("benhvien.lo_hang", string="Lô Hàng", readonly=True)
 
     currency_id = fields.Many2one(
         "res.currency",
         string="Loại tiền tệ",
         default=lambda self: self.env.company.currency_id,
-        readonly=True,
-        store=False  # Không lưu vào database
+        readonly=True
     )
 
     @api.depends("thuoc")
-    def _compute_don_gia(self):
-        """Lấy giá bán từ thuốc."""
+    def _compute_don_gia_thuoc(self):
+        """Lấy đơn giá của thuốc từ model `benhvien.thuoc`."""
         for record in self:
-            record.don_gia = record.thuoc.gia_ban if record.thuoc else 0.0
+            record.don_gia_thuoc = record.thuoc.gia_ban if record.thuoc else 0.0
 
-    @api.depends("so_luong", "don_gia")
-    def _compute_thanh_tien(self):
-        """Tính tổng tiền = số lượng * đơn giá."""
+    @api.depends("so_luong", "don_gia_thuoc")
+    def _compute_gia_chua_giam(self):
+        """Tính tổng tiền trước khi giảm giá."""
         for record in self:
-            record.thanh_tien = record.so_luong * record.don_gia if record.so_luong and record.don_gia else 0.0
+            record.gia_chua_giam = record.so_luong * record.don_gia_thuoc
+
+    @api.depends("gia_chua_giam", "mien_giam")
+    def _compute_phai_thu(self):
+        """Tính số tiền phải thu = Giá thuốc chưa giảm - Miễn giảm."""
+        for record in self:
+            record.phai_thu = max(0, record.gia_chua_giam - record.mien_giam)
+
+
+
+    @api.depends("gia_chua_giam", "ma_phieu.hoa_don.has_bhyt", "thuoc.bhyt")
+    def _compute_mien_giam(self):
+        """Tính số tiền miễn giảm dựa trên BHYT."""
+        for record in self:
+            record.mien_giam = 0.0  # Mặc định không miễn giảm
+
+            if record.ma_phieu and record.ma_phieu.hoa_don:
+                hoa_don = record.ma_phieu.hoa_don
+
+                if hoa_don.has_bhyt and record.thuoc.bhyt:
+                    # Nếu có BHYT và thuốc được BHYT chi trả, miễn giảm theo tỷ lệ
+                    record.mien_giam = record.gia_chua_giam * 0.8
+
+
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -68,7 +94,7 @@ class ChiTietPhieuXuat(models.Model):
                 new_vals.update({
                     "ma_lo_hang": lo_hang.id,
                     "so_luong": so_luong_tru,
-                    "don_gia": lo_hang.thuoc.gia_ban
+                    "don_gia_thuoc": lo_hang.thuoc.gia_ban
                 })
                 record = super(ChiTietPhieuXuat, self).create(new_vals)
                 new_records.append(record)

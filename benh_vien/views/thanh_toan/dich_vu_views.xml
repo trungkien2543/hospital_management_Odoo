@@ -8,7 +8,7 @@
             <list>
                 <field name="ten_dich_vu"/>
                 <field name="mo_ta"/>
-                <field name="bhyt"/>
+                <field name="ap_dung_bhyt"/>
                 <field name="loai_chan_doan"/>
                 <field name="don_gia"/>
                 <field name="currency_id"/>
@@ -25,7 +25,7 @@
                     <group>
                         <field name="ten_dich_vu"/>
                         <field name="mo_ta"/>
-                        <field name="bhyt"/>
+                        <field name="ap_dung_bhyt"/>
                         <field name="loai_chan_doan"/>
                         <field name="don_gia"/>
                         <field name="currency_id"/>

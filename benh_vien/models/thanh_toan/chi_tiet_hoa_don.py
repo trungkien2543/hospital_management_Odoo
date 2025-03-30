@@ -1,19 +1,19 @@
-from datetime import date
-from email.policy import default
 
 from odoo import models, fields, api
-from odoo.exceptions import UserError
 
 
 class ChiTietHoaDon(models.Model):
     _name = 'benhvien.chi_tiet_hoa_don'
     _description = 'Chi Tiết Hóa Đơn'
 
-    hoa_don_id = fields.Many2one('benhvien.hoa_don', string='Hóa Đơn',readonly=True)
-    dich_vu = fields.Many2one('benhvien.dich_vu', string='Dịch Vụ',required =True)
-    so_luong = fields.Integer(string='Số Lượng',required =True,default=1)
-    thanh_tien = fields.Monetary(string='Tiền Bệnh Nhân Trả', currency_field='currency_id',readonly=True,compute = '_compute_thanh_tien',store=True)
-    don_gia = fields.Monetary(string='Đơn giá', currency_field='currency_id', compute = '_compute_don_gia',store=True,readonly=True)
+    hoa_don_id = fields.Many2one('benhvien.hoa_don', string='Hóa Đơn', readonly=True)
+    dich_vu = fields.Many2one('benhvien.dich_vu', string='Dịch Vụ', required=True)
+    so_luong = fields.Integer(string='Số Lượng', required=True, default=1)
+    don_gia = fields.Monetary(string='Đơn giá', currency_field='currency_id', compute='_compute_don_gia', store=True,readonly=True)
+    original_price = fields.Monetary(string='DV Chưa Giảm', currency_field='currency_id', compute='_compute_original_price', store=True,readonly=True)
+    discount_amount = fields.Monetary(string='Miễn Giảm', currency_field='currency_id', default=0.0,readonly=True,compute='_compute_discount_amount',store=True)
+    patient_pay = fields.Monetary(string='Phải Thu', currency_field='currency_id', compute='_compute_patient_pay', store=True,readonly=True)
+
     currency_id = fields.Many2one(
         'res.currency',
         string='Currency',
@@ -21,75 +21,28 @@ class ChiTietHoaDon(models.Model):
         readonly=True
     )
 
-
-    gia_bhyt = fields.Monetary(string='Tiền BHYT trả', currency_field='currency_id',readonly=True,compute = '_compute_gia_bhyt',store=True)
-
-    ghi_chu = fields.Selection(
-        [
-            ('ap_dung_bhyt', 'Áp dụng BHYT'),
-            ('khong_co_bhyt', 'Không có BHYT'),
-            ('bhyt_het_han', 'BHYT hết hạn'),
-            ('dich_vu_khong_bhyt', 'Dịch vụ không áp dụng BHYT')
-        ],
-        string="Ghi chú",
-        required=True,
-        compute="_compute_gia_bhyt",
-        default="khong_co_bhyt",
-        readonly=True,
-        store=True
-    )
-
-
-    @api.depends("dich_vu")
+    @api.depends('dich_vu.don_gia')
     def _compute_don_gia(self):
-        """Lấy giá dịch vụ."""
         for record in self:
-            record.don_gia = record.dich_vu.don_gia if record.dich_vu else 0.0
+            record.don_gia = record.dich_vu.don_gia
 
 
-    @api.depends("so_luong", "don_gia")
-    def _compute_thanh_tien(self):
-        """Tính tổng tiền = số lượng * đơn giá."""
+    @api.depends('dich_vu.don_gia', 'so_luong')
+    def _compute_original_price(self):
         for record in self:
-            record.thanh_tien = record.so_luong * record.don_gia if record.so_luong and record.don_gia else 0.0
+            record.original_price = record.dich_vu.don_gia * record.so_luong
 
 
-    @api.depends("hoa_don_id", "dich_vu", "so_luong")
-    def _compute_gia_bhyt(self):
-        """Kiểm tra bảo hiểm của bệnh nhân và cập nhật giá sau BHYT (chỉ khi thêm mới)."""
-        today = date.today()
-        discount_rate = 0.6  # Tiền bệnh nhân trả giảm 60% nếu áp dụng BHYT
-
-
+    @api.depends('hoa_don_id.has_bhyt', 'dich_vu.ap_dung_bhyt', 'original_price')
+    def _compute_discount_amount(self):
         for record in self:
-
-
-            if not record.dich_vu.bhyt:
-                record.ghi_chu = 'dich_vu_khong_bhyt'
-                record.gia_bhyt = 0
-                continue
-
-
-            patient = record.hoa_don_id.benh_an_id.ma_benh_nhan
-            if not patient:
-                record.gia_bhyt = 0
-                record.ghi_chu = 'khong_co_bhyt'
-                continue
-
-
-            bhyt_record = self.env['benhvien.bhyt'].search([
-                ('ma_benh_nhan', '=', patient.id)
-            ], limit=1, order="ngay_het_han DESC")
-
-
-            if bhyt_record:
-                if bhyt_record.ngay_het_han < today:
-                    record.ghi_chu = 'bhyt_het_han'
-                    record.gia_bhyt = 0
-                else:
-                    record.ghi_chu = 'ap_dung_bhyt'
-                    record.gia_bhyt = record.thanh_tien * discount_rate
-                    record.thanh_tien -= record.gia_bhyt
+            if record.hoa_don_id.has_bhyt and record.dich_vu.ap_dung_bhyt:
+                record.discount_amount = record.original_price * 0.8  # Giảm 80% nếu áp dụng BHYT
             else:
-                record.ghi_chu = 'khong_co_bhyt'
-                record.gia_bhyt = 0
+                record.discount_amount = 0.0
+
+
+    @api.depends('original_price', 'discount_amount')
+    def _compute_patient_pay(self):
+        for record in self:
+            record.patient_pay = record.original_price - record.discount_amount

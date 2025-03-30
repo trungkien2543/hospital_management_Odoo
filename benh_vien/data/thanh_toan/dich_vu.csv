@@ -1,4 +1,4 @@
-ten_dich_vu,don_gia,mo_ta,bhyt,loai_chan_doan,currency_id/id
+ten_dich_vu,don_gia,mo_ta,ap_dung_bhyt,loai_chan_doan,currency_id/id
 Xét nghiệm máu,150000,Kiểm tra tổng quát về các chỉ số máu.,True,Xét nghiệm máu,base.VND
 Xét nghiệm nước tiểu,100000,Đánh giá tình trạng sức khỏe qua nước tiểu.,True,Xét nghiệm nước tiểu,base.VND
 Xét nghiệm đường huyết,120000,Kiểm tra mức đường trong máu.,False,Xét nghiệm đường huyết,base.VND

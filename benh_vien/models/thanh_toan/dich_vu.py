@@ -12,7 +12,7 @@ class DichVu(models.Model):
 
     mo_ta = fields.Text(string='Mô Tả',required=True)
 
-    bhyt = fields.Boolean(string='Cho phép BHYT', default=False)
+    ap_dung_bhyt = fields.Boolean(string='Cho phép BHYT', default=False)
 
     loai_chan_doan = fields.Many2one("benhvien.loaichandoan","Loại chẩn đoán")
 
