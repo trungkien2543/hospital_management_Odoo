@@ -10,7 +10,7 @@
     """,
     'data': [
 
-        'views/nhansu_action.xml',
+
 
         # Views cho khoa
         'views/khoa/khoa_action.xml',
@@ -32,13 +32,14 @@
         # 'data/loaixetnghiem_data.csv',
         'data/xetnghiem_chandoan/sequence.xml',
 
-
-        'views/salary_views.xml',
-        'views/allowance_views.xml',
-        'views/allowance_detail_views.xml',
-        'views/my_employee_view.xml',  # View cho nhân sự
-        'views/my_experience_view.xml',  # View cho kinh nghiệm
-        'views/my_skill_view.xml',  # View cho kỹ năng
+        'views/nhansu/nhansu_action.xml',
+        'views/nhansu/nhansu_menu.xml',
+        'views/nhansu/salary_views.xml',
+        'views/nhansu/allowance_views.xml',
+        'views/nhansu/allowance_detail_views.xml',
+        'views/nhansu/my_employee_view.xml',  # View cho nhân sự
+        'views/nhansu/my_experience_view.xml',  # View cho kinh nghiệm
+        'views/nhansu/my_skill_view.xml',  # View cho kỹ năng
 
         # Views cho thuốc
         'views/thuoc/medicine_action.xml',
