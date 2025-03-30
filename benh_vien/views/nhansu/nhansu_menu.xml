@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <!-- Menu Quản lý nhân sự (nằm riêng ở menu chính) -->
+        <menuitem id="qlnhansu_menu" name="Quản lý nhân sự"/>
+        <menuitem id="menu_benhvien_nhansu" name="Nhân viên" action="action_benhvien_nhansu" parent="qlnhansu_menu"/>
+        <menuitem id="menu_benhvien_tienluong" name="Bảng Lương" action="action_benhvien_tienluong" parent="qlnhansu_menu"/>
+        <menuitem id="menu_benhvien_tienluong_chitietphucap" name="Chi tiết Phụ cấp" action="action_benhvien_tienluong_chitietphucap" parent="qlnhansu_menu"/>
+        <menuitem id="menu_benhvien_tienluong_phucap" name="Phụ cấp" action="action_benhvien_tienluong_phucap" parent="qlnhansu_menu"/>
+
+    </data>
+</odoo>

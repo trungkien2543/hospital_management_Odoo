@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <!-- View for Quy Dinh -->
+        <record id="quydinh_view" model="ir.ui.view">
+            <field name="name">Quy Định View</field>
+            <field name="model">benhvien.quydinh</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_quy_dinh"/>
+                    <field name="mo_ta"/>
+                    <field name="co_quan_ban_hanh"/>
+                    <field name="ngay_ban_hanh"/>
+                    <field name="ngay_het_hieu_luc"/>
+                    <field name="trang_thai"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>
