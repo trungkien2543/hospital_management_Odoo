@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Sequence cho Chứng Nhận -->
+        <record id="chungnhan_code_incre" model="ir.sequence">
+            <field name="name">Chung Nhan Code</field>
+            <field name="code">benhvien.chungnhan</field>
+            <field name="prefix">CN</field>  <!-- Tiền tố (CN0001, CN0002, ...) -->
+            <field name="padding">3</field>  <!-- Độ dài số -->
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Sequence cho Kiểm Tra -->
+        <record id="kiemtra_code_incre" model="ir.sequence">
+            <field name="name">Kiem Tra Code</field>
+            <field name="code">benhvien.kiemtra</field>
+            <field name="prefix">KT</field>  <!-- Tiền tố (KT0001, KT0002, ...) -->
+            <field name="padding">3</field>  <!-- Độ dài số -->
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Sequence cho Quy Định -->
+        <record id="quydinh_code_incre" model="ir.sequence">
+            <field name="name">Quy Dinh Code</field>
+            <field name="code">benhvien.quydinh</field>
+            <field name="prefix">QD</field>  <!-- Tiền tố (QD0001, QD0002, ...) -->
+            <field name="padding">3</field>  <!-- Độ dài số -->
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
+    </data>
+</odoo>

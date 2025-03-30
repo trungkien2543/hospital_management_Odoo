@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <!-- Main menu for System Management -->
+        <menuitem id="hethong_main_menu" name="Quản lý quy định" action="action_quydinh">
+
+            <!-- Menu for Chứng Nhận -->
+            <menuitem id="ql_chungnhan_menu" name="Quản lý chứng nhận" action="action_chungnhan">
+            </menuitem>
+
+            <!-- Menu for Kiểm Tra -->
+            <menuitem id="ql_kiemtra_menu" name="Quản lý kiểm tra" action="action_kiemtra">
+            </menuitem>
+
+        </menuitem>
+
+    </data>
+</odoo>

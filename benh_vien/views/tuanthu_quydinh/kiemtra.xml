@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <!-- View for Kiem Tra -->
+        <record id="kiemtra_view" model="ir.ui.view">
+            <field name="name">Kiểm Tra View</field>
+            <field name="model">benhvien.kiemtra</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_kiem_tra"/>
+                    <field name="ngay_kiem_tra"/>
+                    <field name="ket_qua"/>
+                    <field name="ghi_chu"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

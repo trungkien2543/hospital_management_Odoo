@@ -79,6 +79,15 @@
         'views/thanh_toan/dich_vu_views.xml',
         'views/thanh_toan/hoa_don_views.xml',
 
+
+        #tuanthu_quydinh
+        'views/tuanthu_quydinh/tuanthu_action.xml',
+        'views/tuanthu_quydinh/tuanthu_menu.xml',
+        'views/tuanthu_quydinh/chungnhan.xml',
+        'views/tuanthu_quydinh/kiemtra.xml',
+        'views/tuanthu_quydinh/quydinh.xml',
+        'data/tuanthu_quydinh/sequence.xml',
+
     ],
     'demo': [
     ],
