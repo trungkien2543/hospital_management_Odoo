@@ -37,6 +37,8 @@ class HoaDon(models.Model):
 
     phieu_xuat_ids = fields.One2many("benhvien.phieu_xuat","hoa_don",string="Phiếu xuất")
 
+    ma_thanh_toan = fields.One2many("benhvien.ma_thanh_toan","hoa_don_id",string="Mã thanh toán")
+
 
 
     @api.depends('chi_tiet_hoa_don_ids.patient_pay', 'phieu_xuat_ids.tong_phai_thu')
@@ -48,7 +50,6 @@ class HoaDon(models.Model):
     def _compute_remaining_debt(self):
         for record in self:
             record.remaining_debt = record.patient_pay - record.paid_amount
-
 
     @api.depends('benh_an_id.ma_benh_nhan')
     def _compute_has_bhyt(self):
@@ -63,3 +64,28 @@ class HoaDon(models.Model):
                 record.has_bhyt = bool(bhyt_record)
             else:
                 record.has_bhyt = False
+
+
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super(HoaDon, self).create(vals_list)
+        for record in records:
+            record._create_bhyt_payment()
+        return records
+
+
+    def _create_bhyt_payment(self):
+        """Tạo mã thanh toán BHYT sau khi hóa đơn được tạo."""
+        if self.has_bhyt and not self.env['benhvien.ma_thanh_toan'].search(
+                [('hoa_don_id', '=', self.id), ('phuong_thuc', '=', 'bhyt')]):
+            self.env['benhvien.ma_thanh_toan'].create({
+                'hoa_don_id': self.id,
+                'so_tien': sum(self.chi_tiet_hoa_don_ids.mapped("discount_amount")) + sum( self.phieu_xuat_ids.mapped("tong_mien_giam")),
+                'phuong_thuc': 'bhyt',
+                'trang_thai': 'pending',
+                'is_bhyt':True,
+                'ngay_tao': fields.Datetime.now(),
+                'mo_ta': 'Thanh toán bảo hiểm y tế',
+                'currency_id': self.currency_id.id
+            })

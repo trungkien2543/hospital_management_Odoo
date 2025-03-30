@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_ma_thanh_toan_form" model="ir.ui.view">
+        <field name="name">ma.thanh.toan.form</field>
+        <field name="model">benhvien.ma_thanh_toan</field>
+        <field name="arch" type="xml">
+            <form string="Mã Thanh Toán">
+                <sheet>
+                    <group>
+                        <field name="ngay_thanh_toan"/>
+                        <field name="so_tien"/>
+                        <field name="phuong_thuc"/>
+                        <field name="trang_thai"/>
+                        <field name="hoa_don_id"/>
+                        <field name="mo_ta"/>
+                        <field name="is_bhyt"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ma_thanh_toan_tree" model="ir.ui.view">
+        <field name="name">ma.thanh.toan.tree</field>
+        <field name="model">benhvien.ma_thanh_toan</field>
+        <field name="arch" type="xml">
+            <list string="Danh Sách Thanh Toán">
+                <field name="ngay_thanh_toan"/>
+                <field name="so_tien"/>
+                <field name="phuong_thuc"/>
+                <field name="trang_thai"/>
+            </list>
+        </field>
+    </record>

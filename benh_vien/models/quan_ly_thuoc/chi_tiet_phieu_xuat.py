@@ -12,7 +12,7 @@ class ChiTietPhieuXuat(models.Model):
 
     don_gia_thuoc = fields.Monetary(string="Đơn Giá Thuốc", compute="_compute_don_gia_thuoc", store=True, currency_field="currency_id")
     gia_chua_giam = fields.Monetary(string="Giá Thuốc Chưa Giảm", compute="_compute_gia_chua_giam", store=True, currency_field="currency_id")
-    mien_giam = fields.Monetary(string="Miễn Giảm", default=0.0, currency_field="currency_id")
+    mien_giam = fields.Monetary(string="Miễn Giảm", default=0.0, currency_field="currency_id", compute="_compute_mien_giam",store=True)
     phai_thu = fields.Monetary(string="Phải Thu", compute="_compute_phai_thu", store=True, currency_field="currency_id")
 
     ma_lo_hang = fields.Many2one("benhvien.lo_hang", string="Lô Hàng", readonly=True)
@@ -55,6 +55,7 @@ class ChiTietPhieuXuat(models.Model):
 
                 if hoa_don.has_bhyt and record.thuoc.bhyt:
                     # Nếu có BHYT và thuốc được BHYT chi trả, miễn giảm theo tỷ lệ
+
                     record.mien_giam = record.gia_chua_giam * 0.8
 
 
