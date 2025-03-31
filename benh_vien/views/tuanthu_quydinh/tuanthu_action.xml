@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Action for Chung Nhan -->
+        <record id="action_chungnhan" model="ir.actions.act_window">
+            <field name="name">Danh sách Chứng Nhận</field>
+            <field name="res_model">benhvien.chungnhan</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Chứng Nhận for more!
+                </p>
+            </field>
+        </record>
+
+        <!-- Action for Kiem Tra -->
+        <record id="action_kiemtra" model="ir.actions.act_window">
+            <field name="name">Danh sách Kiểm Tra</field>
+            <field name="res_model">benhvien.kiemtra</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Kiểm Tra for more!
+                </p>
+            </field>
+        </record>
+
+        <!-- Action for Quy Dinh -->
+        <record id="action_quydinh" model="ir.actions.act_window">
+            <field name="name">Danh sách Quy Định</field>
+            <field name="res_model">benhvien.quydinh</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Quy Định for more!
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -95,12 +95,26 @@
                             <field name="ke_hoach_dieu_tri"/>
                             <field name="hen_ngay_tai_kham"/>
                         </group>
+
                         <notebook>
                             <page string="Đơn thuốc liên quan">
                                 <field name="don_thuoc" mode="list,form"/>
                             </page>
+                             <page string="Hóa đơn liên quan">
+                                <field name="hoa_don_ids" mode="list"/>
+                            </page>
+                            <page string="Giường bệnh">
+                                <field name="sudunggiuongbenh" mode="list,form"/>
+                            </page>
+                            <page string="Xét nghiệm">
+                                <field name="xetnghiem" mode="list,form"/>
+                            </page>
+                            <page string="Hình ảnh">
+                                <field name="hinhanh" mode="list,form"/>
+                            </page>
                         </notebook>
                     </group>
+
                 </sheet>
             </form>
         </field>
@@ -117,6 +131,46 @@
                 <field name="chuan_doan"/>
                 <field name="ngay_kham"/>
             </list>
+        </field>
+    </record>
+
+
+
+       <!-- Tree View (Danh sách BHYT) -->
+    <record id="view_bhyt_tree" model="ir.ui.view">
+        <field name="name">bhyt.tree</field>
+        <field name="model">benhvien.bhyt</field>
+        <field name="arch" type="xml">
+            <list string="Danh sách BHYT">
+                <field name="ma_bhyt"/>
+                <field name="ma_benh_nhan"/>
+                <field name="noi_dang_ky"/>
+                <field name="ngay_hieu_luc"/>
+                <field name="ngay_het_han"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View (Chi tiết BHYT) -->
+    <record id="view_bhyt_form" model="ir.ui.view">
+        <field name="name">bhyt.form</field>
+        <field name="model">benhvien.bhyt</field>
+        <field name="arch" type="xml">
+            <form string="Thông tin BHYT">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ma_bhyt"/>
+                            <field name="ma_benh_nhan"/>
+                            <field name="noi_dang_ky"/>
+                        </group>
+                        <group>
+                            <field name="ngay_hieu_luc"/>
+                            <field name="ngay_het_han"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 

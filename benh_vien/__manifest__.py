@@ -10,7 +10,7 @@
     """,
     'data': [
 
-        'views/nhansu_action.xml',
+
 
         # Views cho khoa
         'views/khoa/khoa_action.xml',
@@ -28,18 +28,18 @@
         'views/xetnghiem_chandoan/chandoan_menu.xml',
         'views/xetnghiem_chandoan/xetnghiem.xml',
         'views/xetnghiem_chandoan/hinhanh.xml',
-        'views/xetnghiem_chandoan/loaixetnghiem.xml',
-        'views/xetnghiem_chandoan/loaihinhanh.xml',
+        'views/xetnghiem_chandoan/loaichandoan.xml',
         # 'data/loaixetnghiem_data.csv',
         'data/xetnghiem_chandoan/sequence.xml',
 
-
-        'views/salary_views.xml',
-        'views/allowance_views.xml',
-        'views/allowance_detail_views.xml',
-        'views/my_employee_view.xml',  # View cho nhân sự
-        'views/my_experience_view.xml',  # View cho kinh nghiệm
-        'views/my_skill_view.xml',  # View cho kỹ năng
+        'views/nhansu/nhansu_action.xml',
+        'views/nhansu/nhansu_menu.xml',
+        'views/nhansu/salary_views.xml',
+        'views/nhansu/allowance_views.xml',
+        'views/nhansu/allowance_detail_views.xml',
+        'views/nhansu/my_employee_view.xml',  # View cho nhân sự
+        'views/nhansu/my_experience_view.xml',  # View cho kinh nghiệm
+        'views/nhansu/my_skill_view.xml',  # View cho kỹ năng
 
         # Views cho thuốc
         'views/thuoc/medicine_action.xml',
@@ -73,6 +73,22 @@
         'views/lichhenvalichkham/lichkham_action.xml',
         'views/lichhenvalichkham/lichkham_menu.xml',
         'data/lichhenvalichkham/email_template.xml',
+
+        #thanh toan
+        'views/thanh_toan/thanh_toan_action.xml',
+        'views/thanh_toan/thanh_toan_menus.xml',
+        'views/thanh_toan/dich_vu_views.xml',
+        'views/thanh_toan/hoa_don_views.xml',
+
+
+        #tuanthu_quydinh
+        'views/tuanthu_quydinh/tuanthu_action.xml',
+        'views/tuanthu_quydinh/tuanthu_menu.xml',
+        'views/tuanthu_quydinh/chungnhan.xml',
+        'views/tuanthu_quydinh/kiemtra.xml',
+        'views/tuanthu_quydinh/quydinh.xml',
+        'data/tuanthu_quydinh/sequence.xml',
+
     ],
     'demo': [
     ],

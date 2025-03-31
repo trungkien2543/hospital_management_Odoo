@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <!-- Views for Dich Vu -->
+    <record id="view_dich_vu_tree" model="ir.ui.view">
+        <field name="name">benhvien.dich_vu.list</field>
+        <field name="model">benhvien.dich_vu</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="ten_dich_vu"/>
+                <field name="mo_ta"/>
+                <field name="ap_dung_bhyt"/>
+                <field name="loai_chan_doan"/>
+                <field name="don_gia"/>
+                <field name="currency_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_dich_vu_form" model="ir.ui.view">
+        <field name="name">benhvien.dich_vu.form</field>
+        <field name="model">benhvien.dich_vu</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="ten_dich_vu"/>
+                        <field name="mo_ta"/>
+                        <field name="ap_dung_bhyt"/>
+                        <field name="loai_chan_doan"/>
+                        <field name="don_gia"/>
+                        <field name="currency_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

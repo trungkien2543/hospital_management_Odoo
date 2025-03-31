@@ -1,39 +1,53 @@
+
 from odoo import models, fields, api
-from datetime import datetime
 
 class PhieuXuatKho(models.Model):
     _name = 'benhvien.phieu_xuat'
     _description = 'Phiếu Xuất Kho'
 
     ma_phieu_xuat = fields.Char(string="Mã Phiếu Xuất", required=True, copy=False, readonly=True, default="New")
-    ngay_xuat = fields.Datetime(string="Ngày Xuất", required=True, default=fields.Datetime.now,readonly=True)
-    tong_tien = fields.Monetary(string="Tổng Tiền", compute="_compute_tong_tien", store=True, currency_field="currency_id")
+    ngay_xuat = fields.Datetime(string="Ngày Xuất", required=True, default=fields.Datetime.now, readonly=True)
     ghi_chu = fields.Text(string="Ghi Chú")
+
+    hoa_don = fields.Many2one("benhvien.hoa_don", string="Hóa đơn")
 
     currency_id = fields.Many2one(
         "res.currency",
         string="Loại tiền tệ",
         default=lambda self: self.env.company.currency_id,
-        readonly=True,
-        store=False  # Không lưu vào database
+        readonly=True
     )
 
     chi_tiet_xuat = fields.One2many("benhvien.chi_tiet_phieu_xuat", "ma_phieu", string="Chi Tiết Xuất")
 
-    @api.depends('chi_tiet_xuat.thanh_tien')
+    # 🟢 Tổng tiền chưa giảm
+    tong_tien_chua_giam = fields.Monetary(
+        string="Tổng Tiền Chưa Giảm",
+        compute="_compute_tong_tien",
+        store=True,
+        currency_field="currency_id"
+    )
+
+    # 🟢 Tổng miễn giảm
+    tong_mien_giam = fields.Monetary(
+        string="Tổng Miễn Giảm",
+        compute="_compute_tong_tien",
+        store=True,
+        currency_field="currency_id"
+    )
+
+    # 🟢 Tổng phải thu
+    tong_phai_thu = fields.Monetary(
+        string="Tổng Phải Thu",
+        compute="_compute_tong_tien",
+        store=True,
+        currency_field="currency_id"
+    )
+
+    @api.depends('chi_tiet_xuat.gia_chua_giam', 'chi_tiet_xuat.mien_giam', 'chi_tiet_xuat.phai_thu')
     def _compute_tong_tien(self):
-        """Tính tổng tiền dựa vào thành tiền của các chi tiết phiếu xuất."""
+        """Tính tổng tiền của phiếu xuất"""
         for record in self:
-            record.tong_tien = sum(record.chi_tiet_xuat.mapped("thanh_tien"))
-
-
-    @api.model_create_multi
-    def create(self, vals_list):
-        """
-        Ghi đè phương thức create để tự động tạo mã phiếu nhập (ma_phieu_nhap) khi thêm mới bản ghi.
-        """
-        for vals in vals_list:
-            if not vals.get('ma_phieu_xuat') or vals['ma_phieu_nhap'] == 'PX0001':
-                vals['ma_phieu_xuat'] = self.env['ir.sequence'].next_by_code('benhvien.phieu_xuat') or 'PX0001'
-
-        return super(PhieuXuatKho, self).create(vals_list)
+            record.tong_tien_chua_giam = sum(record.chi_tiet_xuat.mapped("gia_chua_giam"))
+            record.tong_mien_giam = sum(record.chi_tiet_xuat.mapped("mien_giam"))
+            record.tong_phai_thu = sum(record.chi_tiet_xuat.mapped("phai_thu"))

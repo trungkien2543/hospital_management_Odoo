@@ -15,7 +15,12 @@ class PhieuNhap(models.Model):
     ], string="Hình Thức Thanh Toán", required=True)
     ngay_nhap = fields.Datetime(string="Ngày nhập", required=True, default=fields.Datetime.now,readonly=True)
     ghi_chu = fields.Text(string="Ghi Chú")
-    nha_cung_cap = fields.Many2one('res.partner', string="Nhà Cung Cấp", required=True)
+    nha_cung_cap = fields.Many2one(
+        'res.partner',
+        string='Nhà Cung Cấp',
+        domain=[('category_id.name', '=', 'Nhà Cung Cấp')],
+        required=True
+    )
     lo_hang_ids = fields.One2many('benhvien.lo_hang', 'phieu_nhap', string="Lô Hàng Nhập Kho")
 
     currency_id = fields.Many2one(

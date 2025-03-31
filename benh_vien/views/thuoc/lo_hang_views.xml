@@ -19,6 +19,7 @@
                             <field name="gia_ban"/>
                             <field name="trang_thai"/>
                             <field name="tinh_trang_chat_luong"/>
+                            <field name="currency_id"/>
                         </group>
                     </group>
                 </sheet>
@@ -39,6 +40,7 @@
                 <field name="gia_nhap"/>
                 <field name="gia_ban"/>
                 <field name="trang_thai"/>
+                <field name="currency_id"/>
             </list>
         </field>
     </record>

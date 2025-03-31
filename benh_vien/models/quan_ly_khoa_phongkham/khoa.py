@@ -5,7 +5,7 @@ class Khoa(models.Model):
     _name = "benhvien.khoa"
     _description = "Khoa Management"
 
-    ma_khoa = fields.Char(string="Mã khoa", required=True, copy=False, readonly=True, default="KHOA001")
+    ma_khoa = fields.Char(string="Mã khoa", required=True, copy=False, readonly=True, default="Không cần nhập")
     name = fields.Char(string="Tên khoa")
     description = fields.Text(string="Mô tả khoa")
 

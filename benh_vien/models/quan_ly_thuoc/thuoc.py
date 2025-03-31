@@ -1,3 +1,5 @@
+from email.policy import default
+
 from odoo import fields, models, api
 from odoo.api import readonly
 
@@ -25,6 +27,9 @@ class Thuoc(models.Model):
         ('low_stock', 'Sắp hết hàng'),
         ('out_of_stock', 'Hết hàng')
     ], string="Trạng thái", required=True, copy=False, readonly=True,default='out_of_stock',compute="_compute_state")
+
+    bhyt = fields.Boolean(string='Cho phép BHYT', default=False)
+
 
     currency_id = fields.Many2one(
         "res.currency",

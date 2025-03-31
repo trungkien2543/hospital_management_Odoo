@@ -36,7 +36,6 @@
         <field name="model">benhvien.don_thuoc</field>
         <field name="arch" type="xml">
             <list string="Danh sách Đơn thuốc">
-                <field name="ma_don_thuoc"/>
                 <field name="ngay_ke_don"/>
                 <field name="ghi_chu"/>
                 <field name="dan_do"/>

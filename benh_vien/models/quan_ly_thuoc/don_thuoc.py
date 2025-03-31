@@ -12,6 +12,8 @@ class DonThuoc(models.Model):
     dan_do = fields.Text(string="Dặn dò")
     chi_tiet_don_thuoc_ids = fields.One2many("benhvien.chi_tiet_don_thuoc", "ma_don_thuoc", string="Chi tiết đơn thuốc")
 
+    ho_so_benh = fields.Many2one("benhvien.hosobenhan",string="Hồ sơ bệnh án")
+
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
