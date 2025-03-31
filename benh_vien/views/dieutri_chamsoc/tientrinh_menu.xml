@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+         <menuitem id="tientrinh_menu" name="Quản lý tiến trình điều trị" action="action_tientrinh">
+        </menuitem>
+
+    </data>
+</odoo> 

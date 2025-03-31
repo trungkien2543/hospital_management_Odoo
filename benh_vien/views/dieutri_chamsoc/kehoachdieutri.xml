@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="kehoachdieutri_list_view" model="ir.ui.view">
+            <field name="name">Quản lý kế hoạch điều trị</field>
+            <field name="model">benhvien.kehoachdieutri</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_kehoach"/>
+                    <field name="name"/>
+                    <field name="mo_ta"/>
+                    <field name="ma_benh_an"/>
+                    <field name="ma_bac_si"/>
+                    <field name="ngay_bat_dau"/>
+                    <field name="ngay_ket_thuc"/>
+                    <field name="ngay_tao"/>
+                    <field name="ngay_cap_nhat"/>
+                    <field name="trang_thai"/>
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>
