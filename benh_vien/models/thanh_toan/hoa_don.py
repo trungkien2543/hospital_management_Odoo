@@ -1,91 +1,74 @@
+from datetime import date
+
 from odoo import models, fields, api
 
+
 class HoaDon(models.Model):
-    _name = 'benhvien.hoa_don'
-    _description = 'Hóa Đơn'
+    _name = "benhvien.hoa_don"
+    _description = "Hóa Đơn"
+    _rec_name = 'ma_hoa_don'
 
-    benh_an_id = fields.Many2one(
-        'benhvien.hosobenhan',
-        string='Bệnh Án',
-        required=True,
-        ondelete='cascade'
-    )
+    ma_hoa_don = fields.Char(string="Mã Hóa Đơn", required=True, copy=False, readonly=True, default="New")
+    created_at = fields.Datetime(string="Ngày Tạo", required=True, default=fields.Datetime.now, readonly=True)
+    benh_an_id = fields.Many2one("benhvien.hosobenhan", string="Bệnh Án", required=True)
+
+    has_bhyt = fields.Boolean(string="Có BHYT", compute="_compute_bhyt", store=True)
+
+    chi_tiet_hoa_don = fields.One2many("benhvien.chi_tiet_hoa_don", "hoa_don_id", string="Chi Tiết Hóa Đơn")
+
+    tong_tien = fields.Monetary(string="Tổng Tiền", compute="_compute_tong_tien", store=True,
+                                currency_field="currency_id")
+    mien_giam = fields.Monetary(string="Tổng Miễn Giảm", compute="_compute_tong_tien", store=True,
+                                currency_field="currency_id")
+    phai_thu = fields.Monetary(string="Phải Thu", compute="_compute_tong_tien", store=True,
+                               currency_field="currency_id")
 
 
-    paid_amount = fields.Monetary(string='Đã Thu', currency_field='currency_id', default=0.0,readonly=True)
-    patient_pay = fields.Monetary(string='Phải Thu', currency_field='currency_id', compute='_compute_patient_pay', store=True)
-    remaining_debt = fields.Monetary(string='Còn Nợ', currency_field='currency_id', compute='_compute_remaining_debt', store=True)
+    chi_tiet_hoa_don_ids = fields.One2many("benhvien.chi_tiet_hoa_don","hoa_don_id",string="Chi tiết hóa đơn")
 
-    has_bhyt = fields.Boolean(string='Áp Dụng BHYT', compute='_compute_has_bhyt', store=True, readonly=True)
+    phieu_xuat_ids =fields.One2many("benhvien.phieu_xuat","hoa_don",string="Phiếu xuất")
 
-    status = fields.Selection([
-        ('pending', 'Chờ Thanh Toán'),
-        ('partially_paid', 'Thanh Toán Một Phần'),
-        ('paid', 'Đã Thanh Toán')
-    ], string='Trạng Thái', compute='_compute_status', store=True)
-
-    created_at = fields.Datetime(string='Ngày Lập Hóa Đơn', default=fields.Datetime.now, readonly=True)
 
     currency_id = fields.Many2one(
-        'res.currency',
-        string='Currency',
-        default=lambda self: self.env.ref('base.VND').id,
+        "res.currency",
+        string="Loại tiền tệ",
+        default=lambda self: self.env.company.currency_id,
         readonly=True
     )
 
-    chi_tiet_hoa_don_ids = fields.One2many("benhvien.chi_tiet_hoa_don", "hoa_don_id", string="Chi tiết hóa đơn")
-
-    phieu_xuat_ids = fields.One2many("benhvien.phieu_xuat","hoa_don",string="Phiếu xuất")
-
-    ma_thanh_toan = fields.One2many("benhvien.ma_thanh_toan","hoa_don_id",string="Mã thanh toán")
-
-
-
-    @api.depends('chi_tiet_hoa_don_ids.patient_pay', 'phieu_xuat_ids.tong_phai_thu')
-    def _compute_patient_pay(self):
+    @api.depends("chi_tiet_hoa_don.original_price", "chi_tiet_hoa_don.discount_amount", "chi_tiet_hoa_don.patient_pay")
+    def _compute_tong_tien(self):
         for record in self:
-            record.patient_pay = sum(record.chi_tiet_hoa_don_ids.mapped("patient_pay")) + sum(record.phieu_xuat_ids.mapped("tong_phai_thu"))
+            record.tong_tien = sum(record.chi_tiet_hoa_don.mapped("original_price"))
+            record.mien_giam = sum(record.chi_tiet_hoa_don.mapped("discount_amount"))
+            record.phai_thu = sum(record.chi_tiet_hoa_don.mapped("patient_pay"))
 
-    @api.depends('patient_pay', 'paid_amount')
-    def _compute_remaining_debt(self):
+    @api.depends('benh_an_id')
+    def _compute_bhyt(self):
+        """Tự động cập nhật has_bhyt dựa vào thông tin BHYT của bệnh nhân"""
         for record in self:
-            record.remaining_debt = record.patient_pay - record.paid_amount
+            record.has_bhyt = False  # Mặc định là không có BHYT
+            if record.benh_an_id and record.benh_an_id.ma_benh_nhan:
+                benh_nhan = record.benh_an_id.ma_benh_nhan
+                today = date.today()
 
-    @api.depends('benh_an_id.ma_benh_nhan')
-    def _compute_has_bhyt(self):
-        for record in self:
-            patient = record.benh_an_id.ma_benh_nhan
-            if patient:
-                bhyt_record = self.env['benhvien.bhyt'].search([
-                    ('ma_benh_nhan', '=', patient.id),
-                    ('ngay_hieu_luc', '<=', fields.Date.today()),
-                    ('ngay_het_han', '>=', fields.Date.today())
+                # Tìm BHYT hợp lệ
+                bhyt_hop_le = self.env["benhvien.bhyt"].search([
+                    ("ma_benh_nhan", "=", benh_nhan.id),
+                    ("ngay_hieu_luc", "<=", today),
+                    ("ngay_het_han", ">", today)
                 ], limit=1)
-                record.has_bhyt = bool(bhyt_record)
-            else:
-                record.has_bhyt = False
+
+                # Nếu có BHYT hợp lệ, cập nhật has_bhyt = True
+                if bhyt_hop_le:
+                    record.has_bhyt = True
 
 
-
-    @api.model_create_multi
-    def create(self, vals_list):
-        records = super(HoaDon, self).create(vals_list)
-        for record in records:
-            record._create_bhyt_payment()
-        return records
+    @api.model
+    def create(self, vals):
+        """Tự động tạo mã hóa đơn theo sequence"""
+        if vals.get('ma_hoa_don', 'New') == 'New':
+            vals['ma_hoa_don'] = self.env['ir.sequence'].next_by_code('benhvien.hoa_don') or 'HD00001'
 
 
-    def _create_bhyt_payment(self):
-        """Tạo mã thanh toán BHYT sau khi hóa đơn được tạo."""
-        if self.has_bhyt and not self.env['benhvien.ma_thanh_toan'].search(
-                [('hoa_don_id', '=', self.id), ('phuong_thuc', '=', 'bhyt')]):
-            self.env['benhvien.ma_thanh_toan'].create({
-                'hoa_don_id': self.id,
-                'so_tien': sum(self.chi_tiet_hoa_don_ids.mapped("discount_amount")) + sum( self.phieu_xuat_ids.mapped("tong_mien_giam")),
-                'phuong_thuc': 'bhyt',
-                'trang_thai': 'pending',
-                'is_bhyt':True,
-                'ngay_tao': fields.Datetime.now(),
-                'mo_ta': 'Thanh toán bảo hiểm y tế',
-                'currency_id': self.currency_id.id
-            })
+        return super(HoaDon, self).create(vals)

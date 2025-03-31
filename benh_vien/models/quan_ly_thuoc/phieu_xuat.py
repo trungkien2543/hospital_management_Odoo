@@ -4,6 +4,7 @@ from odoo import models, fields, api
 class PhieuXuatKho(models.Model):
     _name = 'benhvien.phieu_xuat'
     _description = 'Phiếu Xuất Kho'
+    _rec_name = 'ma_phieu_xuat'
 
     ma_phieu_xuat = fields.Char(string="Mã Phiếu Xuất", required=True, copy=False, readonly=True, default="New")
     ngay_xuat = fields.Datetime(string="Ngày Xuất", required=True, default=fields.Datetime.now, readonly=True)
@@ -51,3 +52,11 @@ class PhieuXuatKho(models.Model):
             record.tong_tien_chua_giam = sum(record.chi_tiet_xuat.mapped("gia_chua_giam"))
             record.tong_mien_giam = sum(record.chi_tiet_xuat.mapped("mien_giam"))
             record.tong_phai_thu = sum(record.chi_tiet_xuat.mapped("phai_thu"))
+
+
+    @api.model
+    def create(self, vals):
+        """Tự động tạo mã phiếu xuất theo sequence"""
+        if vals.get('ma_phieu_xuat', 'New') == 'New':
+            vals['ma_phieu_xuat'] = self.env['ir.sequence'].next_by_code('benhvien.phieu_xuat') or 'PX00001'
+        return super(PhieuXuatKho, self).create(vals)
