@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- View for Chung Nhan -->
+        <record id="chungnhan_view" model="ir.ui.view">
+            <field name="name">Chứng Nhận View</field>
+            <field name="model">benhvien.chungnhan</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_chung_nhan"/>
+                    <field name="ten_chung_nhan"/>
+                    <field name="ngay_cap"/>
+                    <field name="ngay_het_han"/>
+                    <field name="trang_thai"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="danhsachloaixetnghiem_view" model="ir.ui.view">
+            <field name="name">Quản lý loại xét nghiệm</field>
+            <field name="model">benhvien.loaichandoan</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_loai"/>
+                    <field name="name"/>
+                    <field name="mo_ta"/>
+                    <field name="status"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

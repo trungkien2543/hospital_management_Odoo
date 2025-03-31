@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
-    <menuitem id="benhnhan_menu" name="Bệnh nhân">
-        <menuitem id="thongtincanhan_menu" name="Thông tin cá nhân" action="thongtincanhan_action">
-        </menuitem>
-        <menuitem id="hosobenhan_menu" name="Hồ sơ bệnh án" action="hosobenhan_action">
-        </menuitem>
-    </menuitem>
-</odoo>

@@ -1,0 +1,24 @@
+﻿ma_loai,name,mo_ta,status
+XN,Xét nghiệm máu,Kiểm tra tổng quát về các chỉ số máu.,xetnghiem
+XN,Xét nghiệm nước tiểu,Đánh giá tình trạng sức khỏe qua nước tiểu.,xetnghiem
+XN,Xét nghiệm đường huyết,Kiểm tra mức đường trong máu.,xetnghiem
+XN,Xét nghiệm chức năng gan,Đánh giá tình trạng và hoạt động của gan.,xetnghiem
+XN,Xét nghiệm chức năng thận,Kiểm tra mức độ hoạt động của thận.,xetnghiem
+XN,Xét nghiệm mỡ máu,Đánh giá mức cholesterol và triglyceride.,xetnghiem
+XN,Xét nghiệm điện giải,Kiểm tra nồng độ các chất điện giải trong máu.,xetnghiem
+XN,Xét nghiệm đông máu,Đánh giá khả năng đông máu của cơ thể.,xetnghiem
+XN,Xét nghiệm tổng phân tích tế bào máu,Kiểm tra số lượng và loại tế bào trong máu.,xetnghiem
+XN,Xét nghiệm vi khuẩn HP,Kiểm tra vi khuẩn Helicobacter pylori gây viêm loét dạ dày.,xetnghiem
+XN,Xét nghiệm HIV,Kiểm tra sự hiện diện của virus HIV trong cơ thể.,xetnghiem
+XN,Xét nghiệm viêm gan B,Kiểm tra tình trạng nhiễm virus viêm gan B.,xetnghiem
+XN,Xét nghiệm ung thư,Kiểm tra các dấu ấn ung thư trong cơ thể.,xetnghiem
+HA,X-quang phổi,Chụp X-quang để kiểm tra phổi và đường hô hấp.,chupanh
+HA,CT Scan đầu,Chụp cắt lớp vi tính vùng đầu để kiểm tra não.,chupanh
+HA,MRI cột sống,Chụp cộng hưởng từ để đánh giá cột sống.,chupanh
+HA,Siêu âm ổ bụng,Siêu âm kiểm tra các cơ quan trong ổ bụng.,chupanh
+HA,Nội soi dạ dày,Kiểm tra dạ dày bằng ống nội soi.,chupanh
+HA,Chụp mạch vành,Kiểm tra mạch vành của tim bằng tia X.,chupanh
+HA,Siêu âm tim,Kiểm tra cấu trúc và chức năng của tim.,chupanh
+HA,MRI khớp gối,Chụp cộng hưởng từ để đánh giá tổn thương khớp gối.,chupanh
+HA,X-quang xương,Chụp X-quang để kiểm tra xương và khớp.,chupanh
+HA,Chụp nhũ ảnh,Chụp X-quang tuyến vú để phát hiện ung thư vú.,chupanh

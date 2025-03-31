@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_hoa_don_tree" model="ir.ui.view">
+        <field name="name">benhvien.hoa_don.list</field>
+        <field name="model">benhvien.hoa_don</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="created_at"/>
+                <field name="benh_an_id"/>
+                <field name="has_bhyt"/>
+                <field name="patient_pay"/>
+                <field name="paid_amount"/>
+                <field name="remaining_debt"/>
+                <field name="status"/>
+                <field name="currency_id"/>
+            </list>
+        </field>
+    </record>
+
+
+
+
+
+    <record id="view_hoa_don_form" model="ir.ui.view">
+        <field name="name">benhvien.hoa_don.form</field>
+        <field name="model">benhvien.hoa_don</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="created_at"/>
+                            <field name="benh_an_id"/>
+                            <field name="has_bhyt"/>
+                            <field name="status"/>
+                        </group>
+                        <group>
+                            <field name="patient_pay"/>
+                            <field name="paid_amount"/>
+                            <field name="remaining_debt"/>
+                            <field name="currency_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Chi tiết dịch vụ">
+                            <field name="chi_tiet_hoa_don_ids">
+                                <list editable="bottom">
+                                    <field name="dich_vu"/>
+                                    <field name="so_luong"/>
+                                    <field name="don_gia"/>
+                                    <field name="original_price"/>
+                                    <field name="discount_amount"/>
+                                    <field name="patient_pay"/>
+                                    <field name="currency_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Xuất kho thuốc">
+                             <field name="phieu_xuat_ids" mode="list,form"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+
+</odoo>
+
