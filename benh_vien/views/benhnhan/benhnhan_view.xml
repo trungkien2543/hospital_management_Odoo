@@ -27,6 +27,19 @@
                     <group>
                         <field name="image" widget="image" class="oe_avatar"/>
                     </group>
+                    <notebook>
+                        <page string="Lịch sử khám bệnh">
+                            <field name="hosobenhan">
+                                <list>
+                                    <field name="ma_ho_so"/>
+                                    <field name="ma_bac_si"/>
+                                    <field name="chuan_doan"/>
+                                    <field name="trieu_chung"/>
+                                    <field name="ngay_kham"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
