@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="tientrinh_list_view" model="ir.ui.view">
+            <field name="name">Quản lý tiến trình điều trị</field>
+            <field name="model">benhvien.tientrinh</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="ma_tien_trinh"/>
+                    <field name="ma_ke_hoach"/>
+                    <field name="ngay_ghi_nhan"/>
+                    <field name="huyet_ap"/>
+                    <field name="nhip_tim"/>
+                    <field name="luong_duong"/>
+                    <field name="nhiet_do"/>
+                    <field name="BMI"/>
+                    <field name="trieu_chung_hien_tai"/>
+                    <field name="phan_hoi"/>
+                    <field name="ghi_chu"/>
+                    <field name="ngay_cap_nhat"/>
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

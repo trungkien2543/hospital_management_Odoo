@@ -89,6 +89,14 @@
         'views/tuanthu_quydinh/quydinh.xml',
         'data/tuanthu_quydinh/sequence.xml',
 
+        #quan_ly_dieutri_chamsoc
+        'views/dieutri_chamsoc/kehoachdieutri_action.xml',
+        'views/dieutri_chamsoc/kehoachdieutri_menu.xml',
+        'views/dieutri_chamsoc/kehoachdieutri.xml',
+        'views/dieutri_chamsoc/tientrinh_action.xml',
+        'views/dieutri_chamsoc/tientrinh_menu.xml',
+        'views/dieutri_chamsoc/tientrinh.xml',
+
     ],
     'demo': [
     ],
