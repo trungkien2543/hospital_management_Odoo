@@ -46,3 +46,6 @@ class ChiTietHoaDon(models.Model):
     def _compute_patient_pay(self):
         for record in self:
             record.patient_pay = record.original_price - record.discount_amount
+
+
+

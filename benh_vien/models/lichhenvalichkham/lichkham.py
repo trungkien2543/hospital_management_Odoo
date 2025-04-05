@@ -27,6 +27,7 @@ class LichKham(models.Model):
     ly_do_kham = fields.Text(string='Lý Do Khám Bệnh')
     ngay_dat_lich = fields.Datetime(string='Ngày Đặt Lịch', default=fields.Datetime.now(), readonly=True)
 
+
     @api.constrains('ngay_kham')
     def _check_ngay_kham(self):
         """Không cho phép đặt lịch trong quá khứ"""
@@ -52,18 +53,18 @@ class LichKham(models.Model):
     def action_xac_nhan(self):
         """Bác sĩ xác nhận lịch khám và gửi email cho bệnh nhân"""
         self.write({'trang_thai': 'da_xac_nhan'})
-
         # Lấy template email
-        template = self.env.ref('lichhenvalichkham.email_template_lich_kham_xac_nhan')
-
+        template = self.env.ref('benh_vien.email_template_lich_kham_xac_nhan')
         # Kiểm tra xem template có tồn tại không
         if template:
             for record in self:
                 if record.ma_benh_nhan.email:
+                    print("Vo gui email ne 6", record.ma_benh_nhan.email)
+                    print("Vo gui email ne 7", record.id)
                     template.send_mail(record.id, force_send=True)
                 else:
+                    print("Vo gui email ne 8")
                     raise ValidationError(_("Bệnh nhân chưa có email, không thể gửi xác nhận."))
-
 
     def action_huy_lich(self):
         """Bác sĩ hủy lịch khám"""

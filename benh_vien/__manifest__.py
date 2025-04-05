@@ -79,6 +79,7 @@
         'views/thanh_toan/thanh_toan_menus.xml',
         'views/thanh_toan/dich_vu_views.xml',
         'views/thanh_toan/hoa_don_views.xml',
+        'views/thanh_toan/ma_thanh_toan.xml',
 
 
         #tuanthu_quydinh
