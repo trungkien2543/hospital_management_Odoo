@@ -1,0 +1,11 @@
+id,ma_benh_nhan,ho_ten,ngay_sinh,gioi_tinh,sdt,email,dia_chi,lich_su_benh_ly,nguoi_lien_he,nhom_mau
+benhnhan_01,BN-030,Nguyễn Văn A,1985-05-20,nam,0912345678,a.nguyen@example.com,123 Lê Lợi,Đã từng mổ ruột thừa,Trần Thị B,A
+benhnhan_02,BN-031,Trần Thị B,1990-08-15,nu,0912345679,b.tran@example.com,456 Trần Hưng Đạo,Hen suyễn,Nguyễn Văn A,B
+benhnhan_03,BN-032,Phạm Văn C,1978-03-10,nam,0912345680,c.pham@example.com,789 Nguyễn Huệ,Tăng huyết áp,Trần Thị D,AB
+benhnhan_04,BN-033,Lê Thị D,2000-12-05,nu,0912345681,d.le@example.com,12 Pasteur,Không có tiền sử bệnh,Phạm Văn E,O
+benhnhan_05,BN-034,Đỗ Văn E,1995-07-22,nam,0912345682,e.do@example.com,34 Hai Bà Trưng,Tiểu đường,Nguyễn Thị F,A
+benhnhan_06,BN-035,Ngô Thị F,1982-09-11,nu,0912345683,f.ngo@example.com,56 Nguyễn Trãi,Viêm gan B,Lê Văn G,B
+benhnhan_07,BN-036,Hoàng Văn G,1975-04-30,nam,0912345684,g.hoang@example.com,78 Cách Mạng Tháng Tám,Bệnh tim mạch,Ngô Thị H,AB
+benhnhan_08,BN-037,Võ Thị H,1988-06-18,nu,0912345685,h.vo@example.com,90 Điện Biên Phủ,Suy thận,Hoàng Văn I,O
+benhnhan_09,BN-038,Bùi Văn I,1992-11-27,nam,0912345686,i.bui@example.com,102 Phạm Ngũ Lão,Bệnh da liễu,Võ Thị K,A
+benhnhan_10,BN-039,Đặng Thị K,1999-01-09,nu,0912345687,k.dang@example.com,114 Lý Thường Kiệt,Đau dạ dày,Bùi Văn I,B

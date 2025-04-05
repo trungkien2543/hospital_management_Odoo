@@ -13,6 +13,7 @@ class BenhNhan(models.Model):
         string='Giới tính',
         default='nam'
     )
+    hosobenhan = fields.One2many('benhvien.hosobenhan', 'ma_benh_nhan', string="Hồ sơ bệnh án")
     sdt = fields.Char(string='Số điện thoại')
     email = fields.Char(string='Email')
     dia_chi = fields.Text(string='Địa chỉ')
