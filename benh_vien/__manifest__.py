@@ -92,11 +92,12 @@
 
         #quan_ly_dieutri_chamsoc
         'views/dieutri_chamsoc/kehoachdieutri_action.xml',
+        'views/dieutri_chamsoc/tientrinh_action.xml',
         'views/dieutri_chamsoc/kehoachdieutri_menu.xml',
         'views/dieutri_chamsoc/kehoachdieutri.xml',
-        'views/dieutri_chamsoc/tientrinh_action.xml',
         'views/dieutri_chamsoc/tientrinh_menu.xml',
         'views/dieutri_chamsoc/tientrinh.xml',
+        'data/dieutri_chamsoc/sequence_kehoach.xml',
 
     ],
     'demo': [

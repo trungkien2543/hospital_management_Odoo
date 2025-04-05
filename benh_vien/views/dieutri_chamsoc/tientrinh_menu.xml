@@ -2,8 +2,7 @@
 <odoo>
     <data>
 
-         <menuitem id="tientrinh_menu" name="Quản lý tiến trình điều trị" action="action_tientrinh">
-        </menuitem>
+
 
     </data>
 </odoo> 
