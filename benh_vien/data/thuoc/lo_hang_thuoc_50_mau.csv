@@ -1,0 +1,44 @@
+nha_cung_cap,hinh_thuc_thanh_toan,ngay_nhap,lo_hang_ids/thuoc,lo_hang_ids/gia_nhap,lo_hang_ids/so_luong_ton_kho,lo_hang_ids/han_su_dung
+The Jackson Group,chuyen_khoan,2025-04-02 10:00:00,Paracetamol 500mg,15000,200,2026-04-02
+Wood Corner,the_tin_dung,2025-04-03 11:30:00,Amoxicillin 500mg,8000,150,2026-04-03
+OpenWood,tien_mat,2025-04-04 14:15:00,Paracetamol 500mg,15000,120,2026-04-04
+The Jackson Group,chuyen_khoan,2025-04-05 08:45:00,Metformin 500mg,20000,80,2026-04-05
+Deco Addict,tien_mat,2025-04-06 09:00:00,Ibuprofen 200mg,12000,180,2026-04-06
+Wood Corner,the_tin_dung,2025-04-07 15:30:00,Amoxicillin 500mg,8000,220,2026-04-07
+The Jackson Group,tien_mat,2025-04-08 16:45:00,Paracetamol 500mg,15000,140,2026-04-08
+OpenWood,chuyen_khoan,2025-04-09 07:30:00,Ibuprofen 200mg,12000,210,2026-04-09
+Wood Corner,tien_mat,2025-04-10 10:00:00,Metformin 500mg,20000,90,2026-04-10
+The Jackson Group,the_tin_dung,2025-04-11 11:15:00,Amoxicillin 500mg,8000,180,2026-04-11
+Deco Addict,tien_mat,2025-04-12 13:45:00,Paracetamol 500mg,15000,160,2026-04-12
+Wood Corner,chuyen_khoan,2025-04-13 12:30:00,Ibuprofen 200mg,12000,170,2026-04-13
+The Jackson Group,tien_mat,2025-04-14 09:45:00,Metformin 500mg,20000,110,2026-04-14
+OpenWood,the_tin_dung,2025-04-15 14:00:00,Amoxicillin 500mg,8000,190,2026-04-15
+Wood Corner,tien_mat,2025-04-16 10:30:00,Paracetamol 500mg,15000,200,2026-04-16
+The Jackson Group,chuyen_khoan,2025-04-17 11:00:00,Ibuprofen 200mg,12000,250,2026-04-17
+Deco Addict,tien_mat,2025-04-18 12:30:00,Amoxicillin 500mg,8000,210,2026-04-18
+Wood Corner,the_tin_dung,2025-04-19 13:00:00,Paracetamol 500mg,15000,180,2026-04-19
+The Jackson Group,tien_mat,2025-04-20 14:15:00,Metformin 500mg,20000,130,2026-04-20
+OpenWood,chuyen_khoan,2025-04-21 09:00:00,Ibuprofen 200mg,12000,200,2026-04-21
+Wood Corner,tien_mat,2025-04-22 15:30:00,Amoxicillin 500mg,8000,250,2026-04-22
+The Jackson Group,the_tin_dung,2025-04-23 08:00:00,Paracetamol 500mg,15000,220,2026-04-23
+Deco Addict,tien_mat,2025-04-24 09:30:00,Ibuprofen 200mg,12000,300,2026-04-24
+My Company (Chicago),tien_mat,2025-04-25 10:15:00,Vitamin C 1000mg,25000,100,2026-04-25
+The Jackson Group,chuyen_khoan,2025-04-26 11:45:00,Cetirizine 10mg,18000,150,2026-04-26
+Wood Corner,the_tin_dung,2025-04-27 14:30:00,Aspirin 100mg,9000,200,2026-04-27
+OpenWood,tien_mat,2025-04-28 08:20:00,Omeprazole 20mg,22000,80,2026-04-28
+Deco Addict,chuyen_khoan,2025-04-29 09:10:00,Vitamin C 1000mg,25000,120,2026-04-29
+My Company (Chicago),the_tin_dung,2025-04-30 10:50:00,Cetirizine 10mg,18000,170,2026-04-30
+The Jackson Group,tien_mat,2025-05-01 13:25:00,Aspirin 100mg,9000,220,2026-05-01
+Wood Corner,chuyen_khoan,2025-05-02 15:40:00,Omeprazole 20mg,22000,90,2026-05-02
+OpenWood,the_tin_dung,2025-05-03 07:55:00,Vitamin C 1000mg,25000,130,2026-05-03
+Deco Addict,tien_mat,2025-05-04 11:30:00,Cetirizine 10mg,18000,190,2026-05-04
+My Company (Chicago),chuyen_khoan,2025-05-05 14:15:00,Aspirin 100mg,9000,240,2026-05-05
+The Jackson Group,the_tin_dung,2025-05-06 08:45:00,Omeprazole 20mg,22000,110,2026-05-06
+Wood Corner,tien_mat,2025-05-07 10:20:00,Vitamin C 1000mg,25000,140,2026-05-07
+OpenWood,chuyen_khoan,2025-05-08 12:35:00,Cetirizine 10mg,18000,210,2026-05-08
+Deco Addict,the_tin_dung,2025-05-09 09:50:00,Aspirin 100mg,9000,260,2026-05-09
+My Company (Chicago),tien_mat,2025-05-10 16:10:00,Omeprazole 20mg,22000,70,2026-05-10
+The Jackson Group,chuyen_khoan,2025-05-11 07:30:00,Vitamin C 1000mg,25000,160,2026-05-11
+Wood Corner,the_tin_dung,2025-05-12 11:45:00,Cetirizine 10mg,18000,230,2026-05-12
+OpenWood,tien_mat,2025-05-13 14:20:00,Aspirin 100mg,9000,280,2026-05-13
+Deco Addict,chuyen_khoan,2025-05-14 08:15:00,Omeprazole 20mg,22000,95,2026-05-14
