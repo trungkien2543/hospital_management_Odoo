@@ -24,7 +24,7 @@
         </record>
 
         <record id="action_loaixetnghiem" model="ir.actions.act_window">
-            <field name="name">Danh sách loại chan doan</field>
+            <field name="name">Danh sách loại chẩn đoán</field>
             <field name="res_model">benhvien.loaichandoan</field>
             <field name="view_mode">list,form</field>
             <field name="help" type="html">

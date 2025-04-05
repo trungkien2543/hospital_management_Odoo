@@ -6,7 +6,7 @@
             <field name="model">benhvien.giuongbenh</field>
             <field name="arch" type="xml">
                 <list>
-                    <field name="ma_giuong"/>
+<!--                    <field name="ma_giuong"/>-->
                     <field name="name"/>
                     <field name="code_phong"/>
                     <field name="status"/>
