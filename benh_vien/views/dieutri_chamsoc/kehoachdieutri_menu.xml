@@ -2,6 +2,10 @@
 <odoo>
     <data>
 
-         <menuitem id="kehoachdieutri_menu" name="Quản lý kế hoạch điều trị" action="action_kehoachdieutri"/>
+        <menuitem id="kehoachdieutri_menu" name="Quản lý kế hoạch điều trị" action="action_kehoachdieutri">
+            <menuitem id="tientrinh_menu" name="Quản lý tiến trình điều trị" action="action_tientrinh">
+            </menuitem>
+        </menuitem>
+
     </data>
 </odoo>
