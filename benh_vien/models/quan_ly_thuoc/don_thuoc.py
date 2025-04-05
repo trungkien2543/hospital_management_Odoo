@@ -10,6 +10,8 @@ class DonThuoc(models.Model):
     ngay_ke_don = fields.Date(string="Ngày kê đơn",readonly=True,default=fields.Date.today())
     ghi_chu = fields.Text(string="Ghi chú")
     dan_do = fields.Text(string="Dặn dò")
+    chan_doan = fields.Text(string="Chẩn đoán")
+    hen_ngay_tai_kham = fields.Date(string="Hẹn ngày tái khám")
     chi_tiet_don_thuoc_ids = fields.One2many("benhvien.chi_tiet_don_thuoc", "ma_don_thuoc", string="Chi tiết đơn thuốc")
 
     ho_so_benh = fields.Many2one("benhvien.hosobenhan",string="Hồ sơ bệnh án")

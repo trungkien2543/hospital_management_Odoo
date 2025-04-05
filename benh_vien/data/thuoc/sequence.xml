@@ -53,4 +53,12 @@
     </data>
 
 
+    <record id="seq_benhvien_ma_thanh_toan" model="ir.sequence">
+        <field name="name">Mã Thanh Toán</field>
+        <field name="code">benhvien.ma_thanh_toan</field>
+        <field name="prefix">MTT</field>  <!-- Mã tiền tố, có thể là "MTT" hoặc khác -->
+        <field name="padding">4</field>   <!-- Số ký tự tối thiểu -->
+        <field name="number_increment">1</field> <!-- Tăng tự động mỗi khi tạo mới -->
+    </record>
+
 </odoo>

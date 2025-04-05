@@ -93,7 +93,7 @@
                         <group>
                             <field name="ngay_kham" required="1"/>
                             <field name="ke_hoach_dieu_tri"/>
-                            <field name="hen_ngay_tai_kham"/>
+
                         </group>
 
                         <notebook>

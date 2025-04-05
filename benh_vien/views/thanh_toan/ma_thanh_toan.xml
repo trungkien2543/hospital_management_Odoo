@@ -6,13 +6,15 @@
             <form string="Mã Thanh Toán">
                 <sheet>
                     <group>
-                        <field name="ngay_thanh_toan" modifiers="{'readonly': [('is_bhyt', '=', True)]}"/>
-                        <field name="so_tien" modifiers="{'readonly': [('is_bhyt', '=', True)]}"/>
-                        <field name="phuong_thuc" modifiers="{'readonly': [('is_bhyt', '=', True)]}"/>
-                        <field name="trang_thai" modifiers="{'readonly': [('is_bhyt', '=', True)]}"/>
-                        <field name="hoa_don_id" modifiers="{'readonly': [('is_bhyt', '=', True)]}"/>
-                        <field name="mo_ta" modifiers="{'readonly': [('is_bhyt', '=', True)]}"/>
+                        <field name="ma_thanh_toan"/>
+                        <field name="ngay_thanh_toan"/>
+                        <field name="so_tien"/>
+                        <field name="phuong_thuc"/>
+                        <field name="trang_thai"/>
+                        <field name="hoa_don_id"/>
+                        <field name="mo_ta"/>
                         <field name="is_bhyt"/>
+                        <field name="currency_id"/>
                     </group>
                 </sheet>
             </form>
@@ -24,10 +26,12 @@
         <field name="model">benhvien.ma_thanh_toan</field>
         <field name="arch" type="xml">
             <list string="Danh Sách Thanh Toán">
+                <field name="ma_thanh_toan"/>
                 <field name="ngay_thanh_toan"/>
                 <field name="so_tien"/>
                 <field name="phuong_thuc"/>
                 <field name="trang_thai"/>
+                <field name="currency_id"/>
             </list>
         </field>
     </record>

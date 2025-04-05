@@ -70,5 +70,16 @@ class HoaDon(models.Model):
         if vals.get('ma_hoa_don', 'New') == 'New':
             vals['ma_hoa_don'] = self.env['ir.sequence'].next_by_code('benhvien.hoa_don') or 'HD00001'
 
+        hoa_don = super(HoaDon, self).create(vals)
 
-        return super(HoaDon, self).create(vals)
+        # Kiểm tra nếu hóa đơn có BHYT thì tự động tạo mã thanh toán BHYT
+        if hoa_don.has_bhyt:
+            self.env['benhvien.ma_thanh_toan'].create({
+                'hoa_don_id': hoa_don.id,
+                'so_tien': hoa_don.phai_thu,  # Lấy số tiền bệnh nhân phải trả sau khi giảm BHYT
+                'trang_thai': 'pending',  # Mặc định là chờ xử lý
+                'is_bhyt': True,  # Đánh dấu đây là thanh toán BHYT
+                'phuong_thuc': 'bhyt',  # Phương thức thanh toán là BHYT
+            })
+
+        return hoa_don

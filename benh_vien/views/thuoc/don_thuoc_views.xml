@@ -9,10 +9,12 @@
                     <group>
                         <field name="ma_don_thuoc"/>
                         <field name="ngay_ke_don"/>
+                        <field name="chan_doan"/>
                     </group>
                     <group>
                         <field name="ghi_chu"/>
                         <field name="dan_do"/>
+                        <field name="hen_ngay_tai_kham"/>
                     </group>
                     <notebook>
                         <page string="Chi tiết đơn thuốc">

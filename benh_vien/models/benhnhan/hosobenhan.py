@@ -14,7 +14,7 @@ class HoSoBenhAn(models.Model):
     don_thuoc = fields.One2many('benhvien.don_thuoc', 'ho_so_benh', string="Đơn thuốc liên quan")
     ngay_kham = fields.Date(string="Ngày khám", required=True, default=fields.Date.context_today)
     ke_hoach_dieu_tri = fields.Text(string="Kế hoạch điều trị")
-    hen_ngay_tai_kham = fields.Date(string="Hẹn ngày tái khám")
+
 
 
 
