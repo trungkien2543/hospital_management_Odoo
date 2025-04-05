@@ -57,9 +57,6 @@
                 <field name="sdt"/>
                 <field name="email"/>
                 <field name="dia_chi"/>
-                <field name="nguoi_lien_he"/>
-                <field name="lich_su_benh_ly"/>
-                <field name="nhom_mau"/>
                 <field name="ngay_tao"/>
             </list>
         </field>
@@ -77,9 +74,9 @@
                         <div class="o_kanban_card">
                             <field name="image" widget="image" class="o_kanban_image" />
                             <div class="o_kanban_details">
-                                <strong><field name="ho_ten"/></strong>
-                                <div><field name="sdt"/></div>
-                                <div><field name="email"/></div>
+                                <strong>Họ tên: <field name="ho_ten"/></strong>
+                                <div>Số điện thoại: <field name="sdt"/></div>
+                                <div>Email: <field name="email"/></div>
                             </div>
                         </div>
                     </t>

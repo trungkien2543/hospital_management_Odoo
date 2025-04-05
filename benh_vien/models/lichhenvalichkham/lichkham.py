@@ -27,6 +27,7 @@ class LichKham(models.Model):
     ly_do_kham = fields.Text(string='Lý Do Khám Bệnh')
     ngay_dat_lich = fields.Datetime(string='Ngày Đặt Lịch', default=fields.Datetime.now(), readonly=True)
 
+
     @api.constrains('ngay_kham')
     def _check_ngay_kham(self):
         """Không cho phép đặt lịch trong quá khứ"""
