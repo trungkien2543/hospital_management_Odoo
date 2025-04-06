@@ -32,14 +32,16 @@
         # 'data/loaixetnghiem_data.csv',
         'data/xetnghiem_chandoan/sequence.xml',
 
+        #view cho nhan su
+        # 'security/clinic_message_log_security.xml',  # Quyền truy cập
+        'data/nhansu//benhvien_nhansu_demo.xml',
         'views/nhansu/nhansu_action.xml',
         'views/nhansu/nhansu_menu.xml',
         'views/nhansu/salary_views.xml',
         'views/nhansu/allowance_views.xml',
         'views/nhansu/allowance_detail_views.xml',
         'views/nhansu/my_employee_view.xml',  # View cho nhân sự
-        'views/nhansu/my_experience_view.xml',  # View cho kinh nghiệm
-        'views/nhansu/my_skill_view.xml',  # View cho kỹ năng
+        'views/quanlylienlac/clinic_message_log_views.xml',  # Views cho message log
 
         # Views cho thuốc
         'views/thuoc/medicine_action.xml',

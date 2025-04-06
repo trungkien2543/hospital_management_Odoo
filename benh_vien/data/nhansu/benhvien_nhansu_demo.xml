@@ -1,0 +1,216 @@
+<odoo>
+  <data noupdate="1">
+
+    <record id="nhansu_1" model="benhvien.nhansu">
+      <field name="employee_code">NV001</field>
+      <field name="name">Nguyễn Văn A</field>
+      <field name="gender">male</field>
+      <field name="date_of_birth">1985-03-10</field>
+      <field name="phone">0912345678</field>
+      <field name="email">vana@example.com</field>
+      <field name="address">Hà Nội</field>
+      <field name="specialization">Bác sĩ nội khoa</field>
+      <field name="qualifications">Đại học Y Hà Nội</field>
+      <field name="certifications">Chứng chỉ nội soi</field>
+      <field name="cccd">123456789012</field>
+    </record>
+
+    <record id="nhansu_2" model="benhvien.nhansu">
+      <field name="employee_code">NV002</field>
+      <field name="name">Trần Thị B</field>
+      <field name="gender">female</field>
+      <field name="date_of_birth">1990-06-22</field>
+      <field name="phone">0934567890</field>
+      <field name="email">thib@example.com</field>
+      <field name="address">TP.HCM</field>
+      <field name="specialization">Điều dưỡng</field>
+      <field name="qualifications">Cao đẳng Y tế</field>
+      <field name="certifications">Chứng chỉ chăm sóc bệnh nhân</field>
+      <field name="cccd">234567890123</field>
+    </record>
+
+    <record id="nhansu_3" model="benhvien.nhansu">
+      <field name="employee_code">NV003</field>
+      <field name="name">Phạm Văn C</field>
+      <field name="gender">male</field>
+      <field name="date_of_birth">1982-11-01</field>
+      <field name="phone">0908765432</field>
+      <field name="email">vanc@example.com</field>
+      <field name="address">Hải Phòng</field>
+      <field name="specialization">Kỹ thuật viên X-quang</field>
+      <field name="qualifications">Trung cấp kỹ thuật y tế</field>
+      <field name="certifications">Chứng chỉ X-quang</field>
+      <field name="cccd">345678901234</field>
+    </record>
+
+    <record id="nhansu_4" model="benhvien.nhansu">
+      <field name="employee_code">NV004</field>
+      <field name="name">Lê Thị D</field>
+      <field name="gender">female</field>
+      <field name="date_of_birth">1993-08-14</field>
+      <field name="phone">0987654321</field>
+      <field name="email">thid@example.com</field>
+      <field name="address">Đà Nẵng</field>
+      <field name="specialization">Y sĩ đa khoa</field>
+      <field name="qualifications">Đại học Y</field>
+      <field name="certifications">Chứng chỉ cấp cứu cơ bản</field>
+      <field name="cccd">456789012345</field>
+    </record>
+
+    <record id="nhansu_5" model="benhvien.nhansu">
+      <field name="employee_code">NV005</field>
+      <field name="name">Đỗ Văn E</field>
+      <field name="gender">male</field>
+      <field name="date_of_birth">1987-01-05</field>
+      <field name="phone">0971122334</field>
+      <field name="email">vane@example.com</field>
+      <field name="address">Cần Thơ</field>
+      <field name="specialization">Bác sĩ răng hàm mặt</field>
+      <field name="qualifications">Đại học Y Dược Cần Thơ</field>
+      <field name="certifications">Chứng chỉ chỉnh nha</field>
+      <field name="cccd">567890123456</field>
+    </record>
+
+    <record id="nhansu_6" model="benhvien.nhansu">
+      <field name="employee_code">NV006</field>
+      <field name="name">Ngô Thị F</field>
+      <field name="gender">female</field>
+      <field name="date_of_birth">1995-02-28</field>
+      <field name="phone">0912233445</field>
+      <field name="email">thif@example.com</field>
+      <field name="address">Huế</field>
+      <field name="specialization">Hành chính nhân sự</field>
+      <field name="qualifications">ĐH Kinh tế</field>
+      <field name="certifications">Chứng chỉ quản trị nhân sự</field>
+      <field name="cccd">678901234567</field>
+    </record>
+
+    <record id="nhansu_7" model="benhvien.nhansu">
+      <field name="employee_code">NV007</field>
+      <field name="name">Phan Văn G</field>
+      <field name="gender">male</field>
+      <field name="date_of_birth">1991-09-12</field>
+      <field name="phone">0933445566</field>
+      <field name="email">vang@example.com</field>
+      <field name="address">Nghệ An</field>
+      <field name="specialization">Bảo vệ</field>
+      <field name="qualifications">Trung cấp an ninh</field>
+      <field name="certifications">An toàn bệnh viện</field>
+      <field name="cccd">789012345678</field>
+    </record>
+
+    <record id="nhansu_8" model="benhvien.nhansu">
+      <field name="employee_code">NV008</field>
+      <field name="name">Lý Thị H</field>
+      <field name="gender">female</field>
+      <field name="date_of_birth">1994-07-19</field>
+      <field name="phone">0955667788</field>
+      <field name="email">thih@example.com</field>
+      <field name="address">Nha Trang</field>
+      <field name="specialization">Lễ tân</field>
+      <field name="qualifications">Cao đẳng du lịch</field>
+      <field name="certifications">Kỹ năng giao tiếp</field>
+      <field name="cccd">890123456789</field>
+    </record>
+
+    <record id="nhansu_9" model="benhvien.nhansu">
+      <field name="employee_code">NV009</field>
+      <field name="name">Vũ Văn I</field>
+      <field name="gender">male</field>
+      <field name="date_of_birth">1989-12-05</field>
+      <field name="phone">0966778899</field>
+      <field name="email">vani@example.com</field>
+      <field name="address">Bình Dương</field>
+      <field name="specialization">Kỹ thuật viên xét nghiệm</field>
+      <field name="qualifications">Đại học Y Dược TP.HCM</field>
+      <field name="certifications">Xét nghiệm huyết học</field>
+      <field name="cccd">901234567890</field>
+    </record>
+
+    <record id="nhansu_10" model="benhvien.nhansu">
+      <field name="employee_code">NV010</field>
+      <field name="name">Tạ Thị K</field>
+      <field name="gender">female</field>
+      <field name="date_of_birth">1996-04-08</field>
+      <field name="phone">0977888999</field>
+      <field name="email">thik@example.com</field>
+      <field name="address">Long An</field>
+      <field name="specialization">Kế toán</field>
+      <field name="qualifications">Đại học Tài chính</field>
+      <field name="certifications">Chứng chỉ kế toán tổng hợp</field>
+      <field name="cccd">012345678901</field>
+    </record>
+    <record id="phucap_antrua" model="benhvien.tienluong.phucap">
+        <field name="name">Phụ cấp ăn trưa</field>
+        <field name="amount">500000</field>
+    </record>
+
+    <record id="phucap_dienthoai" model="benhvien.tienluong.phucap">
+        <field name="name">Phụ cấp điện thoại</field>
+        <field name="amount">300000</field>
+    </record>
+
+    <record id="phucap_trachnhiem" model="benhvien.tienluong.phucap">
+        <field name="name">Phụ cấp trách nhiệm</field>
+        <field name="amount">700000</field>
+    </record>
+
+    <!-- NV001: Nguyễn Văn A -->
+    <record id="ctpc_nv001_1" model="benhvien.tienluong.chitietphucap">
+        <field name="employee_code" ref="nhansu_1"/>
+        <field name="allowance_id" ref="phucap_antrua"/>
+    </record>
+    <record id="ctpc_nv001_2" model="benhvien.tienluong.chitietphucap">
+        <field name="employee_code" ref="nhansu_1"/>
+        <field name="allowance_id" ref="phucap_dienthoai"/>
+    </record>
+
+    <!-- NV002: Trần Thị B -->
+    <record id="ctpc_nv002_1" model="benhvien.tienluong.chitietphucap">
+        <field name="employee_code" ref="nhansu_2"/>
+        <field name="allowance_id" ref="phucap_antrua"/>
+    </record>
+
+    <!-- NV003: Phạm Văn C -->
+    <record id="ctpc_nv003_1" model="benhvien.tienluong.chitietphucap">
+        <field name="employee_code" ref="nhansu_3"/>
+        <field name="allowance_id" ref="phucap_trachnhiem"/>
+    </record>
+    <record id="luong_nv001" model="benhvien.tienluong">
+        <field name="code">TL001</field>
+        <field name="employee_code" ref="nhansu_1"/>
+        <field name="month_year">2024-03-01</field>
+        <field name="working_days">22</field>
+        <field name="overtime_hours">10</field>
+        <field name="base_salary">10000000</field>
+        <field name="salary_coefficient">1.5</field>
+        <field name="tax_income">1000000</field>
+        <field name="note">Lương tháng 3</field>
+    </record>
+
+    <record id="luong_nv002" model="benhvien.tienluong">
+        <field name="code">TL002</field>
+        <field name="employee_code" ref="nhansu_2"/>
+        <field name="month_year">2024-03-01</field>
+        <field name="working_days">20</field>
+        <field name="overtime_hours">5</field>
+        <field name="base_salary">8000000</field>
+        <field name="salary_coefficient">1.2</field>
+        <field name="tax_income">800000</field>
+        <field name="note">Lương tháng 3</field>
+    </record>
+
+    <record id="luong_nv003" model="benhvien.tienluong">
+        <field name="code">TL003</field>
+        <field name="employee_code" ref="nhansu_3"/>
+        <field name="month_year">2024-03-01</field>
+        <field name="working_days">21</field>
+        <field name="overtime_hours">8</field>
+        <field name="base_salary">9000000</field>
+        <field name="salary_coefficient">1.3</field>
+        <field name="tax_income">900000</field>
+        <field name="note">Lương tháng 3</field>
+    </record>
+
+  </data>
+</odoo>

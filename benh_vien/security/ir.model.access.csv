@@ -21,8 +21,11 @@ access_hr_allowance,access_hr_allowance,model_benhvien_tienluong_phucap,,1,1,1,1
 access_hr_allowance_detail,access_hr_allowance_detail,model_benhvien_tienluong_chitietphucap,,1,1,1,1
 access_hr_salary,access_hr_salary,model_benhvien_tienluong,,1,1,1,1
 access_my_employee,benhvien.nhansu,model_benhvien_nhansu,,1,1,1,1
-access_my_experience,benhvien.nhansu.kinhnghiem,model_benhvien_nhansu_kinhnghiem,,1,1,1,1
-access_my_skill,benhvien.nhansu.kynang,model_benhvien_nhansu_kynang,,1,1,1,1
+access_work_schedule,access.medical.work.schedule,model_medical_work_schedule,,1,1,1,1
+access_performance_review,access.medical.performance.review,model_medical_performance_review,,1,1,1,1
+
+access_clinic_message_log_user,access.clinic.message.log.user,model_clinic_message_log,base.group_user,1,0,0,0
+access_clinic_message_log_admin,access.clinic.message.log.admin,model_clinic_message_log,base.group_system,1,1,1,1
 
 
 

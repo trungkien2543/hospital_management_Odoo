@@ -2,27 +2,45 @@
 
 class MyEmployee(models.Model):
     _name = 'benhvien.nhansu'
-    _description = 'Employee'
+    _description = 'Nhân viên y tế'
     _rec_name = 'name'  # Đặt employee_code làm tên hiển thị thay vì id
 
     employee_code = fields.Char(string="Mã nhân sự", required=True, index=True)  # Khóa chính tùy chỉnh
-    name = fields.Char(string="Tên nhân sự", required=True)  
-    job_position = fields.Char(string="Tên công việc")  
-    address = fields.Char(string="Địa chỉ")  
-    birth_date = fields.Date(string="Ngày sinh")  
+
+    # --- Thông tin cá nhân ---
+    name = fields.Char(string='Họ và tên', required=True)
     gender = fields.Selection([
         ('male', 'Nam'),
-        ('female', 'Nữ')
-    ], string="Giới tính")  
+        ('female', 'Nữ'),
+        ('other', 'Khác')
+    ], string='Giới tính')
+    date_of_birth = fields.Date(string='Ngày sinh')
+    phone = fields.Char(string='Số điện thoại')
+    email = fields.Char(string='Email')
+    address = fields.Text(string='Địa chỉ')
     cccd = fields.Char(string="CCCD")  
-    email = fields.Char(string="Email")  
-    phone = fields.Char(string="Số điện thoại")  
-    image = fields.Image(string="Ảnh")  
-    manager_id = fields.Many2one('benhvien.nhansu', string="Quản lý")  
 
-    experience_ids = fields.One2many('benhvien.nhansu.kinhnghiem', 'employee_code', string="Kinh nghiệm")
-    skill_ids = fields.One2many('benhvien.nhansu.kynang', 'employee_code', string="Kỹ năng")
     sudungphongkham_id = fields.Many2one("benhvien.sudungphongkham", string="Sử dụng phòng khám")
+
+    # --- Chuyên môn ---
+    specialization = fields.Char(string='Chuyên môn')
+    qualifications = fields.Text(string='Bằng cấp')
+    certifications = fields.Text(string='Chứng chỉ')
+
+    # --- Lịch làm việc ---
+    work_schedule_ids = fields.One2many(
+        'medical.work.schedule',
+        'employee_id',
+        string='Lịch làm việc'
+    )
+
+    # --- Đánh giá hiệu suất ---
+    performance_ids = fields.One2many(
+        'medical.performance.review',
+        'employee_id',
+        string='Đánh giá hiệu suất'
+    )
+
 
     _sql_constraints = [
         ('unique_employee_code', 'UNIQUE(employee_code)', 'Mã nhân sự phải là duy nhất!')

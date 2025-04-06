@@ -1,50 +1,91 @@
 <odoo>
-    <record id="view_benhvien_nhansu_list" model="ir.ui.view">
-        <field name="name">benhvien.nhansu.list</field>
-        <field name="model">benhvien.nhansu</field>
-        <field name="arch" type="xml">
-            <list string="Nhân viên">
-                <field name="employee_code"/>
-                <field name="name"/>
-                <field name="job_position"/>
-                <field name="phone"/>
-                <field name="manager_id"/>
-                <!-- <field name="khoa"/> -->
-            </list>
-        </field>
-    </record>
+  <!-- list View -->
+  <record id="view_benhvien_nhansu_kanban" model="ir.ui.view">
+    <field name="name">benhvien.nhansu.kanban</field>
+    <field name="model">benhvien.nhansu</field>
+    <field name="arch" type="xml">
+      <kanban class="o_kanban_example">
+        <field name="name"/>
+        <field name="specialization"/>
+        <field name="phone"/>
+        <field name="email"/>
+        <field name="gender"/>
+        <field name="employee_code"/>
 
-    <record id="view_benhvien_nhansu_form" model="ir.ui.view">
-        <field name="name">benhvien.nhansu.form</field>
-        <field name="model">benhvien.nhansu</field>
-        <field name="arch" type="xml">
-            <form string="Nhân viên">
-                <sheet>
-                    <group>
-                        <field name="employee_code"/>
-                        <field name="name"/>
-                        <field name="job_position"/>
-                        <field name="address"/>
-                        <field name="birth_date"/>
-                        <field name="gender"/>
-                        <field name="cccd"/>
-                        <field name="email"/>
-                        <field name="phone"/>
-                        <field name="image" widget="image"/>
-                        <field name="manager_id"/>
-                        <!-- <field name="khoa"/> -->
-                    </group>
-                    <notebook>
-                        <page string="Kinh nghiệm">
-                            <field name="experience_ids"/>
-                        </page>
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_card">
+              <strong>
+                <t t-esc="record.name.value"/> - 
+                <t t-esc="record.specialization.value"/>
+              </strong>
+              <div>
+                📞 <t t-esc="record.phone.value"/>
+              </div>
+              <div>
+                ✉️ <t t-esc="record.email.value"/>
+              </div>
+              <div>
+                👤 Mã: <t t-esc="record.employee_code.value"/> | 
+                <t t-esc="record.gender.value"/>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
 
-                        <page string="Kỹ năng">
-                            <field name="skill_ids"/>
-                        </page>
-                    </notebook>
-                </sheet>
-            </form>
-        </field>
-    </record>
+
+  <!-- Form View -->
+  <record id="view_benhvien_nhansu_form" model="ir.ui.view">
+    <field name="name">benhvien.nhansu.form</field>
+    <field name="model">benhvien.nhansu</field>
+    <field name="arch" type="xml">
+      <form string="Thông tin nhân sự">
+        <sheet>
+          <group>
+            <field name="employee_code"/>
+            <field name="name"/>
+            <field name="cccd"/>
+            <field name="gender"/>
+            <field name="date_of_birth"/>
+            <field name="phone"/>
+            <field name="email"/>
+            <field name="address"/>
+          </group>
+
+          <group string="Thông tin chuyên môn">
+            <field name="specialization"/>
+            <field name="qualifications"/>
+            <field name="certifications"/>
+          </group>
+
+          <notebook>
+            <page string="Lịch làm việc">
+              <field name="work_schedule_ids">
+                <list editable="bottom">
+                  <field name="date"/>
+                  <field name="shift"/>
+                  <field name="start_time"/>
+                  <field name="end_time"/>
+                </list>
+              </field>
+            </page>
+
+            <page string="Đánh giá hiệu suất">
+              <field name="performance_ids">
+                <list editable="bottom">
+                  <field name="review_date"/>
+                  <field name="reviewer_id"/>
+                  <field name="score"/>
+                  <field name="comments"/>
+                </list>
+              </field>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
 </odoo>

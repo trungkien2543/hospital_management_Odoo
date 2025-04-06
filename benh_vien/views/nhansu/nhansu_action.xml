@@ -14,10 +14,11 @@
         </record>
 
         <record id="action_benhvien_nhansu" model="ir.actions.act_window">
-            <field name="name">Nhân viên</field>
+            <field name="name">Nhân viên y tế</field>
             <field name="res_model">benhvien.nhansu</field>
-            <field name="view_mode">list,form</field>
+            <field name="view_mode">kanban,list,form</field> <!-- Ưu tiên kanban -->
         </record>
+
 
         <record id="action_benhvien_tienluong" model="ir.actions.act_window">
             <field name="name">Bảng Lương</field>

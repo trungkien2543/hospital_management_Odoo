@@ -1,0 +1,15 @@
+<odoo>
+  <record id="group_clinic_message_admin" model="res.groups">
+    <field name="name">Clinic Message Admin</field>
+  </record>
+
+  <record id="access_clinic_message_log_group_admin" model="ir.model.access">
+    <field name="name">clinic.message.log.group.admin</field>
+    <field name="model_id" ref="model_clinic_message_log"/>
+    <field name="group_id" ref="module_name.group_clinic_message_admin"/>
+    <field name="perm_read" eval="1"/>
+    <field name="perm_write" eval="1"/>
+    <field name="perm_create" eval="1"/>
+    <field name="perm_unlink" eval="1"/>
+  </record>
+</odoo>

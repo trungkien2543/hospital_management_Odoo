@@ -4,7 +4,6 @@
         <field name="model">benhvien.tienluong.phucap</field>
         <field name="arch" type="xml">
             <list string="Phụ cấp">
-                <field name="code"/>
                 <field name="name"/>
                 <field name="amount"/>
             </list>
@@ -18,7 +17,6 @@
             <form string="Phụ cấp">
                 <sheet>
                     <group>
-                        <field name="code"/>
                         <field name="name"/>
                         <field name="amount"/>
                     </group>
