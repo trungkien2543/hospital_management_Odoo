@@ -13,7 +13,7 @@ class HoSoBenhAn(models.Model):
     trieu_chung = fields.Text(string="Triệu chứng")
     don_thuoc = fields.One2many('benhvien.don_thuoc', 'ho_so_benh', string="Đơn thuốc liên quan")
     ngay_kham = fields.Date(string="Ngày khám", required=True, default=fields.Date.context_today)
-    ke_hoach_dieu_tri = fields.Text(string="Kế hoạch điều trị")
+    ke_hoach_dieu_tri = fields.Many2one('benhvien.kehoachdieutri', string="Kế hoạch điều trị",required=True)
 
 
 
