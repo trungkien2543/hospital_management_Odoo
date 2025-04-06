@@ -1,0 +1,43 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Thêm phản hồi của bệnh nhân -->
+        <record id="feedback_1" model="clinic.feedback">
+            <field name="name">Phản hồi về dịch vụ tốt</field>
+            <field name="feedback_type">positive</field>
+            <field name="feedback_text">Dịch vụ rất tốt, nhân viên thân thiện và nhiệt tình.</field>
+            <field name="feedback_date">2025-04-06 10:00:00</field>
+            <field name="resolved">True</field>
+            <field name="resolution">Đã gửi lời cảm ơn đến bệnh nhân và cải thiện quy trình chăm sóc khách hàng.</field>
+        </record>
+
+        <record id="feedback_2" model="clinic.feedback">
+            <field name="name">Phản hồi về việc chờ đợi lâu</field>
+            <field name="feedback_type">negative</field>
+            <field name="feedback_text">Bệnh nhân phải chờ đợi quá lâu để được phục vụ.</field>
+            <field name="feedback_date">2025-04-06 11:30:00</field>
+            <field name="resolved">False</field>
+            <field name="resolution">Cần cải thiện thời gian phục vụ và thông báo kịp thời với bệnh nhân.</field>
+        </record>
+
+        <!-- Thêm khiếu nại của bệnh nhân -->
+        <record id="complaint_1" model="clinic.complaint">
+            <field name="name">Khiếu nại về chi phí điều trị</field>
+            <field name="complaint_type">cost</field>
+            <field name="complaint_text">Chi phí điều trị quá cao so với mức giá thông thường.</field>
+            <field name="complaint_date">2025-04-06 12:00:00</field>
+            <field name="resolved">True</field>
+            <field name="resolution">Đã xem xét lại các khoản chi phí và giải thích rõ ràng cho bệnh nhân.</field>
+        </record>
+
+        <record id="complaint_2" model="clinic.complaint">
+            <field name="name">Khiếu nại về chất lượng điều trị</field>
+            <field name="complaint_type">treatment</field>
+            <field name="complaint_text">Điều trị không hiệu quả, bệnh tình không cải thiện.</field>
+            <field name="complaint_date">2025-04-06 14:00:00</field>
+            <field name="resolved">False</field>
+            <field name="resolution">Cần xem xét lại phương pháp điều trị và lên kế hoạch thay đổi liệu trình.</field>
+        </record>
+
+    </data>
+</odoo>

@@ -42,6 +42,9 @@
         'views/nhansu/allowance_detail_views.xml',
         'views/nhansu/my_employee_view.xml',  # View cho nhân sự
         'views/quanlylienlac/clinic_message_log_views.xml',  # Views cho message log
+        'views/chamsockhachhang/feedback.xml', 
+        'data/quanlylienlac/guithongbao.xml',  
+        'data/chamsockhachhang/feedbackk.xml',  
 
         # Views cho thuốc
         'views/thuoc/medicine_action.xml',

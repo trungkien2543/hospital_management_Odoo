@@ -5,7 +5,7 @@ class PatientMessageLog(models.Model):
     _name = 'clinic.message.log'
     _description = 'Patient Message Log'
 
-    patient_id = fields.Many2one( 'benhvien.hosobenhan', string="Bệnh nhân")
+    patient_id = fields.Many2one( 'benhvien.benhnhan', string="Bệnh nhân")
     message_type = fields.Selection([('email', 'Email'), ('sms', 'SMS')], required=True, string="Hình thức")
     subject = fields.Char(string="Tiêu đề")
     content = fields.Text(string="Nội dung")

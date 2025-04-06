@@ -27,6 +27,10 @@ access_performance_review,access.medical.performance.review,model_medical_perfor
 access_clinic_message_log_user,access.clinic.message.log.user,model_clinic_message_log,base.group_user,1,0,0,0
 access_clinic_message_log_admin,access.clinic.message.log.admin,model_clinic_message_log,base.group_system,1,1,1,1
 
+access_clinic_feedback_user,access_clinic_feedback_user,model_clinic_feedback,base.group_user,1,0,0,0
+access_clinic_complaint_user,access_clinic_complaint_user,model_clinic_complaint,base.group_user,1,0,0,0
+access_clinic_feedback_admin,access_clinic_feedback_admin,model_clinic_feedback,base.group_erp_manager,1,1,1,1
+access_clinic_complaint_admin,access_clinic_complaint_admin,model_clinic_complaint,base.group_erp_manager,1,1,1,1
 
 
 

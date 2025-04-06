@@ -1,0 +1,87 @@
+<odoo>
+    <!-- list View for Feedback -->
+    <record id="view_clinic_feedback_list" model="ir.ui.view">
+        <field name="name">clinic.feedback.list</field>
+        <field name="model">clinic.feedback</field>
+        <field name="arch" type="xml">
+            <list string="Feedbacks">
+                <field name="name"/>
+                <field name="feedback_type"/>
+                <field name="feedback_date"/>
+                <field name="resolved"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View for Feedback -->
+    <record id="view_clinic_feedback_form" model="ir.ui.view">
+        <field name="name">clinic.feedback.form</field>
+        <field name="model">clinic.feedback</field>
+        <field name="arch" type="xml">
+            <form string="Patient Feedback">
+                <group>
+                    <field name="name"/>
+                    <field name="feedback_type"/>
+                    <field name="feedback_text"/>
+                    <field name="feedback_date"/>
+                    <field name="resolved"/>
+                    <field name="resolution"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Feedback -->
+    <record id="action_clinic_feedback" model="ir.actions.act_window">
+        <field name="name">Phản hồi bệnh nhân</field>
+        <field name="res_model">clinic.feedback</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_clinic_feedback_list"/>
+    </record>
+
+    <!-- list View for Complaints -->
+    <record id="view_clinic_complaint_list" model="ir.ui.view">
+        <field name="name">clinic.complaint.list</field>
+        <field name="model">clinic.complaint</field>
+        <field name="arch" type="xml">
+            <list string="Complaints">
+                <field name="name"/>
+                <field name="complaint_type"/>
+                <field name="complaint_date"/>
+                <field name="resolved"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View for Complaints -->
+    <record id="view_clinic_complaint_form" model="ir.ui.view">
+        <field name="name">clinic.complaint.form</field>
+        <field name="model">clinic.complaint</field>
+        <field name="arch" type="xml">
+            <form string="Patient Complaint">
+                <group>
+                    <field name="name"/>
+                    <field name="complaint_type"/>
+                    <field name="complaint_text"/>
+                    <field name="complaint_date"/>
+                    <field name="resolved"/>
+                    <field name="resolution"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Complaints -->
+    <record id="action_clinic_complaint" model="ir.actions.act_window">
+        <field name="name">Khiếu nại bệnh nhân</field>
+        <field name="res_model">clinic.complaint</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_clinic_complaint_list"/>
+    </record>
+
+    <menuitem id="menu_feedback_root" name="Xử lý phản hồi" sequence="10"/>
+    <menuitem id="menu_clinic_feedback" name="Phản hồi bệnh nhân" parent="menu_feedback_root" action="action_clinic_feedback" sequence="1"/>
+
+    <!-- Menu for Patient Complaints -->
+    <menuitem id="menu_clinic_complaint" name="Khiếu nại bệnh nhân" parent="menu_feedback_root" action="action_clinic_complaint" sequence="2"/>
+</odoo>

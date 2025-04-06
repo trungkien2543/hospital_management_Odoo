@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="message_log_1" model="clinic.message.log">
+            <field name="patient_id" ref="patient_1"/>
+            <field name="message_type">email</field>
+            <field name="subject">Thông báo lịch khám</field>
+            <field name="content">Chào anh Lê Hoài Nam, đây là thông báo về lịch khám của bạn vào ngày 10/04/2025.</field>
+            <field name="sent_date">2025-04-05 08:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_2" model="clinic.message.log">
+            <field name="patient_id" ref="patient_2"/>
+            <field name="message_type">sms</field>
+            <field name="subject">Nhắc lịch hẹn</field>
+            <field name="content">Chị Trần Minh Anh, đừng quên lịch hẹn khám vào ngày 12/04/2025.</field>
+            <field name="sent_date">2025-04-05 09:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_3" model="clinic.message.log">
+            <field name="patient_id" ref="patient_3"/>
+            <field name="message_type">email</field>
+            <field name="subject">Kết quả xét nghiệm</field>
+            <field name="content">Chào anh Nguyễn Văn Dũng, kết quả xét nghiệm của bạn đã có. Vui lòng kiểm tra qua email.</field>
+            <field name="sent_date">2025-04-05 10:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_4" model="clinic.message.log">
+            <field name="patient_id" ref="patient_4"/>
+            <field name="message_type">sms</field>
+            <field name="subject">Thông báo khám định kỳ</field>
+            <field name="content">Chào chị Phạm Thị Hương, lịch khám định kỳ của bạn đã được xác nhận vào ngày 14/04/2025.</field>
+            <field name="sent_date">2025-04-05 11:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_5" model="clinic.message.log">
+            <field name="patient_id" ref="patient_5"/>
+            <field name="message_type">email</field>
+            <field name="subject">Thông báo lịch tái khám</field>
+            <field name="content">Chào anh Đỗ Văn Khải, lịch tái khám của bạn đã được đặt vào ngày 16/04/2025.</field>
+            <field name="sent_date">2025-04-05 12:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_6" model="clinic.message.log">
+            <field name="patient_id" ref="patient_6"/>
+            <field name="message_type">sms</field>
+            <field name="subject">Nhắc nhở lịch khám</field>
+            <field name="content">Chị Lý Thanh Vân, lịch khám của bạn vào ngày 18/04/2025 đã được xác nhận.</field>
+            <field name="sent_date">2025-04-05 13:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_7" model="clinic.message.log">
+            <field name="patient_id" ref="patient_7"/>
+            <field name="message_type">email</field>
+            <field name="subject">Kết quả xét nghiệm</field>
+            <field name="content">Chào anh Ngô Đình Bảo, kết quả xét nghiệm của bạn đã có. Vui lòng kiểm tra qua email.</field>
+            <field name="sent_date">2025-04-05 14:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_8" model="clinic.message.log">
+            <field name="patient_id" ref="patient_8"/>
+            <field name="message_type">sms</field>
+            <field name="subject">Thông báo lịch khám</field>
+            <field name="content">Chị Vũ Thị Ngọc, lịch khám của bạn đã được xác nhận vào ngày 20/04/2025.</field>
+            <field name="sent_date">2025-04-05 15:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_9" model="clinic.message.log">
+            <field name="patient_id" ref="patient_9"/>
+            <field name="message_type">email</field>
+            <field name="subject">Nhắc nhở lịch khám</field>
+            <field name="content">Chào anh Hoàng Văn Tú, lịch khám của bạn đã được xác nhận vào ngày 22/04/2025.</field>
+            <field name="sent_date">2025-04-05 16:00:00</field>
+            <field name="status">sent</field>
+        </record>
+
+        <record id="message_log_10" model="clinic.message.log">
+            <field name="patient_id" ref="patient_10"/>
+            <field name="message_type">sms</field>
+            <field name="subject">Thông báo kết quả khám</field>
+            <field name="content">Chào chị Bùi Thị Lan, kết quả khám của bạn đã có. Vui lòng kiểm tra qua email.</field>
+            <field name="sent_date">2025-04-05 17:00:00</field>
+            <field name="status">sent</field>
+        </record>
+    </data>
+</odoo>
