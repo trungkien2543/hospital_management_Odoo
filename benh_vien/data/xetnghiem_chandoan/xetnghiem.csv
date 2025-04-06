@@ -1,0 +1,6 @@
+﻿id,ma_xet_nghiem,ten_loai_xet_nghiem,ma_benh_an,ten_bac_si,name,thoi_gian_bat_dau,thoi_gian_ket_thuc,trang_thai,ket_qua
+xetnghiem_01,XN,Xét nghiệm máu,HS-001,Nguyễn Văn A,Xét nghiệm máu bệnh nhân A,2025-04-01 08:00:00,2025-04-01 09:00:00,dang_xet_nghiem,Hồng cầu bạch cầu tiểu cầu bình thường.
+xetnghiem_02,XN,Xét nghiệm nước tiểu,HS-002,Trần Thị B,Xét nghiệm nước tiểu bệnh nhân B,2025-04-01 09:15:00,2025-04-01 10:00:00,dang_xet_nghiem,Không phát hiện bất thường trong mẫu nước tiểu.
+xetnghiem_03,XN,Xét nghiệm đường huyết,HS-003,Nguyễn Văn A,Xét nghiệm đường huyết bệnh nhân C,2025-04-01 10:30:00,,dang_lay_mau,Đang chờ kết quả xét nghiệm đường huyết.
+xetnghiem_04,XN,Xét nghiệm chức năng gan,HS-004,Nguyễn Văn A,Xét nghiệm chức năng gan bệnh nhân D,2025-04-02 08:00:00,2025-04-02 08:45:00,dang_xet_nghiem,Men gan cao, nghi vấn viêm gan.
+xetnghiem_05,XN,Xét nghiệm chức năng thận,HS-005,Trần Thị B,Xét nghiệm chức năng thận bệnh nhân E,2025-04-02 09:00:00,,dang_lay_mau,Đang tiến hành thu thập mẫu.

@@ -1,9 +1,9 @@
 Mã hồ sơ bệnh án,Mã bệnh nhân,Bác sĩ phụ trách,Chuẩn đoán bệnh,Triệu chứng,Ngày khám,Kế hoạch điều trị,Hẹn ngày tái khám
-HS-100,Nguyễn Văn A,Lê Hoàng C,Cảm cúm,Sốt,2025-04-01,Uống thuốc và nghỉ ngơi,2025-04-10
-HS-101,Trần Thị B,Nguyễn Văn A,Hen phế quản,Khó thở,2025-04-01,Xịt thuốc định kỳ,2025-04-15
-HS-102,Nguyễn Văn A,Lê Hoàng C,Tăng huyết áp,Đau đầu,2025-04-02,Kiểm soát huyết áp bằng thuốc,2025-04-30
-HS-103,Phạm Văn C,Nguyễn Văn A,Cảm lạnh,Ho nhẹ,2025-04-02,Uống thuốc kháng sinh,2025-04-12
-HS-104,Đỗ Văn E,Trần Thị B,Tiểu đường type 2,Tiểu nhiều,2025-04-02,Ăn kiêng và tiêm insulin,2025-05-01
+HS-001,Nguyễn Văn A,Lê Hoàng C,Cảm cúm,Sốt,2025-04-01,Uống thuốc và nghỉ ngơi,2025-04-10
+HS-002,Trần Thị B,Nguyễn Văn A,Hen phế quản,Khó thở,2025-04-01,Xịt thuốc định kỳ,2025-04-15
+HS-003,Nguyễn Văn A,Lê Hoàng C,Tăng huyết áp,Đau đầu,2025-04-02,Kiểm soát huyết áp bằng thuốc,2025-04-30
+HS-004,Phạm Văn C,Nguyễn Văn A,Cảm lạnh,Ho nhẹ,2025-04-02,Uống thuốc kháng sinh,2025-04-12
+HS-005,Đỗ Văn E,Trần Thị B,Tiểu đường type 2,Tiểu nhiều,2025-04-02,Ăn kiêng và tiêm insulin,2025-05-01
 HS-105,Lê Thị D,Nguyễn Văn A,Viem phổi,Ho nhiều,2025-04-03,Điều trị kháng sinh,2025-04-14
 HS-106,Ngô Thị F,Phạm Quốc D,Đau dạ dày,Đau bụng,2025-04-03,Dùng thuốc chống viêm,2025-04-18
 HS-107,Hoàng Văn G,Phạm Quốc D,Sỏi thận,Đau lưng,2025-04-04,Uống nhiều nước và thuốc tan sỏi,2025-04-25

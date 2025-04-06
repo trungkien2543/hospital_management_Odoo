@@ -11,10 +11,10 @@ class Hinhanh(models.Model):
     name = fields.Char(string="Tên ảnh chụp", required=True)
     thoi_gian_chup = fields.Datetime(string="Thời gian chụp", required=True)
     trang_thai = fields.Selection([
-        ('cho_duyet', 'Chờ duyệt'),
-        ('da_duyet', 'Đã duyệt'),
+        ('dang_chup', 'đang chụp'),
+        ('da_chup', 'đã chụp'),
         ('huy', 'Hủy')
-    ], default='cho_duyet', string='Trạng thái')
+    ], default='dang_chup', string='Trạng thái')
     hinh_anh = fields.Binary(string="Hình ảnh", attachment=True)
 
     @api.model
