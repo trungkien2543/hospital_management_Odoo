@@ -11,3 +11,5 @@ from . import thanh_toan
 from . import quan_ly_tuanthu_quydinh
 from . import quan_ly_nhansu
 from . import quan_ly_dieutri_chamsoc
+from . import quanlylienlac
+from . import chamsockhachhang
