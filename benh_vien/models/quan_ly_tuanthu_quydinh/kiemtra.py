@@ -10,6 +10,10 @@ class KiemTra(models.Model):
     ket_qua = fields.Text(string="Kết quả")
     ghi_chu = fields.Text(string="Ghi chú")
 
+    quy_dinh = fields.Many2one("benhvien.quydinh",string="Quy định")
+
+    nhan_su = fields.Many2one("benhvien.nhansu",string="Nhân sự thực hiện")
+
     @api.model
     def create(self, vals):
         if vals.get('ma_kiem_tra', "New") == "New":

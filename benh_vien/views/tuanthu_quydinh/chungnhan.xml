@@ -12,6 +12,7 @@
                     <field name="ngay_cap"/>
                     <field name="ngay_het_han"/>
                     <field name="trang_thai"/>
+                    <field name="nhan_su"/>
                 </list>
             </field>
         </record>

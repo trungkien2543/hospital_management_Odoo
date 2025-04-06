@@ -12,6 +12,8 @@
                     <field name="ngay_kiem_tra"/>
                     <field name="ket_qua"/>
                     <field name="ghi_chu"/>
+                    <field name="quy_dinh"/>
+                    <field name="nhan_su"/>
                 </list>
             </field>
         </record>

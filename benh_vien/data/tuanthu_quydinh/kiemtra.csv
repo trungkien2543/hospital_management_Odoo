@@ -1,6 +1,6 @@
-﻿ma_kiem_tra,ngay_kiem_tra,ket_qua,ghi_chu
-KT,2024-01-10,Kết quả đạt yêu cầu,Kiểm tra định kỳ thiết bị y tế
-KT,2024-02-15,Kết quả không đạt,Yêu cầu bảo trì máy xét nghiệm
-KT,2024-03-20,Kết quả đạt yêu cầu,Kiểm tra hệ thống xử lý nước thải
-KT,2024-04-05,Kết quả đạt yêu cầu,Đánh giá quy trình làm việc phòng xét nghiệm
-KT,2024-05-10,Kết quả không đạt,Cần kiểm tra lại hệ thống lưu trữ hồ sơ
+﻿ma_kiem_tra,ngay_kiem_tra,ket_qua,ghi_chu,quy_dinh,nhan_su
+KT,2024-01-10,Kết quả đạt yêu cầu,Kiểm tra định kỳ thiết bị y tế,Quy định về kiểm soát nhiễm khuẩn,Lê Hoàng C
+KT,2024-02-15,Kết quả không đạt,Yêu cầu bảo trì máy xét nghiệm,Quy định về kiểm soát nhiễm khuẩn,Lê Hoàng C
+KT,2024-03-20,Kết quả đạt yêu cầu,Kiểm tra hệ thống xử lý nước thải,Quy định về kiểm soát nhiễm khuẩn,Lê Hoàng C
+KT,2024-04-05,Kết quả đạt yêu cầu,Đánh giá quy trình làm việc phòng xét nghiệm,Quy định về kiểm soát nhiễm khuẩn,Lê Hoàng C
+KT,2024-05-10,Kết quả không đạt,Cần kiểm tra lại hệ thống lưu trữ hồ sơ,Quy định về kiểm soát nhiễm khuẩn,Lê Hoàng C

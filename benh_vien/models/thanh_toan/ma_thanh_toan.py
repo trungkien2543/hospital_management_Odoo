@@ -29,7 +29,7 @@ class MaThanhToan(models.Model):
     trang_thai = fields.Selection([
         ('pending', 'Chờ Xử Lý'),
         ('done', 'Hoàn Thành'),
-    ], string='Trạng Thái', default='pending', compute="_compute_is_trang_thai_editable", store=True)
+    ], string='Trạng Thái', default='pending', store=True)
 
     hoa_don_id = fields.Many2one('benhvien.hoa_don', string='Hóa Đơn', required=True, ondelete='cascade')
 
@@ -55,7 +55,3 @@ class MaThanhToan(models.Model):
                 record.ngay_thanh_toan = fields.Datetime.now()
 
 
-    @api.depends('phuong_thuc')
-    def _compute_is_trang_thai_editable(self):
-        for record in self:
-            record.is_trang_thai_editable
