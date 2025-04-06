@@ -30,10 +30,23 @@
                         <field name="ly_do_kham"/>
                         <field name="ngay_dat_lich" readonly="1"/>
                     </group>
+                    <group>
+                        <button name="action_xac_nhan"
+                                string="Xác Nhận"
+                                type="object"
+                                class="oe_highlight"/>
+                        <button name="action_huy_lich"
+                                string="Hủy Lịch"
+                                type="object"
+                                class="oe_highlight"/>
+                    </group>
                 </sheet>
 
             </form>
         </field>
     </record>
+
+
+
 
 </odoo>

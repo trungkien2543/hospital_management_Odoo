@@ -1,0 +1,8 @@
+ma_ke_hoach,name,ma_benh_an,ma_bac_si,ngay_bat_dau,ngay_ket_thuc,trang_thai,mo_ta,ngay_tao,ngay_cap_nhat
+KH001,Kế hoạch điều trị cho bệnh án HS-005,HS-005,Nguyễn Văn A,2024-03-02,2024-03-12,Hoàn thành,Khám định kỳ,2024-02-28,2024-03-13
+KH002,Kế hoạch điều trị cho bệnh án HS-003,HS-003,Nguyễn Văn A,2024-03-05,2024-03-18,Đang điều trị,Theo dõi thêm,2024-03-01,2024-03-19
+KH003,Kế hoạch điều trị cho bệnh án 1015,HS-003,Nguyễn Văn A,2024-03-07,2024-03-15,Chờ xử lý,Điều trị nội trú,2024-03-03,2024-03-16
+KH004,Kế hoạch điều trị cho bệnh án HS-001,HS-001,Nguyễn Văn A,2024-03-10,,Hủy bỏ,Điều trị ngoại trú,2024-03-06,2024-03-15
+KH005,Kế hoạch điều trị cho bệnh án 1020,HS-003,Nguyễn Văn A,2024-03-12,2024-03-25,Hoàn thành,Phục hồi chức năng,2024-03-08,2024-03-26
+
+

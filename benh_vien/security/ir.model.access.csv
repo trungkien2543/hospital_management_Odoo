@@ -60,8 +60,14 @@ access_benhvien_giotrong,benhvien_giotrong,model_benhvien_giotrong,base.group_us
 access_benhvien_hoa_don,access_benhvien_hoa_don,model_benhvien_hoa_don,base.group_user,1,1,1,1
 access_benhvien_chi_tiet_hoa_don,access_benhvien_chi_tiet_hoa_don,model_benhvien_chi_tiet_hoa_don,base.group_user,1,0,1,1
 access_benhvien_dich_vu,access_benhvien_dich_vu,model_benhvien_dich_vu,base.group_user,1,1,1,1
+access_benhvien_ma_thanh_toan,access_benhvien_ma_thanh_toan,model_benhvien_ma_thanh_toan,base.group_user,1,1,1,1
+
+
 
 
 access_benhvien_chungnhan,benhvien.chungnhan,model_benhvien_chungnhan,,1,1,1,1
 access_benhvien_kiemtra,benhvien.kiemtra,model_benhvien_kiemtra,,1,1,1,1
 access_benhvien_quydinh,benhvien.quydinh,model_benhvien_quydinh,,1,1,1,1
+
+access_benhvien_kehoachdieutri,benhvien.kehoachdieutri,model_benhvien_kehoachdieutri,,1,1,1,1
+access_benhvien_tientrinh,benhvien.tientrinh,model_benhvien_tientrinh,,1,1,1,1

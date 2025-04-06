@@ -4,6 +4,7 @@
 class QuyDinh(models.Model):
     _name = "benhvien.quydinh"
     _description = "Quản lý Quy Định"
+    _rec_name = "mo_ta"
 
     ma_quy_dinh = fields.Char(string="Mã quy định", required=True, copy=False, readonly=True, default="Không cần nhập")
     mo_ta = fields.Text(string="Mô tả")
@@ -14,6 +15,8 @@ class QuyDinh(models.Model):
         ('hieu_luc', 'Hiệu lực'),
         ('het_hieu_luc', 'Hết hiệu lực'),
     ], string="Trạng thái", default='hieu_luc')
+
+
 
     @api.model
     def create(self, vals):

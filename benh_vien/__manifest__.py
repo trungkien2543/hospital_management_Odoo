@@ -84,6 +84,7 @@
         'views/thanh_toan/thanh_toan_menus.xml',
         'views/thanh_toan/dich_vu_views.xml',
         'views/thanh_toan/hoa_don_views.xml',
+        'views/thanh_toan/ma_thanh_toan.xml',
 
 
         #tuanthu_quydinh
@@ -93,6 +94,15 @@
         'views/tuanthu_quydinh/kiemtra.xml',
         'views/tuanthu_quydinh/quydinh.xml',
         'data/tuanthu_quydinh/sequence.xml',
+
+        #quan_ly_dieutri_chamsoc
+        'views/dieutri_chamsoc/kehoachdieutri_action.xml',
+        'views/dieutri_chamsoc/tientrinh_action.xml',
+        'views/dieutri_chamsoc/kehoachdieutri_menu.xml',
+        'views/dieutri_chamsoc/kehoachdieutri.xml',
+        'views/dieutri_chamsoc/tientrinh_menu.xml',
+        'views/dieutri_chamsoc/tientrinh.xml',
+        'data/dieutri_chamsoc/sequence_kehoach.xml',
 
     ],
     'demo': [

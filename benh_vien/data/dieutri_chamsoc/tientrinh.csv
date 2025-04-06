@@ -1,0 +1,7 @@
+ma_tien_trinh,ma_ke_hoach,ngay_ghi_nhan,huyet_ap,nhip_tim,luong_duong,nhiet_do,BMI,trieu_chung_hien_tai,phan_hoi,ghi_chu,ngay_cap_nhat
+1,KH001,2024-03-02,120,75,110,37,24,Đau đầu,Tiếp tục theo dõi,Không có ghi chú,2024-03-04
+2,KH002,2024-03-05,115,80,105,36,22,Mệt mỏi,Cần kiểm tra thêm,Cần theo dõi thêm,2024-03-08
+3,KH003,2024-03-07,130,78,120,38,26,Khó thở,Tình trạng ổn định,Không có ghi chú,2024-03-10
+4,KH004,2024-03-10,110,72,98,36,23,Chóng mặt,Chuyển viện,Cần theo dõi thêm,2024-03-13
+5,KH005,2024-03-12,125,85,115,37,27,Buồn nôn,Cần thay đổi thuốc,Không có ghi chú,2024-03-15
+

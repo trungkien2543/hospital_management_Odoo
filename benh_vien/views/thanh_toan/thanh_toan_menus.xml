@@ -2,16 +2,13 @@
 <odoo>
     <menuitem id="purchase_management_menu" name="Quản lý thanh toán">
         <!-- Menu quản lý kho dược phẩm -->
-        <menuitem id="purchase_menu" name="Hóa đơn và dịch vụ">
-            <menuitem id="purchase_action_menu" action="action_hoa_don"/>
-            <menuitem id="purchase_dich_vu_action_menu" action="action_dich_vu"/>
-        </menuitem>
 
-<!--        <menuitem id="pharmacy_stock_menu" name="Kho dược phẩm">-->
-<!--             &lt;!&ndash; Menu &ndash;&gt;-->
-<!--            <menuitem id="pharmacy_stock_menu_phieu_nhap" action="action_phieu_nhap"/>-->
-<!--            <menuitem id="pharmacy_stock_menu_phieu_xuat" action="action_phieu_xuat"/>-->
-<!--        </menuitem>-->
+        <menuitem id="purchase_action_menu" action="action_hoa_don"/>
+
+        <menuitem id="purchase_dich_vu_action_menu" action="action_dich_vu"/>
+
+
+        <menuitem id="menu_ma_thanh_toan_action" action="action_ma_thanh_toan"/>
 
 
     </menuitem>

@@ -1,0 +1,5 @@
+ngay_tao,so_tien,mo_ta,trang_thai,hoa_don_id,is_bhyt,phuong_thuc
+2023-10-01 09:00:00,1500000,"Thanh toán viện phí tháng 10",done,HD00007,False,tien_mat
+2023-10-03 11:15:00,1800000,"Thanh toán thuốc men",pending,HD00007,False,the_tin_dung
+2023-10-04 14:20:00,3200000,"Thanh toán giường bệnh VIP",done,HD00007,False,tien_mat
+2023-10-05 16:45:00,2750000,"Thanh toán xét nghiệm",pending,HD00007,False,chuyen_khoan

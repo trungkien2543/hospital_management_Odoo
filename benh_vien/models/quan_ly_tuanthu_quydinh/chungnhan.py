@@ -13,6 +13,8 @@ class ChungNhan(models.Model):
         ('hieu_luc', 'Hiệu lực'),
         ('het_han', 'Hết hạn'),
     ], string="Trạng thái", default='hieu_luc')
+    nhan_su = fields.Many2one("benhvien.nhansu",string="Nhân sự")
+
 
     @api.model
     def create(self, vals):

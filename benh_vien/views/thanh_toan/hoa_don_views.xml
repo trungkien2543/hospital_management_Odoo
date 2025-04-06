@@ -6,13 +6,14 @@
         <field name="model">benhvien.hoa_don</field>
         <field name="arch" type="xml">
             <list>
+                <field name="ma_hoa_don"/>
                 <field name="created_at"/>
                 <field name="benh_an_id"/>
                 <field name="has_bhyt"/>
-                <field name="patient_pay"/>
-                <field name="paid_amount"/>
-                <field name="remaining_debt"/>
-                <field name="status"/>
+                <field name="tong_tien"/>
+                <field name="mien_giam"/>
+                <field name="phai_thu"/>
+<!--                <field name="status"/>-->
                 <field name="currency_id"/>
             </list>
         </field>
@@ -30,15 +31,16 @@
                 <sheet>
                     <group>
                         <group>
+                            <field name="ma_hoa_don"/>
                             <field name="created_at"/>
                             <field name="benh_an_id"/>
                             <field name="has_bhyt"/>
-                            <field name="status"/>
+<!--                            <field name="status"/>-->
                         </group>
                         <group>
-                            <field name="patient_pay"/>
-                            <field name="paid_amount"/>
-                            <field name="remaining_debt"/>
+                            <field name="tong_tien"/>
+                            <field name="mien_giam"/>
+                            <field name="phai_thu"/>
                             <field name="currency_id"/>
                         </group>
                     </group>
